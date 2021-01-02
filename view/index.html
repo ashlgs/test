@@ -876,12 +876,12 @@
 
     let imageSwiperList = $(".wcyx-image-box-in")
     for (i = 0; i < imageSwiperList.length; i++) {
-        createImgSwiper(imageSwiperList[i], {right: 8,originDistance:i%2*140})
+        createImgSwiper(imageSwiperList[i], {right: 8, originDistance: i % 2 * 140})
     }
 
 
     function createImgSwiper(dom, config) {
-        let {right = 8, speed = 1,originDistance = 0} = config
+        let {right = 8, speed = 1, originDistance = 0} = config
         let itemLen = $(dom).find('a').length
         let itemWidth = $(dom).find('a').width()
         let domWidth = (itemWidth + right) * itemLen
