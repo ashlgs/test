@@ -1,0 +1,12 @@
+[1224/140027.833:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
+[1228/084540.021:ERROR:process_info.cc(359)] UncheckedAllocate
+[1228/084540.060:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\lgs\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\a37f8f0f-9d31-4f89-9bb3-d68bd103a7dc: 系统找不到指定的路径。 (0x3)
+[1228/084601.133:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: 操作成功完成。 (0x0)
+[1228/084956.517:ERROR:process_info.cc(359)] UncheckedAllocate
+[1228/085042.885:ERROR:process_info.cc(359)] UncheckedAllocate
+[1228/085452.321:ERROR:process_info.cc(359)] UncheckedAllocate
+[1228/085505.746:ERROR:process_info.cc(359)] UncheckedAllocate
+[1228/091111.072:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
+[0102/081337.771:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\lgs\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\757c518f-e099-4263-a6d8-54647b51111a: 系统找不到指定的路径。 (0x3)
+[0102/081337.780:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\lgs\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\971c003b-5184-4611-90ac-d6c60859cdc0: 系统找不到指定的路径。 (0x3)
+[0102/081337.784:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)

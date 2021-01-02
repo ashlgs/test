@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,微软雅黑,STHeitiSC-Light,simsun,宋体,WenQuanYi Zen Hei,WenQuanYi Micro Hei,sans-serif"
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type:none
+}
+
+.plate-center {
+    /*width: 1200px;*/
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.header-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: 1400px;
+    height: 85px;
+    background: #fff;
+    z-index: 1;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 170px;
+    /*height: 50px;*/
+    /*background: chartreuse;*/
+    margin-right: 70px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #262626;
+    font-size: 16px;
+    margin:0 20px;
+    cursor: pointer;
+}
+.header-nav a:hover {
+    /*text-decoration: none;*/
+    color: #0066b0;
+    /*font-size: 16px;*/
+    /*margin-right: 12px;*/
+    /*cursor: pointer;*/
+}
+
+.header-right-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 14px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.header-right-item:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right-item img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.header-right-item a {
+    color: #2a303a;
+    font-size: 14px;
+}
+.header-right-item a:hover {
+    color: #0066b0;
+    /*font-size: 14px;*/
+}
+
+
+
+
+.top-line {
+    height: 5px;
+    min-width: 100%;
+    background:#0066b0;
+}
+
+
+
+.top-banner-box {
+    height: 300px;
+    background: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F58817b7e717f6.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611449351&t=1665d48cb121f3266b6550b6f03eb301') no-repeat 0 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.top-banner-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top-banner-title {
+    font-size: 34px;
+    color: #fff;
+}
+
+.top-banner-desc {
+    font-size: 18px;
+    color: #ABABAB;
+}
+
+.top-banner-line {
+    width:160px;
+    height: 2px;
+    background: #ABABAB;
+    margin: 16px 0;
+    position: relative;
+}
+
+.top-banner-line::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 42px;
+    height: 4px;
+    top: -1px;
+    background: #017DFF;
+    content: '';
+}
+
+
+/* 分页 */
+.pagination-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagination-box > a,.pagination-box > span {
+    padding: 6px 12px;
+    border: 1px solid #ABABAB;
+    color: #ABABAB;
+    margin: 0 6px;
+}
+.pagination-box  .active {
+    background: #017DFF;
+    color: #fff;
+    padding: 7px 13px;
+    border: none;
+}

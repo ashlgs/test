@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+
+    <style>
+        body {
+            min-width: 1400px;
+            padding-top: 85px;
+        }
+
+        .top-nav {
+            height: 100px;
+            background: #EBEBEB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top-nav-item {
+            width: 176px;
+            height: 50px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 50px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .top-nav-item:last-child {
+            margin-right: none;
+        }
+
+        .top-nav-active {
+            color: #Fff;
+            background: #0066B0;
+        }
+
+        .top-box {
+            display: flex;
+            justify-content: center;
+            min-height: 540px;
+            background: #fafafa;
+            /*background: #ff8096;*/
+            position: relative;
+
+        }
+
+        .top-box-up-bg {
+            position: absolute;
+            height: 190px;
+            width: 100%;
+            background: white;
+            top: 0;
+            left: 0;
+        }
+
+        .top-box-down-bg {
+            position: absolute;
+            height: 230px;
+            width: 430px;
+            bottom: 0px;
+            right: 0;
+            object-fit: cover;
+        }
+
+        .leader-box {
+            position: absolute;
+            width: 1400px;
+            padding: 70px 0 0;
+            margin: 0 auto;
+        }
+
+        .leader-box-top {
+            display: flex;
+            /*margin-left: 250px;*/
+        }
+
+        .leader-img {
+            width: 600px;
+            height: 400px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .leader-id-box {
+            width: 800px;
+            /*height: 100px;*/
+            /*background: beige;*/
+            padding-left: 60px;
+        }
+
+        .id-intro {
+            font-size: 30px;
+            color: #e7f1f3;
+            font-weight: bold;
+        }
+
+        .id-name {
+            font-size: 30px;
+            color: #000000;
+            margin-top: 20px;
+        }
+
+        .title-row {
+            margin-top: 50px;
+            display: flex;
+            align-content: center;
+
+        }
+
+        .title-name {
+            font-size: 26px;
+            color: #000000;
+        }
+
+        .title-name:before {
+            content: "-";
+            color: #0053a6;
+            padding-right: 12px;
+        }
+
+        .id-title-intro {
+            font-size: 26px;
+            color: #e1e1e1;
+            margin-left: 18px;
+        }
+
+        .identity-box {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 240px;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .identity-item {
+            padding: 6px 0;
+            width: 46%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .company-left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            align-content: center;
+        }
+
+        .company-dot {
+            width: 4px;
+            height: 4px;
+            background: #0053a6;
+        }
+
+        .company {
+            margin-left: 4px;
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .job {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .bottom-box {
+            display: flex;
+            width: 1400px;
+            /*padding: 70px 0;*/
+            margin: 0 auto;
+        }
+
+        .bottom-left {
+            width: 1000px;
+            margin-right: 20px;
+        }
+
+        .bottom-right {
+            width: 380px;
+        }
+
+        .swaper-box {
+            height: 380px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<header class="header-box">
+    <div class="header-content plate-center">
+        <div class="header-left">
+            <img class="header-logo" src="" alt="">
+            <div class="header-nav">
+                <a>首页</a>
+                <a>文创聊城</a>
+                <a>文创之声</a>
+                <a>文创党建</a>
+                <a>品牌文化</a>
+                <a>服务平台</a>
+                <a>会员单位</a>
+                <a>分支机构</a>
+                <a>文创影像</a>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="header-right-item">
+                <img src="" alt="">
+                <a href="">搜索</a>
+            </div>
+            <div class="header-right-item">
+                <img src="" alt="">
+                <a href="">会员申请</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="top-line"></div>
+    <script src="../js/swiper.min.js"></script>
+
+</header>
+
+<div class="top-banner-box">
+    <div class="top-banner-title">文创聊城</div>
+    <div class="top-banner-line"></div>
+    <div class="top-banner-desc">INFORMATION</div>
+</div>
+
+<div class="top-nav">
+    <div class="top-nav-item top-nav-active">文创聊城</div>
+    <div class="top-nav-item">文创聊城</div>
+    <div class="top-nav-item">文创聊城</div>
+    <div class="top-nav-item">文创聊城</div>
+</div>
+<div class="top-box">
+    <div class="top-box-up-bg"></div>
+    <img class="top-box-down-bg"
+         src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
+         alt="">
+
+    <div class="leader-box">
+        <div class="leader-box-top">
+            <img class="leader-img"
+                 src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
+                 alt="">
+            <div class="leader-id-box">
+
+                <div class="id-intro">BRIEF INTRODUCE</div>
+                <div class="id-name">黎元洪</div>
+                <div class="title-row">
+                    <div class="title-name">行业身份</div>
+                    <div class="id-title-intro">IDENTITY</div>
+                </div>
+                <div class="identity-box">
+                    <div class="identity-item">
+                        <div class="company-left">
+                            <div class="company-dot"></div>
+                            <div class="company">聊城托梦电子商务有限公司</div>
+                        </div>
+                        <div class="job">咨询经理</div>
+                    </div>
+                    <div class="identity-item">
+                        <div class="company-left">
+                            <div class="company-dot"></div>
+                            <div class="company">聊城托梦电子商务有限公司</div>
+                        </div>
+                        <div class="job">咨询经理</div>
+                    </div>
+                    <div class="identity-item">
+                        <div class="company-left">
+                            <div class="company-dot"></div>
+                            <div class="company">聊城托梦电子商务有限公司</div>
+                        </div>
+                        <div class="job">咨询经理</div>
+                    </div>
+                    <div class="identity-item">
+                        <div class="company-left">
+                            <div class="company-dot"></div>
+                            <div class="company">聊城托梦电子商务有限公司</div>
+                        </div>
+                        <div class="job">咨询经理</div>
+                    </div>
+                    <div class="identity-item">
+                        <div class="company-left">
+                            <div class="company-dot"></div>
+                            <div class="company">聊城托梦电子商务有限公司</div>
+                        </div>
+                        <div class="job">咨询经理</div>
+                    </div>
+                    <div class="identity-item">
+                        <div class="company-left">
+                            <div class="company-dot"></div>
+                            <div class="company">聊城托梦电子商务有限公司</div>
+                        </div>
+                        <div class="job">咨询经理</div>
+                    </div>
+                    <div class="identity-item">
+                        <div class="company-left">
+                            <div class="company-dot"></div>
+                            <div class="company">聊城托梦电子商务有限公司</div>
+                        </div>
+                        <div class="job">咨询经理</div>
+                    </div>
+                    <div class="identity-item">
+                        <div class="company-left">
+                            <div class="company-dot"></div>
+                            <div class="company">聊城托梦电子商务有限公司</div>
+                        </div>
+                        <div class="job">咨询经理</div>
+                    </div>
+                    <div class="identity-item">
+                        <div class="company-left">
+                            <div class="company-dot"></div>
+                            <div class="company">聊城托梦电子商务有限公司</div>
+                        </div>
+                        <div class="job">咨询经理</div>
+                    </div>
+                    <div class="identity-item">
+                        <div class="company-left">
+                            <div class="company-dot"></div>
+                            <div class="company">聊城托梦电子商务有限公司</div>
+                        </div>
+                        <div class="job">咨询经理</div>
+                    </div>
+                    <div class="identity-item">
+                        <div class="company-left">
+                            <div class="company-dot"></div>
+                            <div class="company">聊城托梦电子商务有限公司</div>
+                        </div>
+                        <div class="job">咨询经理</div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="bottom-box">
+    <div class="bottom-left">
+
+        <div class="title-row">
+            <div class="title-name">荣誉</div>
+            <div class="id-title-intro">HONOR</div>
+        </div>
+    </div>
+
+
+    <div class="bottom-right">
+
+        <div class="title-row">
+            <div class="title-name">论文著作</div>
+            <div class="id-title-intro">BOOK</div>
+        </div>
+        <div class="swaper-box swiper-container">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#" target="_blank">
+                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
+                             alt="">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#" target="_blank">
+                        <img src="https://gimg2.baidu.com/imagesearch/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
+                             alt="">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#" target="_blank">
+                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
+                             alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </div>
+</div>
+</div>
+<script src="../js/jq.js"></script>
+<script>
+    const swiperHeader = new Swiper('.swaper-box.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+            delay: 6000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+</script>
+
+</body>
+
+</html>
