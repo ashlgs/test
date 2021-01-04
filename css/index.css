@@ -1,5 +1,10 @@
+/*body {
+    min-width: 1900px;
+
+}*/
 body {
     min-width: 1900px;
+    padding-top: 85px;
 
 }
 
@@ -223,12 +228,16 @@ body {
     color: #0066b0;
 }
 
+.news-list-item:hover .img-wraper img {
+    transform: scale(1.12);
+}
+
 .news-list-item .date-box {
     margin-top: 20px;
     float: left;
     width: 80px;
     height: 80px;
-    background: #afbcc7 url(../images/timesbg.png) no-repeat 26px 28px;
+    background: #afbcc7 url(../image/timesbg.png) no-repeat 26px 28px;
     color: #fff;
     position: relative;
     -moz-transition: all ease 0.3s;
@@ -325,9 +334,10 @@ body {
     transition: all 1s;
 }
 
+/*
 .news-list-item .img-wraper .image:hover {
     transform: scale(1.12);
-}
+}*/
 
 .link-box {
     background: #f9fbff;
@@ -512,7 +522,15 @@ body {
     margin-right: 20px;
     margin-top: 20px;
     overflow: hidden;
+    position: relative;
+}
 
+.culture-image-wrapper .desc {
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    -ms-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
 }
 
 .culture-image {
@@ -527,8 +545,46 @@ body {
     transition: all 1s;
 }
 
-.culture-image:hover {
+.culture-image-wrapper:hover .culture-image {
     transform: scale(1.12);
+}
+.culture-image-wrapper-not-right:hover .culture-image {
+    transform: scale(1.12);
+}
+
+.culture-image-wrapper:hover .desc {
+    height: 40px;
+    width: 100%;
+    padding: 0 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: rgba(0, 0, 0, 0.5);
+}
+.culture-image-wrapper-not-right:hover .desc {
+    height: 40px;
+    width: 100%;
+    padding: 0 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .culture-image-wrapper-not-right {
@@ -536,6 +592,7 @@ body {
     height: 170px;
     margin-top: 20px;
     overflow: hidden;
+    position: relative;
 }
 
 .organization-item-list-box {
@@ -701,7 +758,7 @@ body {
 }
 
 .people-item-bottom-content {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     display: flex;
 }
 
@@ -855,7 +912,7 @@ body {
     height: 15px;
     margin: 0 15px 0 0;
     /*background-position:center;*/
-    background: #0000 url(../images/rain.png) no-repeat 50% 50%;
+    background: #0000 url(../image/rain.png) no-repeat 50% 50%;
 }
 
 .article-item-left {
@@ -865,7 +922,20 @@ body {
 
 .article-item .article-item-title {
     color: #333333;
-    max-width: 330px;
+    flex:1;
+    margin-right: 20px;
+    width: 100%;
+    max-width: 325px;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.article-item .article-item-title-only {
+    color: #333333;
+    flex:1;
+    width: 100%;
+    max-width: 420px;
     font-size: 16px;
     overflow: hidden;
     white-space: nowrap;
@@ -875,6 +945,16 @@ body {
 .article-item-right {
     color: #999999;
     font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.article-item-right-txt {
+    color: #999999;
+    font-size: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .article-item-decorate {

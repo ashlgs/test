@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+/* 全局样式 */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "PingFang-SC-Regular,,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,微软雅黑,STHeitiSC-Light,simsun,宋体,WenQuanYi Zen Hei,WenQuanYi Micro Hei,sans-serif";
+}
+
+body,
+html,
+ol,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+iframe,
+form,
+input,
+textarea,
+select,
+option,
+legend,
+audio,
+video,
+pre,
+code,
+dl,
+dt,
+dd,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+
+/* 重置列表元素的样式 */
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+.img-box img {
+    width: 100%;
+    display: block;
+}
+
+button,
+input,
+textarea,
+select {
+    border: none;
+    outline: none;
+}
+
+:focus {
+    border: none;
+}
+
+a:focus,
+input:focus,
+button:focus {
+    outline: none;
+    outline-offset: none;
+}
+
+button {
+    background: initial;
+}
+
+
+/* 重置超链接的样式 */
+
+a {
+    text-decoration: none;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+
+/* 清除浮动 */
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/* 文本样式 */
+
+.tac {
+    text-align: center;
+}
+
+.tal {
+    text-align: left;
+}
+
+.tar {
+    text-align: right;
+}
+
+
+/* 占满宽度 */
+
+.w-full {
+    width: 100%;
+}
+
+
+/* 定位样式 */
+
+.pr {
+    position: relative;
+}
+
+.ab {
+    position: absolute;
+}
+
+.none {
+    display: none;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.block {
+    display: block;
+}
+
+.ellipsis {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* 色标方案 文本颜色 */
+
+.light-gray {
+    color: #999;
+}
+
+.deep-gray {
+    color: #666;
+}
+
+.light-black {
+    color: #333;
+}
+
+.deep-black {
+    color: #111;
+}
+
+
+/* 背景颜色 */
+
+
+/* 文字大小 */
+
+.f12 {
+    font-size: 12px;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+
+/* 谷歌默认字体大小为16px */
+
+.f16 {
+    font-size: 16px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+
+/* 通用input控件样式 */
+
+input[type="text"],
+input[type="password"] {
+    width: 200px;
+    height: 30px;
+    padding-left: 5px;
+    background-color: #dbdbdb;
+    /* border-radius: 3px;
+    border: 1px solid #e4e6e5; */
+}
+
+
+/* 通用按钮样式 */
+
+.btn {
+    padding: 9px 0;
+    color: #fff;
+    background-color: #00B51D;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: default;
+}
+
+
+/* 禁用按钮 */
+
+.btn:disabled {
+    background: rgba(66, 189, 86, .5);
+    cursor: not-allowed;
+}
+
+
+/* 自定义字体图标类型 */
+
+
+/* @font-face {
+    font-family: 'iconfont';
+} */
+
+
+/* 将自定义字体图标的类型应用到引入的字体图标上 */
+
+
+/* .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} */

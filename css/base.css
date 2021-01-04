@@ -4,14 +4,12 @@
     font-family: "PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,微软雅黑,STHeitiSC-Light,simsun,宋体,WenQuanYi Zen Hei,WenQuanYi Micro Hei,sans-serif"
 }
 
-
-
 a {
     text-decoration: none;
 }
 
 ul li {
-    list-style-type:none
+    list-style-type: none
 }
 
 .plate-center {
@@ -54,9 +52,10 @@ ul li {
     text-decoration: none;
     color: #262626;
     font-size: 16px;
-    margin:0 20px;
+    margin: 0 20px;
     cursor: pointer;
 }
+
 .header-nav a:hover {
     /*text-decoration: none;*/
     color: #0066b0;
@@ -95,21 +94,17 @@ ul li {
     color: #2a303a;
     font-size: 14px;
 }
+
 .header-right-item a:hover {
     color: #0066b0;
     /*font-size: 14px;*/
 }
 
-
-
-
 .top-line {
     height: 5px;
     min-width: 100%;
-    background:#0066b0;
+    background: #0066b0;
 }
-
-
 
 .top-banner-box {
     height: 300px;
@@ -136,7 +131,7 @@ ul li {
 }
 
 .top-banner-line {
-    width:160px;
+    width: 160px;
     height: 2px;
     background: #ABABAB;
     margin: 16px 0;
@@ -155,22 +150,208 @@ ul li {
     content: '';
 }
 
-
 /* 分页 */
 .pagination-box {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.pagination-box > a,.pagination-box > span {
+
+.pagination-box > a, .pagination-box > span {
     padding: 6px 12px;
     border: 1px solid #ABABAB;
     color: #ABABAB;
     margin: 0 6px;
 }
-.pagination-box  .active {
-    background: #017DFF;
+
+.pagination-box .active {
+    background: #0066b0;
     color: #fff;
     padding: 7px 13px;
     border: none;
+}
+
+/* 底部样式 */
+
+.foot-bg {
+    width: 100%;
+    height: 130px;
+    background: url('../image/footimg/ft-bg.png') no-repeat;
+    margin-top: 50px;
+}
+
+.foot-container {
+    /*width: 100%;*/
+    height: 330px;
+    background: #27334f;
+}
+
+.foot-container .foot-content {
+    padding: 45px 0;
+    display: flex;
+}
+
+.foot-container .foot-left {
+    /*float: left;*/
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot-left .foot-logo {
+    width: 190px;
+    height: 100px;
+    display: block;
+    object-fit: cover;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.foot-container .foot-left p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #838fa7;
+    text-align: center;
+}
+
+/* 底部中间样式 */
+
+.foot-container .foot-center {
+    /*float: left;*/
+    width: 700px;
+    box-sizing: border-box;
+    padding: 10px 30px 0 30px;
+    border-left: 1px solid #55617b;
+    border-right: 1px solid #55617b;
+}
+
+.foot-link-item-box {
+    display: flex;
+    margin: 15px 0 45px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-center .foot-link-item {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #dbdbdb;
+}
+
+.foot-center .foot-link-item .link-txt {
+    font-size: 14px;
+    color: #27334f;
+    line-height: 1;
+    padding: 0 5px;
+    border-right: 1px solid #b3b3b3;
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 通用input控件样式 */
+
+input[type="text"] {
+    width: 180px;
+    padding-left: 5px;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    margin: 3px 0;
+    color: #27334f;
+    border-right: 1px solid #b3b3b3;
+}
+
+.foot-center .foot-link-item img {
+    vertical-align: middle;
+    display: block;
+    width: 9px;
+    padding: 0 5px;
+    object-fit: contain;
+}
+
+.foot-center-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-center-info-item {
+    width: 200px;
+}
+
+/* 底部右侧样式 */
+.foot-container .foot-right {
+    width: 320px;
+    padding-top: 15px;
+    padding-left: 30px;
+}
+.foot-address{
+    color: #fff;
+    font-size: 15px;
+    line-height: 28px;
+    display: flex;
+    overflow: hidden;
+    height: 28px;
+}
+.foot-container .foot-title {
+    color: #fff;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.foot-container ul li {
+    line-height: 24px;
+}
+
+.foot-container span {
+    line-height: 24px;
+    color: #838fa7;
+    font-size: 13px;
+}
+
+.foot-qrcode {
+    width: 320px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-qrcode .qrcode-box {
+    width: 80px;
+    text-align: center;
+}
+
+.foot-qrcode .qrcode-box img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+/* 网站备案 */
+
+.website-records {
+    height: 70px;
+    line-height: 70px;
+    background: #222c45;
+    text-align: center;
+}
+
+.website-records p {
+    color: #838fa7;
+    font-size: 14px;
+}
+
+.website-records p span {
+    font-size: 12px;
+}
+
+.website-records p img {
+    vertical-align: middle;
 }
