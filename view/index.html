@@ -12,6 +12,23 @@
 </head>
 
 <body>
+<div class="search-box" style="display: none">
+    <div class="search-plate">
+        <img class="clear" src="../image/close.png">
+        <input id="searchInput" placeholder="请输入关键词">
+        <div class="desc">按Enter键进行搜索后Esc键关闭</div>
+        <div class="recommend-title">#推荐搜索#
+        </div>
+        <div class="search-tag-box">
+            <div class="search-tag">协会大事记</div>
+            <div class="search-tag">未来感</div>
+            <div class="search-tag">理事单位</div>
+            <div class="search-tag">童年茴香</div>
+            <div class="search-tag">家乡美味</div>
+        </div>
+    </div>
+</div>
+
 <header class="header-box">
     <div class="header-content plate-center">
         <div class="header-left">
@@ -29,9 +46,9 @@
             </div>
         </div>
         <div class="header-right">
-            <div class="header-right-item">
+            <div id="searchBtn" class="header-right-item">
                 <img src="../image/search.png" alt="">
-                <a href="">搜索</a>
+                <a class="search">搜索</a>
             </div>
             <div class="header-right-item">
                 <img src="../image/user.png" alt="">
@@ -52,7 +69,7 @@
             <a href="#" target="_blank">
                 <!--<img src="../img/康华.png" alt="1">-->
                 <img class="image"
-                     src="https://fms.res.meizu.com/dms/2020/12/29/b60b64b5-36cb-49ef-a65a-312200fe0c2f.jpg">
+                     src="../image/banner.png">
 
             </a>
         </div>
@@ -162,7 +179,7 @@
                     <div class="content">暨中国智慧城市国际博览会暨党支部书记,蓝色行动"做一天百分之一"参加22th香港国际影视.ssssssss</div>
                 </div>
                 <div class="img-wraper">
-                    <img class="image" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
+                    <img class="image" src="../image/1.png">
                 </div>
             </div>
             <div class="news-list-item">
@@ -176,7 +193,7 @@
                     <div class="content">暨中国智慧城市国际博览会暨党支部书记,蓝色行动"做一天百分之一"参加22th香港国际影视.</div>
                 </div>
                 <div class="img-wraper">
-                    <img class="image" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
+                    <img class="image" src="../image/2.png">
                 </div>
             </div>
             <div class="news-list-item">
@@ -190,7 +207,7 @@
                     <div class="content">暨中国智慧城市国际博览会暨党支部书记,蓝色行动"做一天百分之一"参加22th香港国际影视.</div>
                 </div>
                 <div class="img-wraper">
-                    <img class="image" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
+                    <img class="image" src="../image/3.png">
                 </div>
             </div>
         </div>
@@ -426,14 +443,22 @@
                 <a><img src="../image/car.png" alt=""></a>
                 <a><img src="../image/car.png" alt=""></a>
             </div>
+
+
+            <!--视频-->
             <div class="wcyx-vide-video-box">
-                <video width="700px" height="400px" poster="../image/videoimg.png" controls >
-                    <source src="https://khcm-cn.oss-cn-hangzhou.aliyuncs.com/xy-teacher/other/2020/11/23/11b7a823916248a3a30fa3dfa4e9f12f.mp4" type="video/mp4">
+                <video id="video" width="700px" height="400px"
+                       src="https://khcm-cn.oss-cn-hangzhou.aliyuncs.com/xy-teacher/other/2020/11/23/11b7a823916248a3a30fa3dfa4e9f12f.mp4"
+                       type="video/mp4" poster="../image/videoimg.png">
                 </video>
                 <!--<video src="https://khcm-cn.oss-cn-hangzhou.aliyuncs.com/xy-teacher/other/2020/11/23/11b7a823916248a3a30fa3dfa4e9f12f.mp4"-->
-                       <!--poster="../image/videoimg.png"></video>-->
-                <!--<img src="../image/videoimg.png" alt="">-->
+                <!--poster="../image/videoimg.png"></video>-->
+                <div class="play-btn">
+                    <img class="play-btn-img" src="../image/play.png" alt="">
+                </div>
             </div>
+
+
             <div class="wcyx-vide-img-box">
                 <a><img src="../image/car.png" alt=""></a>
                 <a><img src="../image/car.png" alt=""></a>
@@ -1341,6 +1366,59 @@
         $("#wc-video").show();
     })
 
+    $(".play-btn-img").click(function () {
+        $(".play-btn").hide();
+        let video = $("#video").get(0);
+        video.play();
+        $("#video").attr("controls", true)
+    })
+    //    搜索
+    $("#searchBtn").click(function () {
+        $(".search-box").show();
+        let video = $("#video").get(0);
+        video.play();
+        $("#video").attr("controls", true);
+        $("body").addClass("noScroll")
+    })
+    $(".clear").click(function () {
+        $(".search-box").hide();
+        $("body").removeClass("noScroll")
+
+    })
+    /* $('#searchInput').bind('keydown', function (event) {
+     if (event.keyCode == "13") {
+     alert(1111);
+     $(".search-box").hide();
+     $("body").removeClass("noScroll")
+     }
+     if (event.keyCode == "27") {
+     $(".search-box").hide();
+     $("body").removeClass("noScroll")
+     }
+     });*/
+    $(window).keydown(function (event) {
+        if (event.keyCode == "13") {//监听Enter
+            if (!$(".search-box").is(":hidden")) {
+                $(".search-box").hide();     //如果元素为显现,则将其隐藏
+                $("body").removeClass("noScroll")
+                console.log("search:::", $('#searchInput').get(0).value);//获取输入框的值
+                $('#searchInput').get(0).value = "";//清空输入框
+            }
+        }
+        if (event.keyCode == "27") {//监听Esc
+            if (!$(".search-box").is(":hidden")) {
+                $(".search-box").hide();     //如果元素为显现,则将其隐藏
+                $("body").removeClass("noScroll")
+            }
+        }
+    });
+    // 搜索标签点击事件
+    $(".search-tag").click(function () {
+        $(".search-box").hide();
+        $("body").removeClass("noScroll")
+        console.log("search:::", $(this).text());//获取输入框的值
+        $('#searchInput').get(0).value = "";//清空输入框
+    })
 
     function createImgSwiper(dom, config) {
         let {right = 10, speed = 1, originDistance = 0} = config

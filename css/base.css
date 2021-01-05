@@ -11,11 +11,121 @@ a {
 ul li {
     list-style-type: none
 }
-
+.noScroll {
+    overflow: hidden;
+    /*height: 100vh;*/
+}
 .plate-center {
     /*width: 1200px;*/
     width: 1400px;
     margin: 0 auto;
+}
+
+.search-box {
+    height: 790px;
+    width: 100%;
+    background: rgba(51, 51, 51, 0.97);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+
+}
+
+.search-plate {
+    width: 1200px;
+    height: 200px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.search-plate input {
+    margin-top: 30px;
+    width: 100%;
+    height: 140px;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    background: transparent;
+    border-bottom: solid 4px #fff;
+    color: #fff;
+    font-size: 90px;
+    font-family: "PingFang SC";
+
+}
+
+.search-plate input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #7d7d7d;
+}
+
+.search-plate input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #7d7d7d;
+}
+
+.search-plate input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #7d7d7d;
+}
+
+.search-plate input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #7d7d7d;
+}
+
+.recommend-title {
+    font-size: 20px;
+    color: #666666;
+    margin-top: 50px;
+}
+
+.search-plate .clear {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+.search-plate .desc {
+    position: absolute;
+    right: 0;
+    top: 170px;
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.search-tag-box {
+    display: flex;
+    margin-top: 20px;
+    width: 1200px;
+
+}
+
+.search-tag {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #666666;
+    margin-right: 15px;
+    padding: 10px 15px;
+    line-height: 1;
+    background: #fff;
+    cursor: pointer;
+
+
+}
+.search-tag:hover {
+    color: #0066b0;
+
 }
 
 .header-box {
@@ -95,7 +205,7 @@ ul li {
     font-size: 14px;
 }
 
-.header-right-item a:hover {
+.header-right-item:hover a {
     color: #0066b0;
     /*font-size: 14px;*/
 }
@@ -290,7 +400,8 @@ input[type="text"] {
     padding-top: 15px;
     padding-left: 30px;
 }
-.foot-address{
+
+.foot-address {
     color: #fff;
     font-size: 15px;
     line-height: 28px;
@@ -298,6 +409,7 @@ input[type="text"] {
     overflow: hidden;
     height: 28px;
 }
+
 .foot-container .foot-title {
     color: #fff;
     font-size: 15px;
