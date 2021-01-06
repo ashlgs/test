@@ -168,6 +168,14 @@ ul li {
     cursor: pointer;
 }
 
+.header-nav .active {
+    text-decoration: none;
+    color: #0066b0;
+    font-size: 16px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
 .header-nav a:hover {
     /*text-decoration: none;*/
     color: #0066b0;
@@ -260,6 +268,80 @@ ul li {
     top: -1px;
     background: #017DFF;
     content: '';
+}
+
+/* 顶部分类导航样式 */
+.top-nav-box {
+    background: #eaeff5;
+}
+
+.top-nav {
+    background: #eaeff5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.top-nav-item {
+    width: 175px;
+    height: 50px;
+    background-color: #fff;
+    margin: 10px 50px 10px 0px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: #333333;
+    border: 1px solid #e5e6ea;
+    cursor: pointer;
+}
+
+.top-nav-item-active {
+    width: 175px;
+    height: 50px;
+    background-color: #0066b0;
+    margin: 10px 50px 10px 0px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #e5e6ea;
+    cursor: pointer;
+}
+
+.top-nav-item-active:last-child {
+    width: 175px;
+    height: 50px;
+    background-color: #0066b0;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #e5e6ea;
+    cursor: pointer;
+}
+
+.top-nav-item:hover {
+    color: #0066b0;
+}
+
+.top-nav-item:last-child:hover {
+    color: #0066b0;
+}
+
+.top-nav-item:last-child {
+    width: 175px;
+    height: 50px;
+    background-color: #fff;
+    margin: 10px 0px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: #333333;
+    border: 1px solid #e5e6ea;
+    cursor: pointer;
 }
 
 /* 分页 */
@@ -383,8 +465,9 @@ ul li {
     text-align: left;
     list-style: none;
     background-color: #fff;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
+    box-sizing: border-box;
+    /*-webkit-background-clip: padding-box;
+    background-clip: padding-box;*/
     border: 1px solid #ccc;
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: 2px;
