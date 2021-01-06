@@ -11,10 +11,12 @@ a {
 ul li {
     list-style-type: none
 }
+
 .noScroll {
     overflow: hidden;
     /*height: 100vh;*/
 }
+
 .plate-center {
     /*width: 1200px;*/
     width: 1400px;
@@ -121,8 +123,8 @@ ul li {
     background: #fff;
     cursor: pointer;
 
-
 }
+
 .search-tag:hover {
     color: #0066b0;
 
@@ -350,6 +352,7 @@ ul li {
     justify-content: space-between;
     align-items: center;
     background: #dbdbdb;
+    position: relative;
 }
 
 .foot-center .foot-link-item .link-txt {
@@ -362,6 +365,48 @@ ul li {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.dropdown-menu {
+    position: absolute;
+    max-height: 200px;
+    overflow-y: auto;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 200px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 2px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 16px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #333;
+    white-space: nowrap;
+
+}
+
+.dropdown-menu > li > a:hover {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
 }
 
 /* 通用input控件样式 */
