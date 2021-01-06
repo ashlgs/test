@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bda86c6e-6b54-4868-9739-646a1afa47c1" name="Default" comment="" />
+    <list default="true" id="bda86c6e-6b54-4868-9739-646a1afa47c1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image/image/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image/image/2-2-分支机构.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image/image/2017.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image/image/2018.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image/image/2019.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image/image/jg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/pingtaigaikuang.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,16 +24,42 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="wczs.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wczs.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/wczs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="85" column="33" lean-forward="true" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+            <state relative-caret-position="222">
+              <caret line="70" column="36" lean-forward="true" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pingtaigaikuang.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/pingtaigaikuang.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="218" column="42" lean-forward="false" selection-start-line="218" selection-start-column="24" selection-end-line="218" selection-end-column="42" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leader.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/leader.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="164" column="10" lean-forward="true" selection-start-line="164" selection-start-column="10" selection-end-line="164" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,13 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nav</find>
-      <find>pagination-box</find>
-      <find>20</find>
-      <find>page</find>
-      <find>content-box</find>
-      <find>ebebeb</find>
-      <find>h</find>
       <find>he</find>
       <find>hea</find>
       <find>head</find>
@@ -58,7 +86,6 @@
       <find>header-na</find>
       <find>top-nav</find>
       <find>会员单位</find>
-      <find>文创之声</find>
       <find>drop</find>
       <find>dropd</find>
       <find>dropdo</find>
@@ -72,6 +99,14 @@
       <find>background</find>
       <find>header-nav</find>
       <find>footer</find>
+      <find>文创之声</find>
+      <find>文创</find>
+      <find>top-</find>
+      <find>left-img</find>
+      <find>right-title-eng</find>
+      <find>right-img</find>
+      <find>center-left</find>
+      <find>center-right</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,6 +135,7 @@
         <option value="$PROJECT_DIR$/view/leader_detail.html" />
         <option value="$PROJECT_DIR$/css/base.css" />
         <option value="$PROJECT_DIR$/view/wcyx.html" />
+        <option value="$PROJECT_DIR$/view/pingtaigaikuang.html" />
       </list>
     </option>
   </component>
@@ -110,8 +146,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="792" />
-    <option name="y" value="145" />
+    <option name="x" value="212" />
+    <option name="y" value="31" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -180,6 +216,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="image" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -200,14 +250,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lgs\Desktop\page\view" />
       <recent name="C:\Users\lgs\Desktop\协会(1)\协会\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lgs\Desktop\page\image\image" />
       <recent name="C:\Users\lgs\Desktop\page\image" />
       <recent name="C:\Users\lgs\Desktop\page\css" />
       <recent name="C:\Users\lgs\Desktop\page\view" />
       <recent name="C:\Users\lgs\Desktop\page\images\company" />
-      <recent name="C:\Users\lgs\Desktop\page\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -324,10 +375,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217365000" />
+    <option name="totallyTimeSpent" value="222251000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="792" y="145" width="1936" height="1056" extended-state="0" />
+    <frame x="212" y="31" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17386723" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -369,14 +420,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/leader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3686">
-          <caret line="194" column="20" lean-forward="false" selection-start-line="194" selection-start-column="20" selection-end-line="196" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/wczs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -633,6 +676,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-133">
           <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -694,14 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/leader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="454" column="42" lean-forward="false" selection-start-line="454" selection-start-column="42" selection-end-line="454" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -731,11 +767,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/wczs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="85" column="33" lean-forward="true" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+        <state relative-caret-position="222">
+          <caret line="70" column="36" lean-forward="true" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/leader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="164" column="10" lean-forward="true" selection-start-line="164" selection-start-column="10" selection-end-line="164" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/pingtaigaikuang.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="218" column="42" lean-forward="false" selection-start-line="218" selection-start-column="24" selection-end-line="218" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
