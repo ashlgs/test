@@ -798,16 +798,68 @@ body {
     padding-bottom: 40px;
 }
 
-.people-item {
-    width: 269px;
+.s4-prev-1 {
+    width: 271.5px;
+    /*width: 232px;*/
     height: 390px;
-    background: skyblue;
-    margin-right: 20px;
+    top: 0;
+    left: -20px;
+    /*margin-top: 0;*/
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+    transition: 0.2s;
+    position: absolute;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .6);
+}
+
+.s4-prev-1::after {
+    content: '';
+    position: absolute;
+    top: 180px;
+    width: 40px;
+    height: 70px;
+    right: -40px;
+    background-image: url(../image/left.png);
+}
+
+.s4-next-1 {
+    width: 271.5px;
+    /*width: 232px;*/
+    height: 390px;
+    top: 0;
+    right: -20px;
+    /*margin-top: 0;*/
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+    transition: 0.2s;
+    position: absolute;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .6);
+}
+
+.s4-next-1::after {
+    content: '';
+    position: absolute;
+    top: 180px;
+    width: 40px;
+    height: 70px;
+    left: -40px;
+    background-image: url(../image/right.png);
+}
+
+.people-item {
+    width: 264px;
+    height: 390px;
+    margin:0 10px;
+    /*margin-right: 20px;*/
     position: relative;
 }
 
 .people-item img {
-    width: 269px;
+    width: 264px;
     height: 390px;
     display: block;
     object-fit: cover;
