@@ -34,7 +34,7 @@
         <div class="header-left">
             <img class="header-logo" src="../image/logo.png" alt="">
             <div class="header-nav">
-                <a>首页</a>
+                <a class="active">首页</a>
                 <a>文创聊城</a>
                 <a>文创之声</a>
                 <a>文创党建</a>
@@ -96,24 +96,6 @@
     </div>
     <div class="swiper-pagination"></div>
 </div>
-
-<!--
-
-<div class="index-item-column">
-    <div class="index-item-title">123</div>
-    <div class="index-item-title-tips">32</div>
-
-    <div class="image-swiper-box">
-        <div class="image-swiper-item-box">
-            <a class="image-swiper-item" href="">
-                <img src="" alt="">
-            </a>
-        </div>
-
-    </div>
-
-</div>
--->
 
 
 <div class="banner-advertisement">
@@ -696,8 +678,6 @@
     </div>
 </div>
 
-</div>
-
 
 <div class="index-item-column">
     <div class="index-item-title">服务平台</div>
@@ -1025,7 +1005,6 @@
 <div class="tab-box">
     <div id="tab1" class="tab-active"></div>
     <div id="tab2" class="tab"></div>
-</div>
 </div>
 
 <div class="banner-advertisement2">
@@ -1605,9 +1584,6 @@
     //    搜索
     $("#searchBtn").click(function () {
         $(".search-box").show();
-        let video = $("#video").get(0);
-        video.play();
-        $("#video").attr("controls", true);
         $("body").addClass("noScroll")
     })
     $(".clear").click(function () {

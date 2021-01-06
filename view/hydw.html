@@ -11,41 +11,54 @@
 </head>
 
 <body>
+
+<div class="search-box" style="display: none">
+    <div class="search-plate">
+        <img class="clear" src="../image/close.png">
+        <input id="searchInput" placeholder="请输入关键词">
+        <div class="desc">按Enter键进行搜索后Esc键关闭</div>
+        <div class="recommend-title">#推荐搜索#
+        </div>
+        <div class="search-tag-box">
+            <div class="search-tag">协会大事记</div>
+            <div class="search-tag">未来感</div>
+            <div class="search-tag">理事单位</div>
+            <div class="search-tag">童年茴香</div>
+            <div class="search-tag">家乡美味</div>
+        </div>
+    </div>
+</div>
+
 <header class="header-box">
     <div class="header-content plate-center">
         <div class="header-left">
-            <div class="header-logo-box">
-                <img class="header-logo" src="../image/headerimg/logo.png" alt="">
-            </div>
+            <img class="header-logo" src="../image/logo.png" alt="">
             <div class="header-nav">
-                <a class="header-nav-item">首页</a>
-                <a class="header-nav-item">文创聊城</a>
-                <a class="header-nav-item">文创之声</a>
-                <a class="header-nav-item">文创党建</a>
-                <a class="header-nav-item">品牌文化</a>
-                <a class="header-nav-item">服务平台</a>
-                <a class="header-nav-item header-nav-active">会员单位</a>
-                <a class="header-nav-item">分支机构</a>
-                <a class="header-nav-item">文创影像</a>
+                <a>首页</a>
+                <a>文创聊城</a>
+                <a>文创之声</a>
+                <a>文创党建</a>
+                <a>品牌文化</a>
+                <a>服务平台</a>
+                <a class="active">会员单位</a>
+                <a>分支机构</a>
+                <a>文创影像</a>
             </div>
         </div>
         <div class="header-right">
-            <div class="header-right-item">
-                <div class="header-icon">
-                    <img src="../image/headerimg/search.png" alt="">
-                </div>
-                <a href="">搜索</a>
+            <div id="searchBtn" class="header-right-item">
+                <img src="../image/search.png" alt="">
+                <a class="search">搜索</a>
             </div>
             <div class="header-right-item">
-                <div class="header-icon">
-                    <img src="../image/headerimg/user.png" alt="">
-                </div>
-
+                <img src="../image/user.png" alt="">
                 <a href="">会员申请</a>
             </div>
         </div>
+
     </div>
     <div class="top-line"></div>
+
 </header>
 <div class="top-banner-box">
     <div class="top-banner-title">会员单位</div>
@@ -55,20 +68,11 @@
 <div class="top-nav-box">
     <div class="plate-center">
         <div class="top-nav">
-            <div class="top-nav-item top-nav-active">
-                <span class="top-nav-title">理事长单位</span>
-            </div>
-            <div class="top-nav-item">
-                <span class="top-nav-title">副理事长单位</span>
-            </div>
-            <div class="top-nav-item">
-                <span class="top-nav-title">理事单位</span>
-            </div>
-            <div class="top-nav-item">
-                <span class="top-nav-title top-nav-item-active">会员单位</span></div>
-            <div class="top-nav-item">
-                <span class="top-nav-title">监事单位</span>
-            </div>
+            <a class="top-nav-item-active">理事长单位</a>
+            <a class="top-nav-item">副理事长单位</a>
+            <a class="top-nav-item">理事单位</a>
+            <a class="top-nav-item">会员单位</a>
+            <a class="top-nav-item">监事单位</a>
         </div>
     </div>
 </div>
@@ -529,6 +533,7 @@
 </div>
 <!-- pager -->
 <div class="pagination-box" style="margin-top: 20px"></div>
+
 <!-- footer -->
 <div class="foot-bg"></div>
 <div class="foot-container">
@@ -546,17 +551,176 @@
                 <div class="foot-title">友情链接</div>
                 <div class="foot-link-item-box">
 
-                    <div class="foot-link-item">
+                    <div id="menu1" class="foot-link-item">
                         <div class="link-txt">文化和旅游政府部分官网</div>
                         <img src="../image/footimg/down-arrow.png" alt="">
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="foot-link-item">
+                    <div id="menu2" class="foot-link-item">
                         <div class="link-txt">文化和旅游政府部分官网</div>
                         <img src="../image/footimg/down-arrow.png" alt="">
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="foot-link-item">
+                    <div id="menu3" class="foot-link-item">
                         <div class="link-txt">文化和旅游政府部分官网</div>
                         <img src="../image/footimg/down-arrow.png" alt="">
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -644,6 +808,8 @@
 
 <script src="../js/jq.js"></script>
 <script src="../js/pagination.js"></script>
+<script src="../js/common.js"></script>
+
 <script>
     $('.pagination-box').pagination({
         totalData: 100, //总数量
