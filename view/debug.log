@@ -11,3 +11,4 @@
 [0102/081337.780:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\lgs\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\971c003b-5184-4611-90ac-d6c60859cdc0: 系统找不到指定的路径。 (0x3)
 [0102/081337.784:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
 [0105/111735.133:ERROR:process_info.cc(359)] UncheckedAllocate
+[0106/131228.527:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
