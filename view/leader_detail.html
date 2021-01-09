@@ -14,35 +14,6 @@
             padding-top: 85px;
         }
 
-        .top-nav {
-            height: 100px;
-            background: #EBEBEB;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .top-nav-item {
-            width: 176px;
-            height: 50px;
-            background: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 50px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .top-nav-item:last-child {
-            margin-right: none;
-        }
-
-        .top-nav-active {
-            color: #Fff;
-            background: #0066B0;
-        }
-
         .top-box {
             display: flex;
             justify-content: center;
@@ -202,36 +173,52 @@
 </head>
 
 <body>
+<div class="search-box" style="display: none">
+    <div class="search-plate">
+        <img class="clear" src="../image/close.png">
+        <input id="searchInput" placeholder="请输入关键词">
+        <div class="desc">按Enter键进行搜索后Esc键关闭</div>
+        <div class="recommend-title">#推荐搜索#
+        </div>
+        <div class="search-tag-box">
+            <div class="search-tag">协会大事记</div>
+            <div class="search-tag">未来感</div>
+            <div class="search-tag">理事单位</div>
+            <div class="search-tag">童年茴香</div>
+            <div class="search-tag">家乡美味</div>
+        </div>
+    </div>
+</div>
+
 <header class="header-box">
     <div class="header-content plate-center">
         <div class="header-left">
-            <img class="header-logo" src="" alt="">
+            <img class="header-logo" src="../image/logo.png" alt="">
             <div class="header-nav">
-                <a>首页</a>
-                <a  class="active">文创聊城</a>
-                <a>文创之声</a>
-                <a>文创党建</a>
-                <a>品牌文化</a>
-                <a>服务平台</a>
-                <a>会员单位</a>
-                <a>分支机构</a>
-                <a>文创影像</a>
+                <a href="index.html" class="active">首页</a>
+                <a href="xhgk.html">文创聊城</a>
+                <a href="wczs.html">文创之声</a>
+                <a href="wcdj.html">文创党建</a>
+                <a href="ppwh.html">品牌文化</a>
+                <a href="fupt.html">服务平台</a>
+                <a href="hydw.html">会员单位</a>
+                <a href="fzjg.html">分支机构</a>
+                <a href="wcyx.html">文创影像</a>
             </div>
         </div>
         <div class="header-right">
-            <div class="header-right-item">
-                <img src="" alt="">
-                <a href="">搜索</a>
+            <div id="searchBtn" class="header-right-item">
+                <img src="../image/search.png" alt="">
+                <a class="search">搜索</a>
             </div>
             <div class="header-right-item">
-                <img src="" alt="">
+                <img src="../image/user.png" alt="">
                 <a href="">会员申请</a>
             </div>
         </div>
 
     </div>
     <div class="top-line"></div>
-    <script src="../js/swiper.min.js"></script>
 
 </header>
 
@@ -241,11 +228,17 @@
     <div class="top-banner-desc">INFORMATION</div>
 </div>
 
-<div class="top-nav">
-    <div class="top-nav-item top-nav-active">文创聊城</div>
-    <div class="top-nav-item">文创聊城</div>
-    <div class="top-nav-item">文创聊城</div>
-    <div class="top-nav-item">文创聊城</div>
+<div class="top-nav-box">
+    <div class="plate-center">
+        <div class="top-nav">
+            <a href="xhgk.html" class="top-nav-item">协会概况</a>
+            <a href="xhjg.html" class="top-nav-item">协会架构</a>
+            <a href="leader.html" class="top-nav-item-active">协会领导</a>
+            <a href="wczk.html" class="top-nav-item">文创智库</a>
+            <a href="fzlc.html" class="top-nav-item">发展历程</a>
+            <a href="xxgk.html" class="top-nav-item">信息公开</a>
+        </div>
+    </div>
 </div>
 <div class="top-box">
     <div class="top-box-up-bg"></div>
@@ -401,22 +394,280 @@
     </div>
 </div>
 </div>
+<!-- footer -->
+<div class="foot-bg"></div>
+<div class="foot-container">
+    <div class="plate-center foot-content">
+        <div class="foot-left">
+            <img class="foot-logo" src="../image/footimg/ft-logo.png" alt="">
+            <div foot-left-info>
+                <p>聊城市文化创意产业协会</p>
+                <p>聊城市文化创意产业公共服务平台</p>
+                <p>C20城市文创产业合作发展联盟合作单位</p>
+            </div>
+        </div>
+        <div class="foot-center">
+            <div class="foot-link">
+                <div class="foot-title">友情链接</div>
+                <div class="foot-link-item-box">
+
+                    <div id="menu1" class="foot-link-item">
+                        <div class="link-txt">文化和旅游政府部分官网</div>
+                        <img src="../image/footimg/down-arrow.png" alt="">
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="menu2" class="foot-link-item">
+                        <div class="link-txt">文化和旅游政府部分官网</div>
+                        <img src="../image/footimg/down-arrow.png" alt="">
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="menu3" class="foot-link-item">
+                        <div class="link-txt">文化和旅游政府部分官网</div>
+                        <img src="../image/footimg/down-arrow.png" alt="">
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                            <li>
+                                <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-center-info">
+                <div class="foot-center-info-item">
+                    <p class="foot-title">指导单位</p>
+                    <ul>
+                        <li>
+                            <span>中共聊城市委宣传部</span>
+                        </li>
+                        <li>
+                            <span> 聊城市文化和旅游局</span>
+                        </li>
+                        <li><span>聊城市民政局(社会组织管理中心)</span></li>
+                    </ul>
+                </div>
+                <div class="foot-center-info-item">
+                    <p class="foot-title">主办单位</p>
+                    <ul>
+                        <li>
+                            <span>聊城市文化创意产业协会</span>
+                        </li>
+                    </ul>
+                    <p class="foot-title">承办单位</p>
+                    <ul>
+                        <li>
+                            <span>秘书处.云上融媒中心</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="foot-center-info-item">
+                    <p class="foot-title">主办单位</p>
+                    <ul>
+                        <li>
+                            <span>山东康华传媒有限公司</span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="foot-right">
+            <div class="foot-address">中国
+                <div style="font-size: 36px;text-align: center;line-height: 28px;color:#fff;margin: -1px 3px;">·</div>
+                聊城经济技术开发区当代国际大厦16楼
+            </div>
+            <ul>
+                <li>
+                    <span>电话：</span>
+                    <span>0635-8256026 8256022</span>
+                </li>
+                <li>
+                    <span>邮箱：</span>
+                    <span> sdlccia@163.com</span>
+                </li>
+                <li><span>http://www.sdlccia.com</span></li>
+            </ul>
+            <div class="foot-qrcode">
+                <div class="qrcode-box">
+                    <img src="../image/footimg/ft-qrcode.png" alt="">
+                    <span>官方公众号</span>
+                </div>
+                <div class="qrcode-box">
+                    <img src="../image/footimg/ft-qrcode.png" alt="">
+                    <span>官方微博</span>
+                </div>
+                <div class="qrcode-box">
+                    <img src="../image/footimg/ft-qrcode.png" alt="">
+                    <span>官方视频号</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="website-records">
+    <p>
+        <span>Copyright © 2020－2030</span> 聊城市文化创意产业协会所有
+        <span>· All Rights Reserved </span> 鲁ICP备
+        <span>2020045966号-1</span>
+        <img src="../image/footimg/record.png" alt=""> 鲁公网安备
+        <sapn>11010502000728</sapn>
+    </p>
+</div>
 <script src="../js/jq.js"></script>
+<script src="../js/common.js"></script>
 <script>
-    const swiperHeader = new Swiper('.swaper-box.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        autoplay: {
-            delay: 6000,
-            stopOnLastSlide: false,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        }
-    });
+
 </script>
 
 </body>

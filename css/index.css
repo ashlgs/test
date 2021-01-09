@@ -268,14 +268,14 @@ body {
     top: 56px;
 }
 
-.news-list-item .content-box {
+.news-list-item .content-wraper {
     width: 446px;
     padding: 20px 20px 0;
     box-sizing: border-box;
     flex: 1;
 }
 
-.news-list-item .content-box .title {
+.news-list-item .content-wraper .title {
     font-size: 18px;
     line-height: 30px;
     color: #262626;
@@ -285,7 +285,7 @@ body {
 
 }
 
-.news-list-item .content-box .content {
+.news-list-item .content-wraper .content {
     font-size: 14px;
     color: #666666;
     line-height: 22px;
@@ -853,7 +853,7 @@ body {
 .people-item {
     width: 264px;
     height: 390px;
-    margin:0 10px;
+    margin: 0 10px;
     /*margin-right: 20px;*/
     position: relative;
 }
@@ -1022,6 +1022,8 @@ body {
     color: #555c68;
     font-size: 16px;
     padding-bottom: 10px;
+    font-family: "PingFang SC Heavy";
+
 }
 
 .article-title-right:hover {
@@ -1149,4 +1151,16 @@ body {
 
 .wcyx-image-box-in img:hover {
     transform: scale(1.12);
+}
+
+/* 手机端 */
+
+@media screen and (min-width: 415px) and (max-width: 767px) {
+
+  /*  body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: red;
+    }*/
 }

@@ -1,0 +1,49 @@
+/* 分支机构页面样式 */
+
+
+/* 顶部导航分类 */
+
+.branch-agency-topnav .top-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+/* 左侧样式 */
+
+.news-content-box .desc {
+    flex: 1;
+    margin-top: 15px
+}
+
+.news-content-box .desc p {
+    color: #787878;
+    font-size: 14px;
+    line-height: 22px;
+    max-height: 44px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.news-content-box .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-content-box .bottom .tag-box {
+    display: flex;
+}
+
+.news-content-box .bottom .tag-box .tag {
+    padding: 4px 10px;
+    margin-right: 10px;
+    background: #0066b0;
+    color: #fff;
+    font-size: 12px;
+}

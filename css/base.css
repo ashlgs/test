@@ -1,7 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,微软雅黑,STHeitiSC-Light,simsun,宋体,WenQuanYi Zen Hei,WenQuanYi Micro Hei,sans-serif"
+    font-family: PingFang SC, Lantinghei SC, Helvetica Neue, Helvetica, Arial, Microsoft YaHei, 微软雅黑, STHeitiSC-Light, simsun, 宋体, WenQuanYi Zen Hei, WenQuanYi Micro Hei, "sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -166,6 +168,7 @@ ul li {
     font-size: 16px;
     margin: 0 20px;
     cursor: pointer;
+    font-family: PingFang SC Medium, PingFang SC Regular;
 }
 
 .header-nav .active {
@@ -536,6 +539,7 @@ input[type="text"] {
     display: flex;
     overflow: hidden;
     height: 28px;
+    flex-shrink: 0;
 }
 
 .foot-container .foot-title {
@@ -594,4 +598,296 @@ input[type="text"] {
 
 .website-records p img {
     vertical-align: middle;
+}
+
+/
+/*********************************************************************************************************************
+
+/* 各模块通用样式 */
+
+.imgbox img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all ease 0.3s;
+}
+
+.imgbox img:hover {
+    transform: scale(1.12);
+
+}
+
+.time {
+    color: #999;
+    font-size: 12px;
+}
+
+/* 页面内容左侧通用样式 */
+
+.content-box {
+    display: flex;
+    padding-top: 70px;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.content-left-box {
+    flex: 1;
+    max-width: 960px;
+    margin-right: 60px;
+    min-height: 2715px;
+}
+
+.news-item {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.news-item .imgbox {
+    width: 210px;
+    height: 140px;
+    overflow: hidden;
+}
+
+.news-item .imgbox img {
+    transition: all ease 0.3s;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.news-item .imgbox:hover {
+    transform: scale(1.12);
+}
+
+.news-content-box {
+    margin-left: 20px;
+    padding: 0 0 5px 0;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.news-content-box .news-title a {
+    display: inline-block;
+    max-width: 730px;
+    font-size: 20px;
+    color: #262626;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-content-box .news-title a:hover {
+    color: #0066b0;
+}
+
+/* 右侧内容通用样式 */
+
+.content-right-box {
+    width: 380px;
+}
+
+.content-right-box .right-item {
+    max-width: 380px;
+    margin-bottom: 40px;
+}
+
+/* 右侧顶部广告 */
+
+.adver-area .imgbox {
+    width: 380px;
+    height: 220px;
+    overflow: hidden;
+}
+
+/* 相关资讯 */
+
+.right-item .title {
+    border-bottom: 1px solid #dee0ea;
+    height: 50px;
+}
+
+.right-item .title .title-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url('../image/ico.png') no-repeat left/100% 100%;
+    vertical-align: -4px;
+    margin-right: 4px;
+}
+
+.right-item .title h2 {
+    display: inline-block;
+    color: #0066b0;
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 17px;
+    border-bottom: 4px solid #0066b0;
+}
+
+.relevant-news-area .imgbox {
+    width: 380px;
+    height: 200px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.news-list .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.news-list .list-item a {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-list .list-item .time {
+    width: 76px;
+    margin-left: 30px;
+}
+
+.news-list .list-item a:before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: url('../image/list-icon.png') no-repeat 2px center;
+}
+
+.news-list .list-item a:hover {
+    color: #0066b0;
+}
+
+.news-list .list-item a:hover:before {
+    background: url('../image/list-icon-rain.png') no-repeat left/100% 100%;
+}
+
+/* 推荐资讯 */
+
+.recommend-news-area .news-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.recommend-news-area .news-item {
+    position: relative;
+    margin-top: 20px;
+    width: 186px;
+    padding: 0;
+}
+
+.recommend-news-area .imgbox {
+    width: 186px;
+    height: 124px;
+    overflow: hidden;
+}
+
+.recommend-news-area .news-item .caption {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, .3);
+}
+
+.recommend-news-area .news-item .caption a {
+    display: inline-block;
+    width: 186px;
+    color: #fff;
+    line-height: 30px;
+    font-size: 13px;
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 热点资讯 */
+
+.hot-news-list {
+    margin-top: 5px;
+}
+
+.hot-news-list .news-item {
+    padding: 15px 0;
+}
+
+.hot-news-list .imgbox {
+    width: 120px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.hot-news-list .news-content-box {
+    margin-left: 15px;
+    justify-content: space-between;
+}
+
+.hot-news-list .news-content-box .news-title a {
+    font-size: 15px;
+    line-height: 24px;
+    max-height: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.hot-news-list .news-content-box .bottom {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* 广告区域 */
+
+.adver-area2 .imgbox {
+    margin-bottom: 20px;
+}
+
+/*手机*/
+@media screen and (min-width: 415px) and (max-width: 767px) {
+  /*  .header-box {
+        background: yellow;
+    }
+    body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }*/
+}
+@media screen and (min-width: 320px) and (max-width: 414px) {
+  /*  body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .header-box {
+        background: green;
+    }*/
 }

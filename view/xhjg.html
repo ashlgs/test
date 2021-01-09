@@ -1,22 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>文创之声</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文创聊城</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/wczs.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="../js/swiper.min.js"></script>
     <style>
         body {
-            min-width: 1400px;
+            min-width: 1900px;
             padding-top: 85px;
+
+        }
+
+        .content-box {
+            position: relative;
+        }
+
+        .content {
+            width: 1400px;
+            margin: 0 auto;
+            padding-top: 140px;
+
+        }
+
+        .content img {
+            width: 1100px;
+            display: block;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+
+        .bg {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
         }
 
     </style>
 </head>
-<body id="body">
+
+<body>
 <div class="search-box" style="display: none">
     <div class="search-plate">
         <img class="clear" src="../image/close.png">
@@ -40,11 +70,11 @@
             <img class="header-logo" src="../image/logo.png" alt="">
             <div class="header-nav">
                 <a href="index.html" class="active">首页</a>
-                <a href="xhgk.html">文创聊城</a>
+                <a href="wclc.html">文创聊城</a>
                 <a href="wczs.html">文创之声</a>
                 <a href="wcdj.html">文创党建</a>
                 <a href="ppwh.html">品牌文化</a>
-                <a href="gxptfw.html">服务平台</a>
+                <a href="fupt.html">服务平台</a>
                 <a href="hydw.html">会员单位</a>
                 <a href="fzjg.html">分支机构</a>
                 <a href="wcyx.html">文创影像</a>
@@ -66,9 +96,8 @@
 
 </header>
 
-
 <div class="top-banner-box">
-    <div class="top-banner-title">文创之声</div>
+    <div class="top-banner-title">文创聊城</div>
     <div class="top-banner-line"></div>
     <div class="top-banner-desc">INFORMATION</div>
 </div>
@@ -76,260 +105,23 @@
 <div class="top-nav-box">
     <div class="plate-center">
         <div class="top-nav">
-            <a class="top-nav-item-active">协会新闻</a>
-            <a class="top-nav-item">产业资讯</a>
-            <a class="top-nav-item">会员资讯</a>
-            <a class="top-nav-item">通知公报</a>
+            <a href="xhgk.html" class="top-nav-item">协会概况</a>
+            <a href="xhjg.html" class="top-nav-item-active">协会架构</a>
+            <a href="leader.html" class="top-nav-item">协会领导</a>
+            <a href="wczk.html" class="top-nav-item">文创智库</a>
+            <a href="fzlc.html" class="top-nav-item">发展历程</a>
+            <a href="xxgk.html" class="top-nav-item">信息公开</a>
         </div>
     </div>
 </div>
 
 <div class="content-box">
-    <!--左侧内容-->
-    <div class="left-box">
-        <!--列表-->
-        <div class="left-news-box">
-            <div class="left-news-img">
-                <img src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-            </div>
-            <div class="left-news-content-box">
-                <div class="title">
-                    全网都在玩赛博朋克2077,可你们知道什么是赛博朋克吗?
-                </div>
-                <div class="content-wraper">
-                    <div class="content">
-                        在赛博朋克2077发售当日，光steam一个平台的同时在线玩家就已经超过了100万人，sdfasdfasfsadffsddf dsfasdf sdfasdf asdfas f
-                        sd这样的同时在线人数量对于一款单机游戏来说可以算是非常恐怖了，仅次于《绝地求生》的3257248人、《CS:GO》的1308963人和《Dota2》的1295114人。要知道这三款游戏都是steam平台上最火爆的多人联机游戏。
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="tag-box">
-                        <div class="tag">原创</div>
-                        <div class="tag">共享自习室</div>
-                        <div class="tag">飞桨开发者</div>
-                    </div>
-                    <div class="time">今天 14:20</div>
-                </div>
-            </div>
-        </div>
-        <div class="left-news-box">
-            <div class="left-news-img">
-                <img src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-            </div>
-            <div class="left-news-content-box">
-                <div class="title">
-                    全网都在玩赛博朋克2077,可你们知道什么是赛博朋克吗?
-                </div>
-                <div class="content-wraper">
-                    <div class="content">
-                        在赛博朋克2077发售当日，光steam一个平台的同时在线玩家就已经超过了100万人，sdfasdfasfsadffsddf dsfasdf sdfasdf asdfas f
-                        sd这样的同时在线人数量对于一款单机游戏来说可以算是非常恐怖了，仅次于《绝地求生》的3257248人、《CS:GO》的1308963人和《Dota2》的1295114人。要知道这三款游戏都是steam平台上最火爆的多人联机游戏。
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="tag-box">
-                        <div class="tag">原创</div>
-                        <div class="tag">共享自习室</div>
-                        <div class="tag">飞桨开发者</div>
-                    </div>
-                    <div class="time">今天 14:20</div>
-                </div>
-            </div>
-        </div>
-        <div class="left-news-box">
-            <div class="left-news-img">
-                <img src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-            </div>
-            <div class="left-news-content-box">
-                <div class="title">
-                    全网都在玩赛博朋克2077,可你们知道什么是赛博朋克吗?
-                </div>
-                <div class="content-wraper">
-                    <div class="content">
-                        在赛博朋克2077发售当日，光steam一个平台的同时在线玩家就已经超过了100万人，sdfasdfasfsadffsddf dsfasdf sdfasdf asdfas f
-                        sd这样的同时在线人数量对于一款单机游戏来说可以算是非常恐怖了，仅次于《绝地求生》的3257248人、《CS:GO》的1308963人和《Dota2》的1295114人。要知道这三款游戏都是steam平台上最火爆的多人联机游戏。
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="tag-box">
-                        <div class="tag">原创</div>
-                        <div class="tag">共享自习室</div>
-                        <div class="tag">飞桨开发者</div>
-                    </div>
-                    <div class="time">今天 14:20</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="pagination-box" style="margin-top: 20px"></div>
+    <img class="bg" src="../image/2-2-IndustryAssociation.png"/>
+    <div class="content">
+        <img src="../image/2-2-分支机构.png">
 
     </div>
-
-    <!--右侧内容-->
-
-    <!--资讯样式1-->
-    <div class="right-box">
-        <div class="right-top-img">
-            <img src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-        </div>
-        <div class="right-title-box">
-            <div class="title-line">
-                <img class="img" src="../image/ico.png">
-                <div>相关资讯</div>
-            </div>
-        </div>
-        <div class="right-big-img-box">
-            <img class="img" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-            <!--<div class="remark">元气森林要进军亿万咖啡市场?</div>-->
-        </div>
-
-
-        <div class="article-item">
-            <div class="article-item-left">
-                <div class="article-item-decorate"></div>
-                <div class="article-item-title">ss蓝色行动"做一天百分之一"参加国际影视sdfasdafa sdf dffasd</div>
-            </div>
-            <div class="article-item-right">2020-12-28</div>
-        </div>
-
-        <div class="article-item">
-            <div class="article-item-left">
-                <div class="article-item-decorate"></div>
-                <div class="article-item-title">ss蓝色行动"做一天百分之一"参加国际影视sdfasdafa sdf dffasd</div>
-            </div>
-            <div class="article-item-right">2020-12-28</div>
-        </div>
-
-        <div class="article-item">
-            <div class="article-item-left">
-                <div class="article-item-decorate"></div>
-                <div class="article-item-title">ss蓝色行动"做一天百分之一"参加国际影视sdfasdafa sdf dffasd</div>
-            </div>
-            <div class="article-item-right">2020-12-28</div>
-        </div>
-
-        <div class="article-item">
-            <div class="article-item-left">
-                <div class="article-item-decorate"></div>
-                <div class="article-item-title">ss蓝色行动"做一天百分之一"参加国际影视sdfasdafa sdf dffasd</div>
-            </div>
-            <div class="article-item-right">2020-12-28</div>
-        </div>
-
-        <div class="article-item">
-            <div class="article-item-left">
-                <div class="article-item-decorate"></div>
-                <div class="article-item-title">ss蓝色行动"做一天百分之一"参加国际影视sdfasdafa sdf dffasd</div>
-            </div>
-            <div class="article-item-right">2020-12-28</div>
-        </div>
-
-
-        <div class="right-title-box">
-            <div class="title-line">
-                <img class="img" src="../image/ico.png">
-                <div>推荐资讯</div>
-            </div>
-        </div>
-
-        <!--资讯样式2-->
-        <div class="information-box">
-            <div class="container">
-                <div class="img-box">
-                    <img class="img" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-                    <div class="remark">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>
-                    视作品《无依之地等入选》手动挡发顺丰是
-                </div>
-            </div>
-            <div class="container">
-                <div class="img-box">
-                    <img class="img" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-                    <div class="remark">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>
-                </div>
-                <!--<div class="title">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>-->
-            </div>
-            <div class="container">
-                <div class="img-box">
-                    <img class="img" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-                    <div class="remark">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>
-                </div>
-                <!--<div class="title">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>-->
-            </div>
-            <div class="container">
-                <div class="img-box">
-                    <img class="img" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-                    <div class="remark">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>
-                </div>
-                <!--<div class="title">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>-->
-            </div>
-            <div class="container">
-                <div class="img-box">
-                    <img class="img" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-                    <div class="remark">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>
-                </div>
-                <!--<div class="title">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>-->
-            </div>
-            <div class="container">
-                <div class="img-box">
-                    <img class="img" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-                    <div class="remark">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>
-                </div>
-                <!--<div class="title">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>-->
-            </div>
-
-        </div>
-
-
-        <div class="right-title-box">
-            <div class="title-line">
-                <img class="img" src="../image/ico.png">
-                <div>热点资讯</div>
-            </div>
-        </div>
-        <div class="information-box3">
-            <div class="container">
-                <div class="img-box">
-                    <img class="img" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-                </div>
-                <div class="right-container">
-                    <div class="title">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>
-                    <div class="time">2020-12-28</div>
-
-                </div>
-            </div>
-            <div class="container">
-                <div class="img-box">
-                    <img class="img" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-                </div>
-                <div class="right-container">
-                    <div class="title">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>
-                    <div class="time">2020-12-28</div>
-
-                </div>
-            </div>
-            <div class="container">
-                <div class="img-box">
-                    <img class="img" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-                </div>
-                <div class="right-container">
-                    <div class="title">奥巴马公布年度最爱影视作品《无依之地等入选》手动挡发顺丰是</div>
-                    <div class="time">2020-12-28</div>
-
-                </div>
-            </div>
-
-        </div>
-        <div class="right-top-img">
-            <img src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-        </div>
-        <div class="right-top-img">
-            <img src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
-        </div>
-
-    </div>
-
 </div>
-
 
 <!-- footer -->
 <div class="foot-bg"></div>
@@ -567,7 +359,7 @@
             <ul>
                 <li>
                     <span>电话：</span>
-                    <span>0635-8256026  8256022</span>
+                    <span>0635-8256026 8256022</span>
                 </li>
                 <li>
                     <span>邮箱：</span>
@@ -601,25 +393,12 @@
         <sapn>11010502000728</sapn>
     </p>
 </div>
-
 <script src="../js/jq.js"></script>
-<script src="../js/pagination.js"></script>
 <script src="../js/common.js"></script>
 <script>
-    $('.pagination-box').pagination({
-        totalData: 2000,    //总数量
-        current: 20,      //当前页数
-        showData: 10,       //一页显示几个
-        prevContent: '上一页',
-        nextContent: '下一页',
-        keepShowPN: true,
-        coping: true,
-        callback: function (api) {
-            $('.now').text(api.getCurrent());
-        }
-    }, function (api) {
-        $('.now').text(api.getCurrent());
-    });
+
 </script>
+
 </body>
+
 </html>

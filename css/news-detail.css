@@ -1,0 +1,169 @@
+/* 新闻详情页样式 */
+
+/* 文章头部 */
+
+.detail-article-container .article-content h1 {
+    font-size: 28px;
+    color: #262626;
+}
+
+.detail-article-container .article-content .article-info {
+    margin-top: 30px;
+}
+
+.article-info .tag-box {
+    float: left;
+}
+
+.tag-box .tag {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-right: 10px;
+    background: #0066b0;
+    color: #fff;
+    font-size: 12px;
+}
+
+.article-info .author-box {
+    float: left;
+    margin-left: 10px;
+}
+
+.article-info .author-box span {
+    color: #666666;
+    font-size: 14px;
+}
+
+.article-info .author-box span.cut-line {
+    display: inline-block;
+    margin: 0 5px;
+    width: 1px;
+    height: 14px;
+    vertical-align: -2px;
+    background: #666;
+}
+
+.article-info .author-box a {
+    color: #666666;
+    font-size: 14px;
+}
+
+.article-info .share-tool-box {
+    float: right;
+}
+
+.detail-article-container .article-content .share-tool-box .share-tools {
+    font-size: 0px;
+}
+
+.share-tool-box .share-tools li {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-left: 10px;
+}
+
+.share-tool-box .share-tools li.cut-line {
+    width: 1px;
+    height: 16px;
+    background: #eaeaea;
+    vertical-align: 5px;
+}
+
+.share-tool-box .share-tools li a {
+    display: block;
+    height: 100%;
+}
+
+.share-tools li a.share-link-icon {
+    background: url(../image/share-icon/share.png) no-repeat;
+}
+
+.share-tools li a.wechat-icon {
+    background: url(../image/share-icon/weixin.png) no-repeat;
+}
+
+.share-tools li a.weibo-icon {
+    background: url(../image/share-icon/weibo.png) no-repeat;
+}
+
+.share-tools li a.qq-icon {
+    background: url(../image/share-icon/qq.png) no-repeat;
+}
+
+.share-tools li a.qzone-icon {
+    background: url(../image/share-icon/qzone.png) no-repeat;
+}
+
+.share-tools li a.print-icon {
+    background: url(../image/share-icon/print.png) no-repeat;
+}
+
+/* 图标被选中时 */
+
+.share-tools li a.weibo-icon-active {
+    background: url(../image/share-icon/weibo1.png) no-repeat;
+}
+
+/* 文章文本内容 */
+
+.detail-article-container .article-content .article-body {
+    width: 100%;
+    min-height: 600px;
+    margin: 40px 0;
+    padding: 40px 0 70px 0px;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    color: #333333;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.detail-article-container .article-content .article-body p {
+    min-height: 30px;
+}
+
+.detail-article-container .article-content .article-body img {
+    margin: 30px auto;
+    display: block;
+    object-fit: cover;
+    width: 720px;
+
+}
+
+/* 文章底部 */
+
+.detail-article-container .article-content .article-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article-content .article-foot span {
+    color: #666;
+    font-size: 14px;
+}
+
+.article-content .article-foot a {
+    color: #666;
+    font-size: 15px;
+}
+
+.article-content .article-foot a:hover {
+    color: #0066b0;
+}
+
+.article-content .article-foot .arrow {
+    display: inline-block;
+    width: 26px;
+    height: 11px;
+    border: 1px solid red;
+}
+
+.article-content .article-foot .arrow.l-arrow {
+    background: url(../image/arrow-icon/l-arrow.png) no-repeat left/100% 100%;
+}
+
+.article-content .article-foot .arrow.r-arrow {
+    background: url(../image/arrow-icon/r-arrow.png) no-repeat left/100% 100%;
+}
