@@ -1,6 +1,10 @@
     /* 金融产品页面样式 */
     /* 产品分类标签样式 */
-    
+    body {
+        min-width: 1900px;
+        padding-top: 85px;
+
+    }
     .main-nav-wrapper {
         margin-bottom: 20px;
     }
