@@ -42,6 +42,13 @@ body {
 .member-container .member-item:hover .member-item-label {
     color: #fff;
 }
+.member-container .member-item:hover .member-item-imgbox img {
+    -webkit-transform: scale(1.12);
+    -moz-transform: scale(1.12);
+    -ms-transform: scale(1.12);
+    -o-transform: scale(1.12);
+    transform: scale(1.12);
+}
 .member-container .member-item:hover .right-arrow {
     display: block;
 }
@@ -61,6 +68,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all ease 0.3s;
 }
 
 .member-item-info {
