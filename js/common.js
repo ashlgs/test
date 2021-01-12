@@ -28,7 +28,10 @@ $(window).keydown(function (event) {
             $(".search-box").hide();     //如果元素为显现,则将其隐藏
             $("body").removeClass("noScroll")
             console.log("search:::", $('#searchInput').get(0).value);//获取输入框的值
+            let keyword = $('#searchInput').get(0).value;
             $('#searchInput').get(0).value = "";//清空输入框
+            window.location.href=`search_result.html?keyword=${keyword}`;
+
         }
     }
     if (event.keyCode == "27") {//监听Esc
@@ -43,7 +46,13 @@ $(".search-tag").click(function () {
     $(".search-box").hide();
     $("body").removeClass("noScroll")
     console.log("search:::", $(this).text());//获取输入框的值
+    let keyword = $(this).text()
     $('#searchInput').get(0).value = "";//清空输入框
+    // window.location.href="http://www.baidu.com";
+    // window.open("http://www.baidu.com",'top');
+    window.location.href=`search_result.html?keyword=${keyword}`;
+
+
 })
 
 $(".foot-link-item").click(function () {
