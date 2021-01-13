@@ -661,7 +661,7 @@ input[type="text"] {
     height: 100%;
 }
 
-.news-item .imgbox:hover {
+.news-item .imgbox img:hover {
     transform: scale(1.12);
 }
 
@@ -706,6 +706,14 @@ input[type="text"] {
     overflow: hidden;
 }
 
+.adver-area .imgbox img {
+    width: 380px;
+    height: 220px;
+    display: block;
+    object-fit: cover;
+    transition: all ease 0.3s;
+}
+
 /* 相关资讯 */
 
 .right-item .title {
@@ -737,6 +745,14 @@ input[type="text"] {
     overflow: hidden;
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+.relevant-news-area .imgbox img {
+    width: 380px;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+    transition: all ease 0.3s;
 }
 
 .news-list .list-item {

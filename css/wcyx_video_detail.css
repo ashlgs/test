@@ -1,0 +1,297 @@
+body {
+    min-width: 1400px;
+    padding-top: 85px;
+}
+
+.content {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/*<div class="top-container">
+<div class="top-container-left">
+</div>
+  <div class="top-container-right">
+</div>
+  </div>*/
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    height: 506px;
+    width: 100%;
+    /*border: 1px solid #dee0ea;*/
+}
+
+.top-container-left {
+    width: 900px;
+    height: 100%;
+}
+
+.big-img-item {
+    width: 100%;
+    height: 100%;
+}
+
+.big-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #E5E6EA;
+}
+
+.little-img-item {
+    width: 350px;
+    height: 234px;
+}
+
+.little-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #E5E6EA;
+}
+
+.bottom-container:hover .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    display: inline-block;
+}
+
+.bottom-container:hover .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    display: inline-block;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    display: none;
+    background-image: url(../image/left.png);
+    width: 40px;
+    height: 70px;
+    right: auto;
+    left: 0;
+    background-size: 100% 100%;
+}
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    display: none;
+
+    background-image: url(../image/right.png);
+    width: 40px;
+    height: 70px;
+    right: 0;
+    left: auto;
+    background-size: 100% 100%;
+}
+
+.top-container-right {
+    width: 600px;
+    box-sizing: border-box;
+    padding-left: 40px;
+    margin-right: 4px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.video-item {
+    width: 432px;
+    height: 243px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.video-item .holder-img {
+    width: 432px;
+    height: 243px;
+    display: block;
+    object-fit: cover;
+}
+
+.video-item .play-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-item .play-btn-img {
+    width: 86px;
+    height: 86px;
+}
+
+.video-item .time {
+    display: flex;
+    position: absolute;
+    /* top: 0; */
+    width: 42px;
+    height: 22px;
+    bottom: 10px;
+    right: 10px;
+    /* left: 0; */
+    line-height: 1;
+    border-radius: 3px;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.70);
+    background: rgba(0, 0, 0, 0.7);
+    /* background: rgba(0, 102, 176, 0.96); */
+    cursor: pointer;
+
+}
+
+/*滚动条样式*/
+.top-container-right::-webkit-scrollbar { /*滚动条整体样式*/
+    width: 6px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+    padding: 0 4px 0 18px;
+}
+
+.top-container-right::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+    border-radius: 6px;
+    /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
+    background: #afbcc7;
+}
+
+.top-container-right::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
+    border-radius: 6px;
+    /*background: ;*/
+}
+
+.top-container-right:hover::-webkit-scrollbar-thumb {
+    background: #0066b0;
+
+}
+
+/*底部轮播*/
+.bottom-container {
+    height: 234px;
+    height: 100%;
+    width: 1400px;
+    margin: 40px 0 50px 0;
+}
+
+.top-box {
+    width: 100%;
+    height: 100px;
+    background: url('../image/文创聊城.png') no-repeat 0 0;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.media-select-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 160px;
+    height: 50px;
+    margin-right: 10px;
+
+    font-size: 16px;
+}
+
+.media-select-box:last-child {
+    margin-right: 0px;
+}
+
+.select-box {
+    background: #fff;
+    position: relative;
+    width: 230px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.slelect-option-ui {
+    position: absolute;
+    top: 50px;
+    width: 160px;
+    position: absolute;
+    max-height: 200px;
+    overflow-y: auto;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    display: none;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 2px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.select-box[data-state=close] .slelect-option-ui {
+    display: none;
+}
+
+.select-box[data-state=open] .slelect-option-ui {
+    display: block;
+}
+
+.select-option-li {
+    height: 42px;
+    font-size: 14px;
+    color: #333;
+    line-height: 42px;
+    padding: 0 10px 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+.select-top {
+    /*padding: 0 12px;*/
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select-val {
+    /*flex: 6;*/
+    padding-left: 20px;
+    width: 130px;
+    border-right: 1px solid #eaeaea;
+    box-sizing: border-box;
+}
+
+.active {
+    color: #0066b0;
+}
+
+.select-icon {
+    width: 30px;
+    height: 5px;
+    display: block;
+    object-fit: contain;
+}
+
+.select-option-li:hover {
+    background: #eee;
+}

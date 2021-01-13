@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
 <div class="search-box" style="display: none">
     <div class="search-plate">
         <img class="clear" src="../image/close.png">
@@ -98,14 +99,14 @@
 </div>
 
 
-<div class="banner-advertisement">
+<div class="banner-advertisement" data-scroll-reveal="wait 0.1s, then enter bottom and move 30px over 0.8s">
     <a class="top-advertisement plate-center" href="">
         <img class="image" src="../image/广告条.png">
     </a>
 </div>
 
 
-<div class="news-box">
+<div class="news-box" data-scroll-reveal="wait 0.1s, then enter bottom and move 30px over 0.8s">
     <div class="news-box-left swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -196,7 +197,7 @@
 
     </div>
 </div>
-<div class="article-list-box">
+<div class="article-list-box" data-scroll-reveal="wait 0.1s, then enter bottom and move 30px over 0.8s">
 
     <div class="article-list">
         <div class="article-title">
@@ -354,7 +355,7 @@
 
 </div>
 
-<div class="link-box">
+<div class="link-box" data-scroll-reveal="wait 0.1s, then enter bottom and move 30px over 0.8s">
     <div class="link-list">
         <a class="link-item-wrapper" href="http://baidu.com">
             <img class="link-item"
@@ -411,7 +412,7 @@
     </div>
 </div>
 
-<div class="wcyx-box">
+<div class="wcyx-box" data-scroll-reveal="wait 0.1s, then enter bottom and move 30px over 0.8s">
     <div class="wcyx-title">文创影像</div>
     <div class="wcyx-nav">
         <div id="tab-wc-image" class="active">文创图片</div>
@@ -573,11 +574,10 @@
         </div>
 
     </div>
-
 </div>
 
 <!--品牌文化&&分支机构-->
-<div class="culture-organization-box">
+<div class="culture-organization-box" data-scroll-reveal="wait 0.1s, then enter bottom and move 30px over 0.8s">
     <div class="culture-organization-content">
         <div class="culture-box">
             <div class="article-title">
@@ -679,7 +679,7 @@
 </div>
 
 
-<div class="index-item-column">
+<div class="index-item-column" data-scroll-reveal="wait 0.1s, then enter bottom and move 30px over 0.8s">
     <div class="index-item-title">服务平台</div>
     <div class="index-item-title-tips">路过去探索见闻,陌路人变得必有份好感</div>
 
@@ -1012,7 +1012,7 @@
         <img class="image" src="../image/广告条.png">
     </a>
 </div>
-<div class="leader-box">
+<div class="leader-box" data-scroll-reveal="wait 0.1s, then enter bottom and move 30px over 0.8s">
     <div class="index-item-title">协会领导</div>
     <div class="index-item-title-tips">领导的领,领导的导</div>
     <div class="swiper-container people-box">
@@ -1124,7 +1124,7 @@
     </div>
 </div>
 
-<div class="index-item-column">
+<div class="index-item-column" data-scroll-reveal="wait 0.1s, then enter bottom and move 30px over 0.8s">
     <div class="index-item-title">会员单位</div>
     <div class="index-item-title-tips">你是会员,啦啦啦啦!</div>
 
@@ -1441,7 +1441,8 @@
         </div>
         <div class="foot-right">
             <div class="foot-address">中国
-                <div style="font-size: 36px;text-align: center;line-height: 28px;color:#fff;margin: -1px 3px;">·</div>
+                <div style="font-size: 36px;text-align: center;line-height: 28px;color:#fff;margin: -1px 3px;">·
+                </div>
                 聊城经济技术开发区当代国际大厦16楼
             </div>
             <ul>
@@ -1484,7 +1485,15 @@
 
 <script src="../js/jq.js"></script>
 <script src="../js/common.js"></script>
+<script src="../js/scrollReveal.min.js"></script>
 <script>
+
+
+    window.scrollReveal = new scrollReveal({
+        reset: true,
+        move: '30px'
+    });
+
     const swiperHeader = new Swiper('.swiper-container.top-swiper-box', {
         slidesPerView: 1,
         spaceBetween: 0,

@@ -196,6 +196,14 @@ body {
     /*overflow-x: auto;*/
     padding-bottom: 34px;
 }
+.bottom-honor-box:hover .s4-next-1 {
+    display: inline-block;
+
+}
+.bottom-honor-box:hover .s4-prev-1 {
+    display: inline-block;
+
+}
 
 .honor-item {
     width: 300px;
@@ -229,6 +237,7 @@ body {
     border: 1px solid #E5E6EA;
 }
 .s4-prev-1 {
+    display: none;
     width: 22px;
     height: 40px;
     top: 120px;
@@ -242,6 +251,7 @@ body {
     background-image: url(../image/left.png);
 }
 .s4-next-1 {
+    display: none;
     width: 22px;
     height: 40px;
     top: 120px;
