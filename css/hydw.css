@@ -25,9 +25,11 @@ body {
     margin-right: 40px;
     margin-top: 20px;
     background: #f9fbff;
-    padding: 1px;
+    padding: 2px;
     box-sizing: border-box;
     position: relative;
+    transition: all ease 0.3s;
+
 }
 
 /*item hover事件*/

@@ -126,7 +126,12 @@
                 </div>
                 <article class="article-body">
 
-                    <p>发酵阿里三等分加水电费记录卡时间点弗兰克sldfjalsjlkasjdfl加凉开水弗兰克的房间廊坊交房辣度鞥哈拉就地方历史记录了司法局了沙发卡拉时间点冯老师对方拒绝说翻就翻可靠拉萨荆防颗粒啊放假啦安吉拉对方吉拉对方<img src="http://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/product/2021/01/09/ce74e33c58444293a37a739a06d9c152.png"/></p><p>发酵阿里三等分加水电费记录卡时间点弗兰克sldfjalsjlkasjdfl加凉开水弗兰克的房间廊坊交房辣度鞥哈拉就地方历史记录了司法局了沙发卡拉时间点冯老师对方拒绝说翻就翻可靠拉萨荆防颗粒啊放假啦安吉拉对方吉拉对方</p>
+                    <p>
+                        发酵阿里三等分加水电费记录卡时间点弗兰克sldfjalsjlkasjdfl加凉开水弗兰克的房间廊坊交房辣度鞥哈拉就地方历史记录了司法局了沙发卡拉时间点冯老师对方拒绝说翻就翻可靠拉萨荆防颗粒啊放假啦安吉拉对方吉拉对方<img
+                            src="http://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/product/2021/01/09/ce74e33c58444293a37a739a06d9c152.png"/>
+                    </p>
+                    <p>
+                        发酵阿里三等分加水电费记录卡时间点弗兰克sldfjalsjlkasjdfl加凉开水弗兰克的房间廊坊交房辣度鞥哈拉就地方历史记录了司法局了沙发卡拉时间点冯老师对方拒绝说翻就翻可靠拉萨荆防颗粒啊放假啦安吉拉对方吉拉对方</p>
                 </article>
                 <div class="article-foot">
                     <div class="article-previous">
@@ -161,21 +166,35 @@
                     </h2>
                 </div>
                 <div class="imgbox">
-                    <img src="https://inews.gtimg.com/newsapp_bt/0/12761656748/1000" alt="">
+                    <a>
+                        <img id="relative-news-img" src="https://inews.gtimg.com/newsapp_bt/0/12761656748/1000" alt="">
+                    </a>
                 </div>
                 <ul class="news-list">
-                    <li class="list-item">
+                    <li class="list-item"
+                        data-news-cover="https://scpic.chinaz.net/files/pic/pic9/202101/bpic22177.jpg">
                         <a href="" target="_blank">回眸2020｜英国“脱欧”剧情了犹未了</a>
                         <span class="time">2021-1-3</span>
                     </li>
-                    <li class="list-item"><a href="" target="_blank">2021年印度面临三大挑战</a>
-                        <span class="time">2021-12-31</span></li>
-                    <li class="list-item"><a href="" target="_blank">寒冬虽冷 血热心暖！沈阳23岁女护士口罩与护目镜上挂冰柱寒冬虽冷 血热心暖!</a>
-                        <span class="time">2021-12-30</span></li>
-                    <li class="list-item"><a href="" target="_blank">视频集锦：多国领导人发表新年贺词 聚焦抗疫与未来</a>
-                        <span class="time">2021-01-12</span></li>
-                    <li class="list-item"><a href="" target="_blank">武汉天桥上刻满援鄂医疗队队名 7旬老人路过时流泪鞠躬致谢</a>
-                        <span class="time">2021-3-5</span></li>
+                    <li class="list-item"
+                        data-news-cover="https://scpic.chinaz.net/files/pic/pic9/202101/apic30154.jpg">
+                        <a href="" target="_blank">2021年印度面临三大挑战</a>
+                        <span class="time">2021-12-31</span>
+                    </li>
+                    <li class="list-item"
+                        data-news-cover="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3543629908,629303851&fm=26&gp=0.jpg">
+                        <a href="" target="_blank">寒冬虽冷 血热心暖！沈阳23岁女护士口罩与护目镜上挂冰柱寒冬虽冷 血热心暖!</a>
+                        <span class="time">2021-12-30</span>
+                    </li>
+                    <li class="list-item"
+                        data-news-cover="https://scpic.chinaz.net/files/pic/pic9/202101/bpic22232.jpg">
+                        <a href="" target="_blank">视频集锦：多国领导人发表新年贺词 聚焦抗疫与未来</a>
+                        <span class="time">2021-01-12</span>
+                    </li>
+                    <li class="list-item" data-news-cover="https://scpic.chinaz.net/files/pic/pic9/202101/hpic3460.jpg">
+                        <a href="" target="_blank">武汉天桥上刻满援鄂医疗队队名 7旬老人路过时流泪鞠躬致谢</a>
+                        <span class="time">2021-3-5</span>
+                    </li>
                 </ul>
             </div>
             <div class="right-item recommend-news-area">
@@ -586,6 +605,32 @@
 
 <script src="../js/jq.js"></script>
 <script src="../js/common.js"></script>
+<script>
+    //    右侧相关推荐新闻,鼠标覆盖更换图片
+    $('.list-item').mouseover(function () {
+        console.log("mouseOver........", $(this).attr('data-news-cover'));
+        //修改封面
+        document.getElementById('relative-news-img').src = $(this).attr('data-news-cover');
+        console.log($('#relative-news-img').parent())
+        //改变图片跳转链接
+        $('#relative-news-img').parent().attr("href", "http://baidu.com");
+    });
+
+    $('.pagination-box').pagination({
+        totalData: 100, //总数量
+        current: 10, //当前页数
+        showData: 10, //一页显示几个
+        prevContent: '上一页',
+        nextContent: '下一页',
+        keepShowPN: true,
+        coping: true,
+        callback: function (api) {
+            $('.now').text(api.getCurrent());
+        }
+    }, function (api) {
+        $('.now').text(api.getCurrent());
+    });
+</script>
 </body>
 
 </html>

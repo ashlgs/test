@@ -1057,6 +1057,10 @@ body {
     color: #0066b0;
 }
 
+.article-item:hover .article-item-title-only {
+    color: #0066b0;
+}
+
 .article-item:hover .article-item-decorate {
     color: #0066b0;
     width: 10px;

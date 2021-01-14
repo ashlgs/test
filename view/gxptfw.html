@@ -305,12 +305,16 @@
             </div>
         </div>
         <div class="right-big-img-box">
-            <img class="img" src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
+            <a>
+                <img class="img" id="relative-news-img"
+                     src="https://wx2.sinaimg.cn/large/005Jaqyyly4globcvibeoj30m30cbgmk.jpg">
+            </a>
             <!--<div class="remark">元气森林要进军亿万咖啡市场?</div>-->
         </div>
 
 
-        <div class="article-item">
+        <div class="article-item"
+             data-news-cover="https://scpic.chinaz.net/files/pic/pic9/202101/bpic22177.jpg">
             <div class="article-item-left">
                 <div class="article-item-decorate"></div>
                 <div class="article-item-title">ss蓝色行动"做一天百分之一"参加国际影视sdfasdafa sdf dffasd</div>
@@ -318,7 +322,8 @@
             <div class="article-item-right">2020-12-28</div>
         </div>
 
-        <div class="article-item">
+        <div class="article-item"
+             data-news-cover="https://scpic.chinaz.net/files/pic/pic9/202101/apic30154.jpg">
             <div class="article-item-left">
                 <div class="article-item-decorate"></div>
                 <div class="article-item-title">ss蓝色行动"做一天百分之一"参加国际影视sdfasdafa sdf dffasd</div>
@@ -326,7 +331,8 @@
             <div class="article-item-right">2020-12-28</div>
         </div>
 
-        <div class="article-item">
+        <div class="article-item"
+             data-news-cover="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3543629908,629303851&fm=26&gp=0.jpg">
             <div class="article-item-left">
                 <div class="article-item-decorate"></div>
                 <div class="article-item-title">ss蓝色行动"做一天百分之一"参加国际影视sdfasdafa sdf dffasd</div>
@@ -334,7 +340,8 @@
             <div class="article-item-right">2020-12-28</div>
         </div>
 
-        <div class="article-item">
+        <div class="article-item"
+             data-news-cover="https://scpic.chinaz.net/files/pic/pic9/202101/bpic22232.jpg">
             <div class="article-item-left">
                 <div class="article-item-decorate"></div>
                 <div class="article-item-title">ss蓝色行动"做一天百分之一"参加国际影视sdfasdafa sdf dffasd</div>
@@ -342,7 +349,8 @@
             <div class="article-item-right">2020-12-28</div>
         </div>
 
-        <div class="article-item">
+        <div class="article-item"
+             data-news-cover="https://scpic.chinaz.net/files/pic/pic9/202101/hpic3460.jpg">
             <div class="article-item-left">
                 <div class="article-item-decorate"></div>
                 <div class="article-item-title">ss蓝色行动"做一天百分之一"参加国际影视sdfasdafa sdf dffasd</div>
@@ -732,6 +740,16 @@
 <script src="../js/pagination.js"></script>
 <script src="../js/common.js"></script>
 <script>
+    //    右侧相关推荐新闻,鼠标覆盖更换图片
+    $('.article-item').mouseover(function () {
+        console.log("mouseOver........", $(this).attr('data-news-cover'));
+        //修改封面
+        document.getElementById('relative-news-img').src = $(this).attr('data-news-cover');
+        console.log($('#relative-news-img').parent())
+        //改变图片跳转链接
+        $('#relative-news-img').parent().attr("href", "http://baidu.com");
+    });
+
     $('.pagination-box').pagination({
         totalData: 2000,    //总数量
         current: 20,      //当前页数

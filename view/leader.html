@@ -31,6 +31,7 @@
             box-sizing: border-box;
             display: flex;
             margin-bottom: 50px;
+            border: 1px solid #E5E6EA;
         }
 
         .leader-item-img {
@@ -41,7 +42,6 @@
         }
 
         .leader-right {
-            border: 1px solid #E5E6EA;
             border-left: none;
             flex: 1;
             padding: 0 20px;
@@ -54,7 +54,7 @@
         }
 
         .leader-item-info-top {
-            padding: 30px 0 24px;
+            padding: 30px 0 20px;
             display: flex;
             align-items: flex-end;
             line-height: 1;
@@ -76,12 +76,22 @@
             font-size: 14px;
             line-height: 24px;
             color: #666666;
+            max-height: 96px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            white-space: normal;
+        }
+
+        .go-more-box {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 4px;
         }
 
         .leader-go-more {
-            position: absolute;
-            bottom: 28px;
-            right: 20px;
             font-size: 14px;
             color: #1A5284;
         }
@@ -191,7 +201,7 @@
         <div class="leader-item">
             <a href="">
                 <img class="leader-item-img"
-                     src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
+                     src="../image/领导.png"
                      alt="">
             </a>
             <div class="leader-right">
@@ -201,9 +211,11 @@
                         <div class="leader-position">客服经理</div>
                     </div>
                     <div class="leader-item-info-bottom">
-                        杨锦堂，途牛旅游网呼叫中心副总经理，超过15年客服类管理经验，对呼叫中心人力资源管理、解决方案策划实施、服务质量监控、资源规划、多媒体服务渠道建设、智能服务、以及客服体验提升等方面有丰富经验。智能化呼叫中心的整体运作及客户需求管理有较深入的研究。
+                        资源规划、多媒体服务渠道建设、智能服务、以及客服体验提升等方面有丰富经验。智能化呼叫中心的整体运作及客户需求管理有较深入的研究。
                     </div>
-                    <a class="leader-go-more" href="">[ 查看详情 ]</a>
+                    <div class="go-more-box">
+                        <a class="leader-go-more" href="">[ 查看详情 ]</a>
+                    </div>
                 </div>
                 <div class="leader-right-bottom">
                     <img class="leader-company-img"
@@ -221,7 +233,38 @@
         <div class="leader-item">
             <a href="">
                 <img class="leader-item-img"
-                     src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
+                     src="../image/领导.png"
+                     alt="">
+            </a>
+            <div class="leader-right">
+                <div class="leader-right-top">
+                    <div class="leader-item-info-top">
+                        <div class="leader-name">林大竣</div>
+                        <div class="leader-position">客服经理</div>
+                    </div>
+                    <div class="leader-item-info-bottom">
+                        杨锦堂，途牛旅游网呼叫中心副总经理，超过15案策划实施、服务质量监控、资源规划、多媒体服务渠道建设、智能服务、以及客服体验提升等方面有丰富经验。智能化呼叫中心的整体运作及客户需求管理有较深入的研究。
+                    </div>
+                    <div class="go-more-box">
+                        <a class="leader-go-more" href="">[ 查看详情 ]</a>
+                    </div>                </div>
+                <div class="leader-right-bottom">
+                    <img class="leader-company-img"
+                         src="https://dss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=199962505,2209257128&fm=179&app=42&f=JPEG?w=200&h=200&s=30B464324A0052CC518229FD0300C029"
+                         alt="">
+                    <div class="leader-company-box">
+                        <div class="leader-company-title">工程师</div>
+                        <div class="leader-company-name">北京总科学院</div>
+                        <div></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="leader-item">
+            <a href="">
+                <img class="leader-item-img"
+                     src="../image/领导.png"
                      alt="">
             </a>
             <div class="leader-right">
@@ -233,7 +276,9 @@
                     <div class="leader-item-info-bottom">
                         杨锦堂，途牛旅游网呼叫中心副总经理，超过15年客服类管理经验，对呼叫中心人力资源管理、解决方案策划实施、服务质量监控、资源规划、多媒体服务渠道建设、智能服务、以及客服体验提升等方面有丰富经验。智能化呼叫中心的整体运作及客户需求管理有较深入的研究。
                     </div>
-                    <a class="leader-go-more" href="">[ 查看详情 ]</a>
+                    <div class="go-more-box">
+                        <a class="leader-go-more" href="">[ 查看详情 ]</a>
+                    </div>
                 </div>
                 <div class="leader-right-bottom">
                     <img class="leader-company-img"
@@ -251,7 +296,7 @@
         <div class="leader-item">
             <a href="">
                 <img class="leader-item-img"
-                     src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
+                     src="../image/领导.png"
                      alt="">
             </a>
             <div class="leader-right">
@@ -263,8 +308,9 @@
                     <div class="leader-item-info-bottom">
                         杨锦堂，途牛旅游网呼叫中心副总经理，超过15年客服类管理经验，对呼叫中心人力资源管理、解决方案策划实施、服务质量监控、资源规划、多媒体服务渠道建设、智能服务、以及客服体验提升等方面有丰富经验。智能化呼叫中心的整体运作及客户需求管理有较深入的研究。
                     </div>
-                    <a class="leader-go-more" href="">[ 查看详情 ]</a>
-                </div>
+                    <div class="go-more-box">
+                        <a class="leader-go-more" href="">[ 查看详情 ]</a>
+                    </div>                </div>
                 <div class="leader-right-bottom">
                     <img class="leader-company-img"
                          src="https://dss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=199962505,2209257128&fm=179&app=42&f=JPEG?w=200&h=200&s=30B464324A0052CC518229FD0300C029"
@@ -281,7 +327,7 @@
         <div class="leader-item">
             <a href="">
                 <img class="leader-item-img"
-                     src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
+                     src="../image/领导.png"
                      alt="">
             </a>
             <div class="leader-right">
@@ -293,8 +339,9 @@
                     <div class="leader-item-info-bottom">
                         杨锦堂，途牛旅游网呼叫中心副总经理，超过15年客服类管理经验，对呼叫中心人力资源管理、解决方案策划实施、服务质量监控、资源规划、多媒体服务渠道建设、智能服务、以及客服体验提升等方面有丰富经验。智能化呼叫中心的整体运作及客户需求管理有较深入的研究。
                     </div>
-                    <a class="leader-go-more" href="">[ 查看详情 ]</a>
-                </div>
+                    <div class="go-more-box">
+                        <a class="leader-go-more" href="">[ 查看详情 ]</a>
+                    </div>                </div>
                 <div class="leader-right-bottom">
                     <img class="leader-company-img"
                          src="https://dss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=199962505,2209257128&fm=179&app=42&f=JPEG?w=200&h=200&s=30B464324A0052CC518229FD0300C029"
@@ -311,7 +358,7 @@
         <div class="leader-item">
             <a href="">
                 <img class="leader-item-img"
-                     src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
+                     src="../image/领导.png"
                      alt="">
             </a>
             <div class="leader-right">
@@ -323,8 +370,9 @@
                     <div class="leader-item-info-bottom">
                         杨锦堂，途牛旅游网呼叫中心副总经理，超过15年客服类管理经验，对呼叫中心人力资源管理、解决方案策划实施、服务质量监控、资源规划、多媒体服务渠道建设、智能服务、以及客服体验提升等方面有丰富经验。智能化呼叫中心的整体运作及客户需求管理有较深入的研究。
                     </div>
-                    <a class="leader-go-more" href="">[ 查看详情 ]</a>
-                </div>
+                    <div class="go-more-box">
+                        <a class="leader-go-more" href="">[ 查看详情 ]</a>
+                    </div>                </div>
                 <div class="leader-right-bottom">
                     <img class="leader-company-img"
                          src="https://dss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=199962505,2209257128&fm=179&app=42&f=JPEG?w=200&h=200&s=30B464324A0052CC518229FD0300C029"
@@ -341,7 +389,7 @@
         <div class="leader-item">
             <a href="">
                 <img class="leader-item-img"
-                     src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
+                     src="../image/领导.png"
                      alt="">
             </a>
             <div class="leader-right">
@@ -353,8 +401,9 @@
                     <div class="leader-item-info-bottom">
                         杨锦堂，途牛旅游网呼叫中心副总经理，超过15年客服类管理经验，对呼叫中心人力资源管理、解决方案策划实施、服务质量监控、资源规划、多媒体服务渠道建设、智能服务、以及客服体验提升等方面有丰富经验。智能化呼叫中心的整体运作及客户需求管理有较深入的研究。
                     </div>
-                    <a class="leader-go-more" href="">[ 查看详情 ]</a>
-                </div>
+                    <div class="go-more-box">
+                        <a class="leader-go-more" href="">[ 查看详情 ]</a>
+                    </div>                </div>
                 <div class="leader-right-bottom">
                     <img class="leader-company-img"
                          src="https://dss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=199962505,2209257128&fm=179&app=42&f=JPEG?w=200&h=200&s=30B464324A0052CC518229FD0300C029"
@@ -371,7 +420,7 @@
         <div class="leader-item">
             <a href="">
                 <img class="leader-item-img"
-                     src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
+                     src="../image/领导.png"
                      alt="">
             </a>
             <div class="leader-right">
@@ -381,40 +430,11 @@
                         <div class="leader-position">客服经理</div>
                     </div>
                     <div class="leader-item-info-bottom">
-                        杨锦堂，途牛旅游网呼叫中心副总经理，超过15年客服类管理经验，对呼叫中心人力资源管理、解决方案策划实施、服务质量监控、资源规划、多媒体服务渠道建设、智能服务、以及客服体验提升等方面有丰富经验。智能化呼叫中心的整体运作及客户需求管理有较深入的研究。
+                        杨锦堂，途牛旅游网呼叫中心副总经理，超过15年客服类管理经验，对呼叫中心源管理、解决方案策划实施、服务质量监控、资源规划、多媒体服务渠道建设、智能服务、以及客服体验提升等方面有丰富经验。智能化呼叫中心的整体运作及客户需求管理有较深入的研究。
                     </div>
-                    <a class="leader-go-more" href="">[ 查看详情 ]</a>
-                </div>
-                <div class="leader-right-bottom">
-                    <img class="leader-company-img"
-                         src="https://dss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=199962505,2209257128&fm=179&app=42&f=JPEG?w=200&h=200&s=30B464324A0052CC518229FD0300C029"
-                         alt="">
-                    <div class="leader-company-box">
-                        <div class="leader-company-title">工程师</div>
-                        <div class="leader-company-name">北京总科学院</div>
-                        <div></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="leader-item">
-            <a href="">
-                <img class="leader-item-img"
-                     src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F04%2F26%2F6087a3130d4501e6bbdcf9a9471ab1ef.jpg%21%2Ffwfh%2F804x1147%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611451232&t=d84136dc4a81291ba6fe1b056b910ffa"
-                     alt="">
-            </a>
-            <div class="leader-right">
-                <div class="leader-right-top">
-                    <div class="leader-item-info-top">
-                        <div class="leader-name">林大竣</div>
-                        <div class="leader-position">客服经理</div>
-                    </div>
-                    <div class="leader-item-info-bottom">
-                        杨锦堂，途牛旅游网呼叫中心副总经理，超过15年客服类管理经验，对呼叫中心人力资源管理、解决方案策划实施、服务质量监控、资源规划、多媒体服务渠道建设、智能服务、以及客服体验提升等方面有丰富经验。智能化呼叫中心的整体运作及客户需求管理有较深入的研究。
-                    </div>
-                    <a class="leader-go-more" href="">[ 查看详情 ]</a>
-                </div>
+                    <div class="go-more-box">
+                        <a class="leader-go-more" href="">[ 查看详情 ]</a>
+                    </div>                </div>
                 <div class="leader-right-bottom">
                     <img class="leader-company-img"
                          src="https://dss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=199962505,2209257128&fm=179&app=42&f=JPEG?w=200&h=200&s=30B464324A0052CC518229FD0300C029"
@@ -709,8 +729,8 @@
 <script src="../js/common.js"></script>
 <script>
     $('.pagination-box').pagination({
-        totalData: 2000,    //总数量
-        current: 20,      //当前页数
+        totalData: 100,    //总数量
+        current: 5,      //当前页数
         showData: 10,       //一页显示几个
         prevContent: '上一页',
         nextContent: '下一页',
