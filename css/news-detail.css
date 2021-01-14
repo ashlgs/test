@@ -157,13 +157,13 @@
     display: inline-block;
     width: 26px;
     height: 11px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .article-content .article-foot .arrow.l-arrow {
-    background: url(../image/arrow-icon/l-arrow.png) no-repeat left/100% 100%;
+    background: url(../image/arrow-icon/r-arrow.png) no-repeat left/100% 100%;
 }
 
 .article-content .article-foot .arrow.r-arrow {
-    background: url(../image/arrow-icon/r-arrow.png) no-repeat left/100% 100%;
+    background: url(../image/arrow-icon/l-arrow.png) no-repeat left/100% 100%;
 }
