@@ -1,0 +1,119 @@
+
+.detail-content-wrapper{
+    width: 1400px;
+    margin:0 auto;
+}
+.form-area-title{
+    font-size: 26px;
+    color: #0066b0;
+    padding:10px 12px;
+}
+.form-area{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-item {
+    height: 44px;
+    width: 30%;
+    color: #1a1a1a;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    /*border: 2px solid #dbdbdb;*/
+    background: #fff;
+    padding:0 12px;
+    /*margin: 14px 20px 0;*/
+    /*margin: 0.2rem 0.2rem 0;*/
+    border-radius: 4px;
+}
+
+.form-item-title {
+    display: flex;
+    align-items: center;
+    color: #1a1a1a;
+    font-size: 16px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.form-item-edit {
+    margin: 0 10px 0 10px;
+    flex: 1;
+    font-size: 30px;
+    color: #1a1a1a;
+    background: #fff;
+    line-height: 1;
+    border-radius: 0;
+    outline: none;
+    box-shadow: 0 0 0 0;
+}
+
+input[type="radio"] {
+    height: 24px;
+    padding: 5px 4px;
+    margin: 0 10px;
+    color: #27334f;
+}
+input[type="date"] {
+    width: 180px;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    padding: 5px 4px;
+    margin-left: 10px;
+    color: #27334f;
+    background: #fff;
+    border:1px solid #E5E6EA;
+}
+input[type="file"] {
+    width: 180px;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    padding: 5px 4px;
+    margin-left: 10px;
+    color: #27334f;
+    background: #fff;
+    border:1px solid #E5E6EA;
+}
+input[type="email"] {
+    width: 180px;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    padding: 5px 4px;
+    margin-left: 10px;
+    color: #27334f;
+    background: #fff;
+    border:1px solid #E5E6EA;
+}
+input[type="text"] {
+    width: 180px;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    padding: 5px 4px;
+    margin-left: 10px;
+    color: #27334f;
+    background: #fff;
+    border:1px solid #E5E6EA;
+}
+input[type="number"] {
+    width: 180px;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    padding: 5px 4px;
+    margin-left: 10px;
+    color: #27334f;
+    background: #fff;
+    border:1px solid #E5E6EA;
+}
+
+.preview{
+    display: block;
+    object-fit: contain;
+    width: 80px;
+    height:80px;
+}

@@ -58,14 +58,21 @@ body {
 
 .detail-article-container .article-content .share-tool-box .share-tools {
     font-size: 0px;
+    display: flex;
+    align-items: center;
 }
 
 .share-tool-box .share-tools li {
     display: inline-block;
     width: 26px;
     height: 26px;
-    margin-left: 10px;
+    margin-right: 10px;
 }
+.share-tool-box .share-tools li:last-child {
+
+    margin-right: 0px;
+}
+
 
 .share-tool-box .share-tools li.cut-line {
     width: 1px;
@@ -101,6 +108,9 @@ body {
 
 .share-tools li a.print-icon {
     background: url(../image/share-icon/print.png) no-repeat;
+}
+.share-tools li a.print-icon:hover {
+    background: url(../image/share-icon/打印2.png) no-repeat;
 }
 
 /* 图标被选中时 */

@@ -7,8 +7,133 @@
     <title>协会新闻详情页</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/apply.css">
     <link rel="stylesheet" href="../css/news-detail.css">
+    <style>
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1040;
+            background-color: rgba(0, 0, 0, 0.61);
+        }
+
+        .tips-box {
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 500px;
+            height: 500px;
+            border: 2px solid #0066b0;
+            position: fixed;
+            top: 10%;
+            left: 50%;
+            z-index: 1041;
+            margin-left: -250px;
+            background: #fff;
+        }
+
+        .tip-title {
+            font-size: 36px;
+            color: #262626;
+
+        }
+
+        .tips {
+            height: 300px;
+            width: 100%;
+            margin: 40px 0;
+            padding: 30px 0;
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+            color: #333333;
+            font-size: 16px;
+            line-height: 30px;
+            overflow-y: auto;
+        }
+
+        .submit {
+            height: 50px;
+            width: 180px;
+            background: #0066b0;
+            color: #FFFFFF;
+            font-size: 20px;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 50px;
+            margin: 50px auto;
+        }
+
+        .close {
+            height: 50px;
+            width: 180px;
+            background: #0066b0;
+            color: #FFFFFF;
+            font-size: 20px;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .close-gray {
+            height: 50px;
+            width: 180px;
+            background: rgba(0, 75, 134, 0.53);
+            color: #FFFFFF;
+            font-size: 20px;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .select-box {
+            /*用div的样式代替select的样式*/
+            width: 140px;
+            height: 30px;
+            /*border-radius: 5px;*/
+            /*盒子阴影修饰作用,自己随意*/
+            /* box-shadow: 0 0 5px #ccc;*/
+            border: 1px solid #cccccc;
+            position: relative;
+        }
+
+        .select-box select {
+            /*清除select的边框样式*/
+            border: none;
+            /*清除select聚焦时候的边框颜色*/
+            outline: none;
+            /*将select的宽高等于div的宽高*/
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            /*隐藏select的下拉图标*/
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            /*通过padding-left的值让文字居中*/
+            padding-left: 20px;
+        }
+
+        /*使用伪类给select添加自己想用的图标*/
+        .select-box:after {
+            content: "";
+            width: 14px;
+            height: 8px;
+            background: url(../image/footimg/down-arrow.png) no-repeat center;
+            /*通过定位将图标放在合适的位置*/
+            position: absolute;
+            right: 20px;
+            top: 41%;
+            /*给自定义的图标实现点击下来功能*/
+            pointer-events: none;
+        }
+    </style>
 </head>
+
 
 <body>
 <div class="search-box" style="display: none">
@@ -67,10 +192,323 @@
     <div class="top-banner-desc">INFORMATION</div>
 </div>
 
+<div class="modal-backdrop"></div>
+<div class="tips-box">
+    <div class="tip-title">会员申请须知</div>
+    <div class="tips">
+        <p>尊敬的用户:</p>
+        <p>
+            您好，为保障公安内部数据安全，平台用户首页所展示的个人信息并非最新数据。
+            注意在网站或12123APP进行电子监控违法处理、罚款缴纳等操作前，请提前登录网站，
+            在我的主页下点击机动车信息更新和驾驶证信息更新，24小时后获得最新的机动车违法和驾驶证记分信息后再操作违法处理或罚款缴纳功能，
+            避免重复处理(交警违法处理窗口已经处理过)、缴费或周期内超12分无法成功处理等问题。给您带来的不便，敬请谅解。</p>
+        <p>
+            您好，为保障公安内部数据安全，平台用户首页所展示的个人信息并非最新数据。
+            注意在网站或12123APP进行电子监控违法处理、罚款缴纳等操作前，请提前登录网站，
+            在我的主页下点击机动车信息更新和驾驶证信息更新，24小时后获得最新的机动车违法和驾驶证记分信息后再操作违法处理或罚款缴纳功能，
+            避免重复处理(交警违法处理窗口已经处理过)、缴费或周期内超12分无法成功处理等问题。给您带来的不便，敬请谅解。</p>
+        <p>
+            您好，为保障公安内部数据安全，平台用户首页所展示的个人信息并非最新数据。
+            注意在网站或12123APP进行电子监控违法处理、罚款缴纳等操作前，请提前登录网站，
+            在我的主页下点击机动车信息更新和驾驶证信息更新，24小时后获得最新的机动车违法和驾驶证记分信息后再操作违法处理或罚款缴纳功能，
+            避免重复处理(交警违法处理窗口已经处理过)、缴费或周期内超12分无法成功处理等问题。给您带来的不便，敬请谅解。</p>
+    </div>
+    <div id="close" class="close-gray">(5)我知道了</div>
 
+</div>
 <!-- article-detail-->
 <div class="detail-content-wrapper">
+    <div class="form" action="http://www.baidu.com">
+        <div class="form-area-title">单位信息</div>
+        <div class="form-area">
+            <div class="form-item">
+                <div class="form-item-title">单位名称：</div>
+                <input class="form-item-edit" type="text" maxlength="20" name="companyName" id="companyName">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">统一信用代码：</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="uniformSocialCreditCode"
+                       id="uniformSocialCreditCode">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">注册地址：</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="registerAddress" id="registerAddress">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">单位地址：</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="companyAddress" id="companyAddress">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">法人代表：</div>
+                <input class="form-item-edit" type="text" maxlength="10" name="legalPerson" id="legalPerson">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">官网网站：</div>
+                <input class="form-item-edit" type="text" maxlength="255" name="officialWebsite" id="officialWebsite">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">注册时间：</div>
+                <input class="form-item-edit" type="date" maxlength="10" placeholder="如:2021-01-01" name="registerDate"
+                       id="registerDate">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">注册资金：</div>
+                <input class="form-item-edit" type="text" maxlength="10" placeholder="如:10万元" name="registerFunds"
+                       id="registerFunds">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">员工数量：</div>
+                <input class="form-item-edit" type="number" max="100000000" name="personnelNum" id="personnelNum">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">单位规模??：</div>
+                <div class="select-box">
+                    <select id="companySize">
+                        <option value="big">大型</option>
+                        <option value="normal">中型</option>
+                        <option value="small" selected>小型</option>
+                        <option value="mini">微型</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">单位性质：</div>
+                <div class="select-box">
+                    <select id="companyType">
+                        <option value='zero'>事业单位</option>
+                        <option value='one'>国有企业</option>
+                        <option value='two' selected>民营企业</option>
+                        <option value='three'>上市企业</option>
+                        <option value='four'>合资企业</option>
+                        <option value='five'>金融机构</option>
+                        <option value='six'>社会团体</option>
+                        <option value='seven'>民办非企</option>
+                        <option value='eight'>高校院校</option>
+                        <option value='other'>其他</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">产业领域：</div>
+                <div class="select-box">
+                    <select id="productField">
+                        <option value="a" selected>综合产业</option>
+                        <option value="b">出版传媒</option>
+                        <option value="c">创意设计</option>
+                        <option value="d">智慧印刷</option>
+                        <option value="o">影视动画</option>
+                        <option value="f">演艺娱乐</option>
+                        <option value="g">数字科技</option>
+                        <option value="h">传统文化</option>
+                        <option value="i">文博非遗</option>
+                        <option value="k">工艺美术</option>
+                        <option value="l">文化制造</option>
+                        <option value="m">会展商贸</option>
+                        <option value="n">文化融合（文化旅游/文化教育/文化体育/文化金融）</option>
+                        <option value="p">基地园区</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">申请会籍：</div>
+                <div class="select-box">
+                    <select id="applyMembership">
+                        <option value="chairman" selected>理事长单位</option>
+                        <option value="vice_chairman">副理事长单位</option>
+                        <option value="member">会员单位</option>
+                        <option value="supervisor">监事单位</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">单位负责人：</div>
+                <input class="form-item-edit" type="text" maxlength="10" name="companyPrincipal" id="companyPrincipal">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">单位电话：</div>
+                <input class="form-item-edit" type="text" maxlength="11" name="companyPhone" id="companyPhone">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">单位传真：</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="companyFax" id="companyFax">
+            </div>
+
+            <div class="form-item">
+                <div class="form-item-title">开户银行：</div>
+                <input class="form-item-edit" type="text" maxlength="20" name="openingBank" id="openingBank">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">开户银行账号：</div>
+                <input class="form-item-edit" type="text" maxlength="30" name="openingBankAccount"
+                       id="openingBankAccount">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">其他社会团体会籍(选填)：</div>
+                <input class="form-item-edit" type="text" maxlength="20" name="otherMembership" id="otherMembership">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">单位荣誉奖项(选填)</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="companyHonor" id="companyHonor">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">单位概况综述</div>
+                <!--<textarea class="form-item-edit" name="companySurvey" id="companySurvey" cols="30" rows="10"></textarea>-->
+
+                <input class="form-item-edit" type="text" maxlength="200" name="companySurvey" id="companySurvey">
+            </div>
+        </div>
+
+        <div class="form-area-title">入会人信息</div>
+        <div class="form-area">
+            <div class="form-item">
+                <div class="form-item-title">入会人姓名</div>
+                <input class="form-item-edit" type="text" maxlength="10" name="memberName" id="memberName">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">入会人性别</div>
+                <input type="radio" name="gender" id="male" value="true" checked> <label for="male">男</label>
+                <input type="radio" name="gender" id="female" value="false"> <label for="female">女</label>
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">出生日期</div>
+                <input class="form-item-edit" type="date" maxlength="10" placeholder="如:2021-01-01" name="birthday"
+                       id="birthday">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">单位职务</div>
+                <input class="form-item-edit" type="text" maxlength="20" name="companyTitle" id="companyTitle">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">民族</div>
+                <input class="form-item-edit" type="text" maxlength="10" name="ethnic" id="ethnic">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">籍贯</div>
+                <input class="form-item-edit" type="text" maxlength="20" name="hometown" id="hometown">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">协会职务</div>
+                <input class="form-item-edit" type="text" maxlength="20" name="associationTitle" id="associationTitle">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">全职/兼职</div>
+                <input type="radio" name="fullTime" id="all" value="true" checked> <label for="male">全职</label>
+                <input type="radio" name="fullTime" id="part" value="false"> <label for="female">兼职</label>
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">最高学历</div>
+                <input class="form-item-edit" type="text" maxlength="10" name="highestEducation" id="highestEducation">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">身份证号</div>
+                <input class="form-item-edit" type="text" maxlength="18" name="cardId" id="cardId">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">毕业(在读)院校</div>
+                <input class="form-item-edit" type="text" maxlength="20" name="colleges" id="colleges">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">政治面貌</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="politicalStatus" id="politicalStatus">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">入党时间</div>
+                <input class="form-item-edit" type="date" maxlength="100" name="gmtJoinParty" id="gmtJoinParty">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">手机号码</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="phone" id="phone">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">邮箱</div>
+                <input class="form-item-edit" type="email" maxlength="30" name="email" id="email">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">党组织关系</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="partyRelation" id="partyRelation">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">是否退役军人</div>
+                <input type="radio" name="retiredSoldier" value="0"> <label for="male">是</label>
+                <input type="radio" name="retiredSoldier" value="1" checked> <label for="female">否</label>
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">其他社会职务(选填)</div>
+                <input class="form-item-edit" type="text" maxlength="20" name="otherSocietyTitle"
+                       id="otherSocietyTitle">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">个人荣誉奖项(选填)</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="personalHonor"
+                       id="personalHonor">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">入会人主要简历</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="curriculumVitae"
+                       id="curriculumVitae">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">联系人姓名</div>
+                <input class="form-item-edit" type="text" maxlength="10" name="contactName"
+                       id="contactName">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">联系人性别</div>
+                <input type="radio" name="contactGender" value="true" checked> <label for="male">男</label>
+                <input type="radio" name="contactGender" value="false"> <label for="female">女</label>
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">联系人职务</div>
+                <input class="form-item-edit" type="text" maxlength="20" name="contactTitle"
+                       id="contactTitle">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">联系方式</div>
+                <input class="form-item-edit" type="text" maxlength="11" name="contactPhone"
+                       id="contactPhone">
+            </div>
+
+
+            <div class="form-item">
+                <div class="form-item-title">营业执照</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="businessLicense"
+                       id="businessLicense">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">法人身份证正面</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="corporateCredentialsFront"
+                       id="corporateCredentialsFront">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">法人身份证反面</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="corporateCredentialsObverse"
+                       id="corporateCredentialsObverse">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">入会人员正面</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="memberCredentialsFront"
+                       id="memberCredentialsFront">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">入会人员反面</div>
+                <input class="form-item-edit" type="text" maxlength="100" name="memberCredentialsObverse"
+                       id="memberCredentialsObverse">
+            </div>
+            <div class="form-item">
+                <div class="form-item-title">入会人一寸照片</div>
+                <input id="uploadImg" name="uploadImg"
+                       type="file" accept="image/*" onchange="preview()"/>
+                <img id="preview-memberPhoto" class="preview" src="">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="submit" onclick="submit()">提交</div>
 </div>
+</div>
+
 <!-- footer -->
 <div class="foot-bg"></div>
 <div class="foot-container">
@@ -344,6 +782,176 @@
 
 <script src="../js/jq.js"></script>
 <script src="../js/common.js"></script>
+<script>
+    $('.modal-backdrop').hide();
+    $('.tips-box').hide();
+
+    /*let restTime = 4;
+     let time = setInterval(function () {
+     $('#close').text(`(${restTime}) 我知道了`);
+     restTime -= 1;
+
+     console.log(restTime)
+     if (restTime < 0) {
+     $('#close').text(`我知道了`);
+     $("#close").removeClass('close-gray');
+     $("#close").addClass('close');
+     clearInterval(time);
+     }
+     }, 1000);
+
+     $('#close').click(function () {
+     if (restTime < 0) {
+     $('.modal-backdrop').hide();
+     $('.tips-box').hide();
+
+     }
+     })*/
+
+    function preview(e) {
+        console.log($('#uploadImg')[0].files[0], "onchange img", $('#uploadImg')[0].value)
+        // 添加请求头
+        let file = $('#uploadImg')[0].files[0];
+        if (!file) {
+            return
+        }
+        let param = new FormData()  // 创建form对象
+        param.append('file', file)  // 通过append向form对象添加数据
+        let fileParams = param.get('file')
+
+        if (parseInt(fileParams.size) > 10000000) {
+            this.toast("上传图片不能大于10M")
+            return
+        }
+        let config = {
+            headers: {'Content-Type': 'multipart/form-data'}
+        }
+
+        $.ajax({
+            url: "http://192.168.1.204:8081/upload/image",
+            type: 'POST',
+            cache: false,
+            data: param,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+            beforeSend: function () {
+//                uploading = true;
+            },
+            success: function (data) {
+                console.log(data)
+                $('#preview-memberPhoto').attr('src',data.data)
+
+            }
+        });
+    }
+
+    $('#submit').click(function () {
+        if (restTime < 0) {
+            $('.modal-backdrop').hide();
+            $('.tips-box').hide();
+
+        }
+    })
+
+
+    function submit() {
+        console.log("submit", $('.detail-content-wrapper input'));
+        let inputArr = $('.detail-content-wrapper input');
+
+        let param = {}  // 创建form对象
+
+        for (let i = 0; i < inputArr.length; i++) {
+            if (inputArr[i].value) {
+                param[inputArr[i].name] = inputArr[i].value;
+            }
+        }
+        console.log("data::::::::::::::::::", param);
+        console.log("data::::::::::::::::::", $(".detail-content-wrapper input[name='gender']:checked").val());
+        console.log("data::::::::::::::::::", $("#companySize option:selected").val());
+        param.gender = $(".detail-content-wrapper input[name='gender']:checked").val();//性别
+        param.companySize = $("#companySize option:selected").val();
+        param.companyType = $("#companyType option:selected").val();
+        param.productField = $("#productField option:selected").val();
+        param.applyMembership = $("#applyMembership option:selected").val();
+        param.fullTime = $(".detail-content-wrapper input[name='fullTime']:checked").val();//性别
+        param.retiredSoldier = $(".detail-content-wrapper input[name='retiredSoldier']:checked").val();//性别
+        param.contactGender = $(".detail-content-wrapper input[name='contactGender']:checked").val();//性别
+
+//        return
+        let data = {
+            "companyName": "这是名称",
+            "applyMembership": 1,
+            "birthday": "2020-01-01",
+            "businessLicense": "这是营业执照",
+            "cardId": "这是身份证号",
+            "colleges": "这是学校",
+            "companyAddress": "这是公司",
+            "companyFax": "这是传真",
+            "companyHonor": "这是单位荣誉",
+            "companyNature": 1,
+            "companyPhone": "这是电话",
+            "companyPrincipal": "这是单位负责时间",
+            "companyScale": 1,
+            "companySurvey": "这是单位概况",
+            "companyTitle": "这是单位职务",
+            "contactGender": false,
+            "contactName": "这是紧急联系人",
+            "contactPhone": "这是手机",
+            "contactTitle": "这是职务",
+            "corporateCredentialsFront": "这是法人身份证·正",
+            "corporateCredentialsObverse": "这是法人身份证·反",
+            "curriculumVitae": "这是简历",
+            "deleted": false,
+            "email": "这是邮件",
+            "ethnic": "这是民族",
+            "fullTime": false,
+            "gender": false,
+            "gmtJoinParty": "2020-01-01",
+            "highestEducation": "这是学历",
+            "hometown": "这是籍贯",
+            "legalPerson": "这是法人代表",
+            "memberCredentialsFront": "这是入会人身份证·正",
+            "memberCredentialsObverse": "这是入会人身份证·反",
+            "memberName": "这是姓名",
+            "memberPhoto": "这是照片",
+            "officialWebsite": "这是官网",
+            "openingBank": "这是银行",
+            "openingBankAccount": "这是账号",
+            "otherMembership": "这是其他会籍",
+            "otherSocietyTitle": "这是其他职务",
+            "partyRelation": "这是党关系",
+            "personalHonor": "这是个人奖项",
+            "personnelNum": 1,
+            "phone": "这是手机",
+            "politicalStatus": 1,
+            "productField": 1,
+            "registerAddress": "这是公司注册地址",
+            "registerDate": "2020-01-01",
+            "registerFunds": "这是注册资金",
+            "retiredSoldier": false,
+//            "status": 1,
+            "uniformSocialCreditCode": "这是代码"
+
+        };
+        $.ajax(
+            {
+                url: 'http://192.168.1.204:8081/api/companyApply',
+                data: JSON.stringify(param),
+                type: 'POST',
+                dataType: 'json',
+                processData: false,
+                contentType: 'application/json',
+                success: function (msg) {
+                    console.log(msg)
+                    alert("提交成功")
+                }
+            }
+        );
+    }
+
+
+</script>
 </body>
 
 </html>

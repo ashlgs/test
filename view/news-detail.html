@@ -8,6 +8,51 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/news-detail.css">
+    <script type="text/javascript" charset="utf-8"
+            src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp&style=999&img=http%3a%2f%2fyour-domain%2fimages%2fbutton.gif&h=50&w=50;pophcol=2&amp;lang=zh"></script>
+    <!--<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>-->
+    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC2.js"></script>
+    <style>
+        .bshare-custom a {
+            display: inline-block !important;
+            margin-right: 10px !important;
+            width: 26px !important;
+            height: 26px !important;
+            padding-left: 0 !important;
+        }
+
+        .bshare-weixin {
+            background: url(../image/share-icon/weixin.png) no-repeat !important;
+        }
+
+        .bshare-weixin:hover {
+            background: url(../image/share-icon/微信2.png) no-repeat !important;
+        }
+
+        .bshare-sinaminiblog {
+            background: url(../image/share-icon/weibo.png) no-repeat !important;
+        }
+
+        .bshare-sinaminiblog:hover {
+            background: url(../image/share-icon/weibo1.png) no-repeat !important;
+        }
+
+        .bshare-qqim {
+            background: url(../image/share-icon/qq.png) no-repeat !important;
+        }
+
+        .bshare-qqim:hover {
+            background: url(../image/share-icon/QQ2.png) no-repeat !important;
+        }
+
+        .bshare-qzone {
+            background: url(../image/share-icon/qzone.png) no-repeat !important;
+        }
+
+        .bshare-qzone:hover {
+            background: url(../image/share-icon/QQ空间2.png) no-repeat !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -98,27 +143,24 @@
                         <span class="cut-line"></span>
                         <span class="news-time">2021-01-04 07:41:50</span>
                     </div>
+
+
                     <div class="share-tool-box">
                         <ul class="share-tools">
                             <li>
-                                <a href="" class="share-link-icon"></a>
+                                <a  class="share-link-icon"></a>
                             </li>
                             <li class="cut-line"></li>
-                            <li>
-                                <a href="" class="wechat-icon"></a>
-                            </li>
-                            <li>
-                                <a href="" class="weibo-icon weibo-icon-active"></a>
-                            </li>
-                            <li>
-                                <a href="" class="qq-icon"></a>
-                            </li>
-                            <li>
-                                <a href="" class="qzone-icon"></a>
-                            </li>
+                            <div style="display: flex" class="bshare-custom">
+                                <a title="分享到微信"
+                                   class="bshare-weixin"></a>
+                                <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+                                <a title="分享到QQ" class="bshare-qqim"></a>
+                                <a title="分享到QQ空间" class="bshare-qzone"></a>
+                            </div>
                             <li class="cut-line"></li>
                             <li>
-                                <a href="" class="print-icon"></a>
+                                <a href="javascript:window.print()" class="print-icon"></a>
                             </li>
                         </ul>
 
@@ -616,20 +658,20 @@
         $('#relative-news-img').parent().attr("href", "http://baidu.com");
     });
 
-    $('.pagination-box').pagination({
-        totalData: 100, //总数量
-        current: 10, //当前页数
-        showData: 10, //一页显示几个
-        prevContent: '上一页',
-        nextContent: '下一页',
-        keepShowPN: true,
-        coping: true,
-        callback: function (api) {
-            $('.now').text(api.getCurrent());
-        }
-    }, function (api) {
-        $('.now').text(api.getCurrent());
-    });
+    /*$('.pagination-box').pagination({
+     totalData: 100, //总数量
+     current: 10, //当前页数
+     showData: 10, //一页显示几个
+     prevContent: '上一页',
+     nextContent: '下一页',
+     keepShowPN: true,
+     coping: true,
+     callback: function (api) {
+     $('.now').text(api.getCurrent());
+     }
+     }, function (api) {
+     $('.now').text(api.getCurrent());
+     });*/
 </script>
 </body>
 
