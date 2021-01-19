@@ -1,7 +1,9 @@
 
 .detail-content-wrapper {
-    width: 1400px;
+    width: 1200px;
     margin: 0 auto;
+    padding: 25px 40px;
+    box-sizing: border-box;
 }
 
 .form-area-title {
@@ -16,44 +18,34 @@
 }
 
 .form-item {
-    height: 44px;
-    width: 50%;
-    color: #1a1a1a;
-    font-size: 15px;
+    height: 60px;
+    width: 560px;
+    font-size: 14px;
     display: flex;
     align-items: center;
-    box-sizing: border-box;
-    /*border: 2px solid #dbdbdb;*/
     background: #fff;
-    padding: 0 12px;
-    /*margin: 14px 20px 0;*/
-    /*margin: 0.2rem 0.2rem 0;*/
-    border-radius: 4px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
-.form-item-title-area{
-    width: 110px;
-    color: #1a1a1a;
-    font-size: 16px;
-    margin-left: 20px;
-    line-height: 40px;
-    font-weight: bold;
+.form-item-title-area {
+    text-align: right;
+    font-size: 14px;
+    padding-right: 14px;
+    width: 120px;
+    color: #32373e;
 }
+
 .form-item-area {
-    /*height: 244px;*/
-    width: 50%;
-    color: #1a1a1a;
-    font-size: 15px;
+    width: 560px;
+    font-size: 14px;
     display: flex;
-    justify-content: space-between;
-    /*align-items: center;*/
-    box-sizing: border-box;
-    /*border: 2px solid #dbdbdb;*/
+    align-items: center;
     background: #fff;
-    padding: 10px 12px;
-    /*margin: 14px 20px 0;*/
-    /*margin: 0.2rem 0.2rem 0;*/
-    border-radius: 4px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    box-sizing: border-box;
     flex-shrink: 0;
 }
 
@@ -86,22 +78,22 @@
 }
 
 .form-item-title {
-    display: flex;
-    align-items: center;
-    color: #1a1a1a;
-    font-size: 16px;
-    margin-left: 20px;
-    font-weight: bold;
+    text-align: right;
+    font-size: 14px;
+    padding-right: 14px;
+    width: 120px;
+    color: #32373e;
 }
 
 .form-item-title-img {
     display: flex;
-    min-width: 120px;
+    width: 120px;
+    align-items: center;
+    justify-content: flex-end;
     line-height: 40px;
     color: #1a1a1a;
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 20px;
-    font-weight: bold;
 }
 
 .img-upload-box {
@@ -110,15 +102,9 @@
 }
 
 .form-item-edit {
-    /*margin: 0 10px 0 10px;*/
-    flex: 1;
-    font-size: 30px;
-    color: #1a1a1a;
-    background: #fff;
-    line-height: 1;
-    border-radius: 0;
-    outline: none;
-    box-shadow: 0 0 0 0;
+    width: 400px;
+    height: 40px;
+    border: 1px solid #e3e7ed;
 }
 
 input[type="radio"] {
@@ -129,19 +115,29 @@ input[type="radio"] {
 }
 
 input[type="date"] {
-    width: 180px;
+    width: 400px;
     font-size: 14px;
-    line-height: 24px;
-    height: 24px;
-    padding: 5px 4px;
-    margin-left: 10px;
+    height: 40px;
     color: #27334f;
-    background: #fff;
-    border: 1px solid #E5E6EA;
+    margin: 0;
+    border: 1px solid #e3e7ed;
+    background: none;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    visibility: hidden;
 }
 
 input[type="file"] {
-    width: 180px;
+    width: 400px;
     font-size: 14px;
     line-height: 24px;
     height: 24px;
@@ -149,11 +145,11 @@ input[type="file"] {
     margin-left: 10px;
     color: #27334f;
     background: #fff;
-    border: 1px solid #E5E6EA;
+    border: 1px solid #e3e7ed;
 }
 
 input[type="email"] {
-    width: 180px;
+    width: 400px;
     font-size: 14px;
     line-height: 24px;
     height: 24px;
@@ -165,27 +161,45 @@ input[type="email"] {
 }
 
 input[type="text"] {
-    width: 180px;
+    width: 400px;
     font-size: 14px;
-    line-height: 24px;
-    height: 24px;
-    padding: 5px 4px;
-    margin-left: 10px;
+    height: 40px;
     color: #27334f;
-    background: #fff;
-    border: 1px solid #E5E6EA;
+    margin: 0;
+    border: 1px solid #e3e7ed;
+    background: none;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    box-sizing: border-box;
 }
 
 input[type="number"] {
-    width: 180px;
+    width: 400px;
     font-size: 14px;
-    line-height: 24px;
-    height: 24px;
-    padding: 5px 4px;
-    margin-left: 10px;
+    height: 40px;
     color: #27334f;
-    background: #fff;
-    border: 1px solid #E5E6EA;
+    margin: 0;
+    border: 1px solid #e3e7ed;
+    background: none;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border: 1px solid #2DA7E0;
+    /* 解决input按钮自动填充后 浏览器渲染的默认背景问题 */
+    box-shadow: inset 0 0 0 1000px #FFFFFF !important;
 }
 
 .preview {

@@ -4,33 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文创聊城</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/swiper.min.css">
-    <script src="../js/swiper.min.js"></script>
+
     <style>
         body {
             min-width: 1400px;
             padding-top: 85px;
-
         }
 
         .content-box {
+            width: 100%;
+            /*height: 700px;*/
             position: relative;
-        }
-
-        .content {
-            width: 1400px;
-            margin: 0 auto;
-            padding-top: 140px;
-
-        }
-
-        .content img {
-            width: 1100px;
-            display: block;
-            margin: 0 auto;
-            object-fit: cover;
         }
 
         .bg {
@@ -43,6 +29,115 @@
             z-index: -1;
         }
 
+        .main {
+            width: 1400px;
+            padding-top: 170px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .banner {
+            width: 1260px;
+            /*border: 1px solid #E5E6EA;*/
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .event-box {
+            display: flex;
+        }
+
+        .event-item {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            width: 400px;
+            height: 320px;
+            margin-right: 30px;
+            border: 1px solid #E5E6EA;
+            flex-shrink: 0;
+        }
+
+        .banner .item .month {
+            width: 400px;
+            line-height: 2;
+            margin-left: 40px;
+        }
+
+        .banner .item .title {
+            width: 90px;
+            height: 25px;
+            margin-top: 40px;
+        }
+
+        .banner .item .month-remark {
+            display: flex;
+            margin-top: 25px;
+        }
+
+        .left {
+            position: absolute;
+            cursor: pointer;
+            left: 0px;
+            margin-top: 140px;
+            background: transparent;
+            z-index: 1;
+
+        }
+
+        .right {
+            position: absolute;
+            right: 0px;
+            margin-top: 140px;
+            cursor: pointer;
+            z-index: 1;
+
+        }
+
+        .pre, .nex {
+            display: none;
+        }
+
+        .time {
+            width: 1280px;
+            height: 80px;
+            margin: 60px auto;
+        }
+
+        .time .time-top {
+            display: flex;
+            justify-content: space-around;
+            width: 1260px;
+            height: 20px;
+            margin-left: 10px;
+        }
+
+        .time .line {
+            width: 35px;
+            height: 12px;
+            border-left: 1px solid #C7C7C7;
+            right: 10px;
+        }
+
+        .time .time-center {
+            display: flex;
+            margin-top: -5px;
+            width: 1280px;
+            height: 7px;
+            background: linear-gradient(to right, #0066b0 600px, #908f8f 0%);
+        }
+
+        .time .time-bottom {
+            width: 1190px;
+            margin: 10px 35px;
+        }
+
+        .time-bottom .year {
+            flex-shrink: 0;
+            width: 230px;
+            height: 20px;
+        }
     </style>
 </head>
 
@@ -69,8 +164,8 @@
         <div class="header-left">
             <img class="header-logo" src="../image/logo.png" alt="">
             <div class="header-nav">
-                <a href="index.html" class="active">首页</a>
-                <a href="wclc.html">文创聊城</a>
+                <a href="index.html">首页</a>
+                <a href="xhgk.html" class="active">文创聊城</a>
                 <a href="wczs.html">文创之声</a>
                 <a href="wcdj.html">文创党建</a>
                 <a href="ppwh.html">品牌文化</a>
@@ -106,23 +201,139 @@
     <div class="plate-center">
         <div class="top-nav">
             <a href="xhgk.html" class="top-nav-item">协会概况</a>
-            <a href="xhjg.html" class="top-nav-item-active">协会架构</a>
-            <a href="leader.html" class="top-nav-item">协会领导</a>
+            <a href="xhjg.html" class="top-nav-item">协会架构</a>
+            <a href="leader.html" class="top-nav-item-active">协会领导</a>
             <a href="wczk.html" class="top-nav-item">文创智库</a>
             <a href="fzlc.html" class="top-nav-item">发展历程</a>
             <a href="xxgk.html" class="top-nav-item">信息公开</a>
         </div>
     </div>
 </div>
-
 <div class="content-box">
-    <img class="bg" src="../image/2-2-IndustryAssociation.png"/>
-    <div class="content">
-        <img src="../image/2-2-分支机构.png">
+    <img class="bg" src="../image/2-5-history.png">
 
+    <div class="main">
+        <div class="left">
+            <img src="../image/2-5-left.png">
+        </div>
+        <div class="right">
+            <img src="../image/2-5-right.png">
+        </div>
+        <!--显示区域-->
+        <div class="banner">
+            <div class="event-box">
+                <div class="item">
+                    <div class="event-item">
+                        <div class="title">2017年</div>
+                        <span class="month-remark">3月,年度中国商业地产特别贡献奖
+                            5月,年度中国商业地产杰出领袖人物
+                            6月，年度中国购物中心十大管理人物
+                            8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                            10月,首届百名行业领军人物</span>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="month">
+                        <div class="title">2018年</div>
+                        <span class="month-remark">五月</span>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="month">
+                        <div class="title">2019年</div>
+                        <span class="month-remark">7月</span>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="month">
+                        <div class="title">2020年</div>
+                        <span class="month-remark">11月</span>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="month">
+                        <div class="title">2021年</div>
+                        <span class="month-remark">11月</span>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="month">
+                        <div class="title">2022年</div>
+                        <span class="month-remark">11月</span>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="month">
+                        <div class="title">2023年</div>
+                        <span class="month-remark">11月</span>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="month">
+                        <div class="title">2024年</div>
+                        <span class="month-remark">11月</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="time">
+            <div class="time-top">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div class="time-center">
+            </div>
+            <div class="time-bottom  swiper-container">
+                <div class="time-bottom-year swiper-wrapper">
+                    <div class="year swiper-slide">2017</div>
+                    <div class="year swiper-slide">2018</div>
+                    <div class="year swiper-slide">2019</div>
+                    <div class="year swiper-slide">2020</div>
+                    <div class="year swiper-slide">2021</div>
+                    <div class="year swiper-slide">2022</div>
+                    <div class="year swiper-slide">2023</div>
+                    <div class="year swiper-slide">2024</div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 <!-- footer -->
 <div class="foot-bg"></div>
 <div class="foot-container">
@@ -395,10 +606,65 @@
 </div>
 <script src="../js/jq.js"></script>
 <script src="../js/common.js"></script>
+<script src="../js/pagination.js"></script>
 <script>
+    /*$(".time-bottom-year .year").click(function (a) {
+        let index = $(".time-bottom-year .year").index(this) + 1;
+        let px = 430;
+        let sum = px * index;
+        let findIndex;
 
+        $(".year").removeAttr("style");
+        $(".item").css("border", "1px solid #EBECEF")
+        // let year = a.target;
+        // let p = year.offsetWidth;
+        // let value = "linear-gradient(to right, #0066b0 " + p + "px," + " #908f8f 0%)";
+        // $(".time-center").css("background", value);
+        a.target.setAttribute("style", "color:#0368B1;font-weight:500")
+        if (index !== 1) {
+            $(".content").css("right", sum - 860);
+        }
+        if (index == 1) {
+            $(".content").css("right", "0");
+        }
+        findIndex = $(".banner .item").eq(index - 1);
+        findIndex.css("border", "1px solid #4790C6")
+
+    });
+
+    // $(".time-bottom").mouseout(function () {
+    //     $(".content").css("right", "0");
+    // });
+
+    $(".left").click(function () {
+        $(".pre").click();
+    })
+
+    $(".right").click(function () {
+        $(".nex").click();
+    });
+
+    const banner = new Swiper('.swiper-container.banner', {
+        autoplay: false,//可选选项，自动滑动
+        loop: false,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.nex',
+            prevEl: '.pre',
+        },
+        observer: true,
+        observeParents: true,
+    });
+
+    const time = new Swiper('.swiper-container.time-bottom', {
+        autoplay: false,//可选选项，自动滑动
+        loop: false,
+        slidesPerView: 'auto',
+        observer: true,
+        observeParents: true,
+    });*/
 </script>
-
 </body>
 
 </html>
