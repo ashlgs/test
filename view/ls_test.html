@@ -46,9 +46,13 @@
 
         .event-box {
             display: flex;
+            transition: all ease 0.3s;
+            /*transform: translateX(-430px);*/
         }
 
         .event-item {
+            padding: 40px;
+            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             background: white;
@@ -57,6 +61,79 @@
             margin-right: 30px;
             border: 1px solid #E5E6EA;
             flex-shrink: 0;
+            position: relative;
+        }
+
+        .event-item-active {
+            padding: 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            width: 400px;
+            height: 320px;
+            margin-right: 30px;
+            border: 1px solid #0066b0;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .event-box .title {
+            font-size: 26px;
+            line-height: 1;
+            /*color: #333;*/
+        }
+
+        .event-box .title-active {
+            font-size: 26px;
+            line-height: 1;
+            color: #0066b0;
+        }
+
+        .event-item[data-state=active] {
+            padding: 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            width: 400px;
+            height: 320px;
+            margin-right: 30px;
+            border: 1px solid #0066b0;
+            color: #0066b0;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .event-item[data-state=active] .triangle {
+            border: 12px solid #0066b0;
+            height: 0;
+            width: 0;
+            border-right-color: #fff;
+            border-bottom-color: #fff;
+            position: absolute;
+            right: -1px;
+            bottom: -1px;
+            display: block;
+        }
+
+        .event-content {
+            padding-top: 20px;
+            font-size: 15px;
+            line-height: 30px;
+            color: #666666;
+        }
+
+        .triangle {
+            display: none;
+            /*border: 12px solid #0066b0;
+            height: 0;
+            width: 0;
+            border-right-color: #fff;
+            border-bottom-color: #fff;
+            position: absolute;
+            right: -1px;
+            bottom: -1px;*/
         }
 
         .banner .item .month {
@@ -222,57 +299,100 @@
         <!--显示区域-->
         <div class="banner">
             <div class="event-box">
-                <div class="item">
-                    <div class="event-item">
-                        <div class="title">2017年</div>
-                        <span class="month-remark">3月,年度中国商业地产特别贡献奖
-                            5月,年度中国商业地产杰出领袖人物
-                            6月，年度中国购物中心十大管理人物
-                            8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
-                            10月,首届百名行业领军人物</span>
+                <div class="event-item">
+                    <div class="title">2017年</div>
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
                     </div>
+                    <div class="triangle"></div>
                 </div>
                 <div class="event-item">
-                    <div class="month">
-                        <div class="title">2018年</div>
-                        <span class="month-remark">五月</span>
+                    <div class="title">2018年</div>
+
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
                     </div>
+                    <div class="triangle"></div>
+
                 </div>
                 <div class="event-item">
-                    <div class="month">
-                        <div class="title">2019年</div>
-                        <span class="month-remark">7月</span>
+                    <div class="title">2019年</div>
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
                     </div>
+                    <div class="triangle"></div>
+
                 </div>
                 <div class="event-item">
-                    <div class="month">
-                        <div class="title">2020年</div>
-                        <span class="month-remark">11月</span>
+                    <div class="title">2020年</div>
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
                     </div>
+                    <div class="triangle"></div>
+
                 </div>
                 <div class="event-item">
-                    <div class="month">
-                        <div class="title">2021年</div>
-                        <span class="month-remark">11月</span>
+                    <div class="title">2021年</div>
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
                     </div>
+                    <div class="triangle"></div>
                 </div>
                 <div class="event-item">
-                    <div class="month">
-                        <div class="title">2022年</div>
-                        <span class="month-remark">11月</span>
+                    <div class="title">2022年</div>
+                    <div class="event-content">2017
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
                     </div>
+                    <div class="triangle"></div>
+
                 </div>
                 <div class="event-item">
-                    <div class="month">
-                        <div class="title">2023年</div>
-                        <span class="month-remark">11月</span>
+                    <div class="title">2023年</div>
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
                     </div>
+                    <div class="triangle"></div>
+
                 </div>
                 <div class="event-item">
-                    <div class="month">
-                        <div class="title">2024年</div>
-                        <span class="month-remark">11月</span>
+                    <div class="title">2024年</div>
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
                     </div>
+                    <div class="triangle"></div>
+
                 </div>
             </div>
         </div>
@@ -608,62 +728,84 @@
 <script src="../js/common.js"></script>
 <script src="../js/pagination.js"></script>
 <script>
-    /*$(".time-bottom-year .year").click(function (a) {
-        let index = $(".time-bottom-year .year").index(this) + 1;
-        let px = 430;
-        let sum = px * index;
-        let findIndex;
+    // todo 获取事件总长度
+    let originTrans = 0;
+    let currentLeftItemIndex = 0;//当前最左事件索引
+    let eventItemW = 430;
+    let eventTotal = $('.event-box ').children().length;
+    let currentRightItemIndex = (currentLeftItemIndex + 2) - (eventTotal - 1) > 0 ? (eventTotal - 1) : (currentLeftItemIndex + 2);//当前最右事件索引
 
-        $(".year").removeAttr("style");
-        $(".item").css("border", "1px solid #EBECEF")
-        // let year = a.target;
-        // let p = year.offsetWidth;
-        // let value = "linear-gradient(to right, #0066b0 " + p + "px," + " #908f8f 0%)";
-        // $(".time-center").css("background", value);
-        a.target.setAttribute("style", "color:#0368B1;font-weight:500")
-        if (index !== 1) {
-            $(".content").css("right", sum - 860);
+
+    console.log("event总数:", eventTotal);
+    if (currentLeftItemIndex == currentRightItemIndex) {//only 1 items
+        $('.event-box').css({
+            'transform': `translateX(${eventItemW}px)`
+        });
+    }
+    if (currentRightItemIndex - currentLeftItemIndex == 1) {//only 2 items
+        $('.event-box').css({
+            'transform': `translateX(${eventItemW / 2}px)`
+        });
+    }
+
+
+    refreshLR();// 刷新左右按钮显示状态
+    $(".right").click(function () {
+        console.log("right")
+        if (currentRightItemIndex < eventTotal - 1) {
+            originTrans -= eventItemW;
+            currentLeftItemIndex += 1;
+            currentRightItemIndex += 1;
+            $('.event-box').css({
+                'transform': `translateX(${originTrans}px)`
+            });
+            $(".right").show();
         }
-        if (index == 1) {
-            $(".content").css("right", "0");
-        }
-        findIndex = $(".banner .item").eq(index - 1);
-        findIndex.css("border", "1px solid #4790C6")
-
-    });
-
-    // $(".time-bottom").mouseout(function () {
-    //     $(".content").css("right", "0");
-    // });
-
-    $(".left").click(function () {
-        $(".pre").click();
+        refreshLR();
     })
 
-    $(".right").click(function () {
-        $(".nex").click();
+    $(".left").click(function () {
+        console.log("left")
+        if (currentLeftItemIndex > 0) {
+            currentLeftItemIndex -= 1;
+            currentRightItemIndex -= 1;
+            originTrans += eventItemW;
+            $('.event-box').css({
+                'transform': `translateX(${originTrans}px)`
+            });
+        }
+        refreshLR();
     });
 
-    const banner = new Swiper('.swiper-container.banner', {
-        autoplay: false,//可选选项，自动滑动
-        loop: false,
-        slidesPerView: 3,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: '.nex',
-            prevEl: '.pre',
-        },
-        observer: true,
-        observeParents: true,
+    $('.event-item').mouseover(function () {
+        console.log("mouseOver........", $(this));
+        let old = $('*[data-state="ss"]');
+        console.log("old::",old)
+        $(this).attr('data-state','active');
+        /*$('.event-item').
+            let state = $(this).parent().attr('data-state') === 'close' ? 'open' : 'close'*/
+
+        //修改封面
+        /* document.getElementById('relative-news-img').src = $(this).attr('data-news-cover');
+         console.log($('#relative-news-img').parent())
+         //改变图片跳转链接
+         $('#relative-news-img').parent().attr("href", "http://baidu.com");*/
     });
 
-    const time = new Swiper('.swiper-container.time-bottom', {
-        autoplay: false,//可选选项，自动滑动
-        loop: false,
-        slidesPerView: 'auto',
-        observer: true,
-        observeParents: true,
-    });*/
+    //    刷新左右按钮显示状态
+    function refreshLR() {
+        if (currentLeftItemIndex <= 0) {
+            $(".left").hide();
+        } else {
+            $(".left").show();
+        }
+        if (currentRightItemIndex >= eventTotal - 1) {
+            $(".right").hide();
+        } else {
+            $(".right").show();
+        }
+    }
+
 </script>
 </body>
 

@@ -31,7 +31,7 @@
             /* border: 2px solid #0066b0; */
             position: fixed;
             top: 10%;
-            left:450px;
+            left: 450px;
             z-index: 1041;
             background: #fff;
             box-sizing: border-box;
@@ -62,7 +62,7 @@
             background: #0066b0;
             color: #FFFFFF;
             font-size: 20px;
-            border-radius: 8px;
+            /*border-radius: 8px;*/
             text-align: center;
             line-height: 50px;
             margin: 50px auto;
@@ -124,7 +124,8 @@
             /*通过padding-left的值让文字居中*/
             padding-left: 10px;
         }
-        .option{
+
+        .option {
             list-style: none;
             white-space: nowrap;
             padding-left: 9px;
@@ -141,8 +142,11 @@
             font-family: Microsoft YaHei;
         }
 
-
-
+        label {
+            padding-left: 4px;
+            margin-right: 20px;
+            line-height: 30px;
+        }
 
         /*使用伪类给select添加自己想用的图标*/
         .select-box:after {
@@ -175,6 +179,10 @@
             height: 140px;
             overflow-y: auto;
             resize: none;
+        }
+
+        .text-area:focus {
+            border: 1px solid #2DA7E0;
         }
     </style>
 </head>
@@ -264,347 +272,415 @@
 <!-- article-detail-->
 <div class="detail-content-wrapper">
     <!--<div class="form" action="http://www.baidu.com">-->
-        <div class="form-area-title">单位信息</div>
-        <div class="form-area">
-            <div class="form-item">
-                <div class="form-item-title requied">单位名称</div>
-                <input class="form-item-edit" type="text" maxlength="20" name="companyName" id="companyName">
+    <div class="form-area-title">单位信息</div>
+    <div class="form-area">
+        <div class="form-item">
+            <div class="form-item-title requied">单位名称</div>
+            <input class="form-item-edit" type="text" maxlength="20" name="companyName" id="companyName">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">统一信用代码</div>
+            <input class="form-item-edit" type="text" maxlength="100" name="uniformSocialCreditCode"
+                   id="uniformSocialCreditCode">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">注册地址</div>
+            <input class="form-item-edit" type="text" maxlength="100" name="registerAddress" id="registerAddress">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">单位地址</div>
+            <input class="form-item-edit" type="text" maxlength="100" name="companyAddress" id="companyAddress">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">法人代表</div>
+            <input class="form-item-edit" type="text" maxlength="10" name="legalPerson" id="legalPerson">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title">官网网站</div>
+            <input class="form-item-edit" type="text" maxlength="255" name="officialWebsite" id="officialWebsite">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">注册时间</div>
+            <input class="form-item-edit" type="date" maxlength="10" placeholder="如:2021-01-01" name="registerDate"
+                   id="registerDate">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">注册资金</div>
+            <input class="form-item-edit" type="text" maxlength="10" placeholder="如:10万元" name="registerFunds"
+                   id="registerFunds">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">员工数量</div>
+            <input class="form-item-edit" type="number" max="100000000" name="personnelNum" id="personnelNum">
+        </div>
+        <div class="form-item-radio">
+            <div class="form-item-title requied">单位规模</div>
+            <!--<div class="select-box">-->
+            <div class="radio-box">
+                <div><input type="radio" name="companySize" id="big" value='big'/><label for="big">大型</label></div>
+                <div><input type="radio" name="companySize" id="normal" value='normal' checked/><label
+                        for="normal">中型</label>
+                </div>
+                <div><input type="radio" name="companySize" id="small" value='small' checked/><label
+                        for="small">小型</label></div>
+                <div><input type="radio" name="companySize" id="mini" value='mini'/><label for="mini">微型</label></div>
             </div>
-            <div class="form-item">
-                <div class="form-item-title requied">统一信用代码</div>
-                <input class="form-item-edit" type="text" maxlength="100" name="uniformSocialCreditCode"
-                       id="uniformSocialCreditCode">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">注册地址</div>
-                <input class="form-item-edit" type="text" maxlength="100" name="registerAddress" id="registerAddress">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">单位地址</div>
-                <input class="form-item-edit" type="text" maxlength="100" name="companyAddress" id="companyAddress">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">法人代表</div>
-                <input class="form-item-edit" type="text" maxlength="10" name="legalPerson" id="legalPerson">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title">官网网站</div>
-                <input class="form-item-edit" type="text" maxlength="255" name="officialWebsite" id="officialWebsite">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">注册时间</div>
-                <input class="form-item-edit" type="date" maxlength="10" placeholder="如:2021-01-01" name="registerDate"
-                       id="registerDate">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">注册资金</div>
-                <input class="form-item-edit" type="text" maxlength="10" placeholder="如:10万元" name="registerFunds"
-                       id="registerFunds">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">员工数量</div>
-                <input class="form-item-edit" type="number" max="100000000" name="personnelNum" id="personnelNum">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">单位规模</div>
-                <div class="select-box">
-                    <select id="companySize">
-                        <option class="option" value="big">大型</option>
-                        <option class="option" value="normal">中型</option>
-                        <option class="option" value="small" selected>小型</option>
-                        <option class="option" value="mini">微型</option>
-                    </select>
+            <!--<select id="companySize">
+                <option class="option" value="big">大型</option>
+                <option class="option" value="normal">中型</option>
+                <option class="option" value="small" selected>小型</option>
+                <option class="option" value="mini">微型</option>
+            </select>-->
+            <!--</div>-->
+        </div>
+        <div class="form-item-radio">
+            <div class="form-item-title requied">单位性质</div>
+            <div class="radio-box">
+                <div><input type="radio" name="companyType" id="zero" value='zero'/><label for="zero">事业单位</label></div>
+                <div><input type="radio" name="companyType" id="one" value='one'/><label for="one">国有企业</label></div>
+                <div><input type="radio" name="companyType" id="two" value='two' checked/><label for="two">民营企业</label>
+                </div>
+                <div><input type="radio" name="companyType" id="three" value='three'/><label for="three">上市企业</label>
+                </div>
+                <div><input type="radio" name="companyType" id="four" value='four'/><label for="four">合资企业</label></div>
+                <div><input type="radio" name="companyType" id="five" value='five'/><label for="five">金融机构</label></div>
+                <div><input type="radio" name="companyType" id="six" value='six'/><label for="six">社会团体</label></div>
+                <div><input type="radio" name="companyType" id="seven" value='seven'/><label for="seven">民办非企</label>
+                </div>
+                <div><input type="radio" name="companyType" id="eight" value='eight'/><label for="eight">高校院校</label>
+                </div>
+                <div><input type="radio" name="companyType" id="other" value='other'/><label for="other">其他</label>
                 </div>
             </div>
-            <div class="form-item">
-                <div class="form-item-title requied">单位性质</div>
-                <div class="select-box">
-                    <select id="companyType">
-                        <option value='zero'>事业单位</option>
-                        <option value='one'>国有企业</option>
-                        <option value='two' selected>民营企业</option>
-                        <option value='three'>上市企业</option>
-                        <option value='four'>合资企业</option>
-                        <option value='five'>金融机构</option>
-                        <option value='six'>社会团体</option>
-                        <option value='seven'>民办非企</option>
-                        <option value='eight'>高校院校</option>
-                        <option value='other'>其他</option>
-                    </select>
+            <!--<div class="select-box">
+                <select id="companyType">
+                    <option value='zero'>事业单位</option>
+                    <option value='one'>国有企业</option>
+                    <option value='two' selected>民营企业</option>
+                    <option value='three'>上市企业</option>
+                    <option value='four'>合资企业</option>
+                    <option value='five'>金融机构</option>
+                    <option value='six'>社会团体</option>
+                    <option value='seven'>民办非企</option>
+                    <option value='eight'>高校院校</option>
+                    <option value='other'>其他</option>
+                </select>
+            </div>-->
+        </div>
+        <div class="form-item-radio">
+            <div class="form-item-title requied">产业领域</div>
+            <!--<div class="select-box">-->
+            <div class="radio-box">
+                <div><input type="radio" name="productField" id="a" value='a'/><label for="a">综合产业</label></div>
+                <div><input type="radio" name="productField" id="b" value='b'/><label for="b">出版传媒</label></div>
+                <div><input type="radio" name="productField" id="c" value='c' checked/><label for="c">创意设计</label></div>
+                <div><input type="radio" name="productField" id="d" value='d'/><label for="d">智慧印刷</label></div>
+                <div><input type="radio" name="productField" id="e" value='e'/><label for="e">影视动画</label></div>
+                <div><input type="radio" name="productField" id="f" value='f'/><label for="f">演艺娱乐</label></div>
+                <div><input type="radio" name="productField" id="g" value='g'/><label for="g">数字科技</label></div>
+                <div><input type="radio" name="productField" id="h" value='h'/><label for="h">传统文化</label></div>
+                <div><input type="radio" name="productField" id="i" value='i'/><label for="i">文博非遗</label></div>
+                <div><input type="radio" name="productField" id="k" value='k'/><label for="k">工艺美术 </label></div>
+                <div><input type="radio" name="productField" id="l" value='l'/><label for="l">文化制造 </label></div>
+                <div><input type="radio" name="productField" id="m" value='m'/><label for="m">会展商贸 </label></div>
+                <div><input type="radio" name="productField" id="n" value='n'/><label
+                        for="n">文化融合（文化旅游/文化教育/文化体育/文化金融）</label></div>
+                <div><input type="radio" name="productField" id="p" value='p'/><label for="p">基地园区</label></div>
+            </div>
+            <!--<select id="productField">
+                <option value="a" selected>综合产业</option>
+                <option value="b">出版传媒</option>
+                <option value="c">创意设计</option>
+                <option value="d">智慧印刷</option>
+                <option value="o">影视动画</option>
+                <option value="f">演艺娱乐</option>
+                <option value="g">数字科技</option>
+                <option value="h">传统文化</option>
+                <option value="i">文博非遗</option>
+                <option value="k">工艺美术</option>
+                <option value="l">文化制造</option>
+                <option value="m">会展商贸</option>
+                <option value="n">文化融合（文化旅游/文化教育/文化体育/文化金融）</option>
+                <option value="p">基地园区</option>
+            </select>-->
+            <!--</div>-->
+        </div>
+        <div class="form-item-radio">
+            <div class="form-item-title requied">申请会籍</div>
+            <div class="radio-box">
+                <div><input type="radio" name="applyMembership" id="chairman" value='chairman'/><label for="chairman">理事长单位</label>
+                </div>
+                <div><input type="radio" name="applyMembership" id="vice_chairman" value='vice_chairman'/><label
+                        for="vice_chairman">副理事长单位</label>
+                </div>
+                <div><input type="radio" name="applyMembership" id="member" value='member' checked/><label for="member">会员单位</label>
+                </div>
+                <div><input type="radio" name="applyMembership" id="supervisor" value='supervisor'/><label
+                        for="supervisor">监事单位</label>
                 </div>
             </div>
-            <div class="form-item">
-                <div class="form-item-title requied">产业领域</div>
-                <div class="select-box">
-                    <select id="productField">
-                        <option value="a" selected>综合产业</option>
-                        <option value="b">出版传媒</option>
-                        <option value="c">创意设计</option>
-                        <option value="d">智慧印刷</option>
-                        <option value="o">影视动画</option>
-                        <option value="f">演艺娱乐</option>
-                        <option value="g">数字科技</option>
-                        <option value="h">传统文化</option>
-                        <option value="i">文博非遗</option>
-                        <option value="k">工艺美术</option>
-                        <option value="l">文化制造</option>
-                        <option value="m">会展商贸</option>
-                        <option value="n">文化融合（文化旅游/文化教育/文化体育/文化金融）</option>
-                        <option value="p">基地园区</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">申请会籍</div>
-                <div class="select-box">
-                    <select id="applyMembership">
-                        <option value="chairman" selected>理事长单位</option>
-                        <option value="vice_chairman">副理事长单位</option>
-                        <option value="member">会员单位</option>
-                        <option value="supervisor">监事单位</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">单位负责人</div>
-                <input class="form-item-edit" type="text" maxlength="10" name="companyPrincipal" id="companyPrincipal">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">单位电话</div>
-                <input class="form-item-edit" type="text" maxlength="11" name="companyPhone" id="companyPhone">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title">单位传真</div>
-                <input class="form-item-edit" type="text" maxlength="100" name="companyFax" id="companyFax">
-            </div>
-
-            <div class="form-item">
-                <div class="form-item-title requied">开户银行</div>
-                <input class="form-item-edit" type="text" maxlength="20" name="openingBank" id="openingBank">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">开户银行账号</div>
-                <input class="form-item-edit" type="text" maxlength="30" name="openingBankAccount"
-                       id="openingBankAccount">
-            </div>
-
-            <div class="form-item-area">
-                <div class="form-item-title-area">其他社会团体会籍</div>
-                <textarea name="otherMembership"
-                          id="otherMembership"
-                          class="text-area"
-                          maxlength="300"
-                          placeholder="请填写其他社会团体会籍(选填)"></textarea>
-            </div>
-
-            <div class="form-item-area">
-                <div class="form-item-title-area">单位荣誉奖项</div>
-                <textarea name="companyHonor"
-                          id="companyHonor"
-                          class="text-area"
-                          maxlength="300"
-                          placeholder="请填写单位荣誉奖项(选填)"></textarea>
-            </div>
-
-            <div class="form-item-area">
-                <div class="form-item-title-area requied">单位概况综述</div>
-                <textarea name="companySurvey"
-                          id="companySurvey"
-                          class="text-area"
-                          maxlength="300"
-                          placeholder="请填写单位概况综述"></textarea>
-            </div>
+            <!--<div class="select-box">
+                <select id="applyMembership">
+                    <option value="chairman" selected>理事长单位</option>
+                    <option value="vice_chairman">副理事长单位</option>
+                    <option value="member">会员单位</option>
+                    <option value="supervisor">监事单位</option>
+                </select>
+            </div>-->
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">单位负责人</div>
+            <input class="form-item-edit" type="text" maxlength="10" name="companyPrincipal" id="companyPrincipal">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">单位电话</div>
+            <input class="form-item-edit" type="text" maxlength="11" name="companyPhone" id="companyPhone">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title">单位传真</div>
+            <input class="form-item-edit" type="text" maxlength="100" name="companyFax" id="companyFax">
         </div>
 
-        <div class="form-area-title">入会人信息</div>
-        <div class="form-area">
-            <div class="form-item">
-                <div class="form-item-title requied">入会人姓名</div>
-                <input class="form-item-edit" type="text" maxlength="10" name="memberName" id="memberName">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">入会人性别</div>
-                <input type="radio" name="gender" id="male" value="true" checked> <label for="male">男</label>
-                <input type="radio" name="gender" id="female" value="false"> <label for="female">女</label>
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">出生日期</div>
-                <input class="form-item-edit" type="date" maxlength="10" placeholder="如:2021-01-01" name="birthday"
-                       id="birthday">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">单位职务</div>
-                <input class="form-item-edit" type="text" maxlength="20" name="companyTitle" id="companyTitle">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">民族</div>
-                <input class="form-item-edit" type="text" maxlength="10" name="ethnic" id="ethnic">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">籍贯</div>
-                <input class="form-item-edit" type="text" maxlength="20" name="hometown" id="hometown">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">协会职务</div>
-                <input class="form-item-edit" type="text" maxlength="20" name="associationTitle" id="associationTitle">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">全职/兼职</div>
-                <input type="radio" name="fullTime" id="all" value="true" checked> <label for="male">全职</label>
-                <input type="radio" name="fullTime" id="part" value="false"> <label for="female">兼职</label>
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">最高学历</div>
-                <input class="form-item-edit" type="text" maxlength="10" name="highestEducation" id="highestEducation">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">身份证号</div>
-                <input class="form-item-edit" type="text" maxlength="18" name="cardId" id="cardId">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">毕业(在读)院校</div>
-                <input class="form-item-edit" type="text" maxlength="20" name="colleges" id="colleges">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">政治面貌</div>
-                <div class="select-box">
-                    <select id="politicalStatus">
-                        <option value="0">共产党员</option>
-                        <option value="1">共青团员</option>
-                        <option value="2">其他党派</option>
-                        <option value="3" selected>群众</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-item">
-                <div class="form-item-title">入党时间</div>
-                <input class="form-item-edit" type="date" maxlength="100" name="gmtJoinParty" id="gmtJoinParty">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">手机号码</div>
-                <input class="form-item-edit" type="text" maxlength="100" name="phone" id="phone">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">邮箱</div>
-                <input class="form-item-edit" type="email" maxlength="30" name="email" id="email">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title">党组织关系</div>
-                <input class="form-item-edit" type="text" maxlength="100" name="partyRelation" id="partyRelation">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">是否退役军人</div>
-                <input type="radio" name="retiredSoldier" value="true"> <label>是</label>
-                <input type="radio" name="retiredSoldier" value="false" checked> <label>否</label>
-            </div>
-            <div class="form-item">
-                <div class="form-item-title">其他社会职务</div>
-                <input class="form-item-edit" type="text" maxlength="20" name="otherSocietyTitle"
-                       id="otherSocietyTitle">
-            </div>
-            <div class="form-item-area">
-                <div class="form-item-title-area">个人荣誉奖项</div>
-                <textarea name="personalHonor"
-                          id="personalHonor"
-                          class="text-area"
-                          maxlength="300"
-                          placeholder="请填写个人荣誉奖项"></textarea>
-            </div>
-            <div class="form-item-area">
-                <div class="form-item-title-area requied">入会人主要简历</div>
-                <textarea name="curriculumVitae"
-                          id="curriculumVitae"
-                          class="text-area"
-                          maxlength="300"
-                          placeholder="请填写个人荣誉奖项"></textarea>
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">联系人姓名</div>
-                <input class="form-item-edit" type="text" maxlength="10" name="contactName"
-                       id="contactName">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">联系人性别</div>
-                <input type="radio" name="contactGender" value="true" checked> <label for="male">男</label>
-                <input type="radio" name="contactGender" value="false"> <label for="female">女</label>
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">联系人职务</div>
-                <input class="form-item-edit" type="text" maxlength="20" name="contactTitle"
-                       id="contactTitle">
-            </div>
-            <div class="form-item">
-                <div class="form-item-title requied">联系方式</div>
-                <input class="form-item-edit" type="text" maxlength="11" name="contactPhone"
-                       id="contactPhone">
-            </div>
-
-
+        <div class="form-item">
+            <div class="form-item-title requied">开户银行</div>
+            <input class="form-item-edit" type="text" maxlength="20" name="openingBank" id="openingBank">
         </div>
-        <div class="form-area-title">上传证件信息</div>
-        <div class="form-area">
-            <div class="form-item-img">
-                <div class="form-item-title-img requied">营业执照</div>
-                <div class="img-upload-box" data-url="" style="position: relative;">
-                    <img id="preview-businessLicense" class="preview" src="../image/营业执照.png">
-                    <input id="businessLicense"
-                           style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
-                           type="file" accept="image/*" onchange="preview('businessLicense')"/>
-                </div>
-            </div>
-            <div class="form-item-img">
-                <div class="form-item-title-img requied">入会人一寸照片</div>
-                <div class="img-upload-box" data-url="" style="position: relative;">
-                    <img id="preview-memberPhoto" class="preview" src="../image/人物，男士，头像.png">
-                    <input id="memberPhoto" style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
-                           name="uploadImg"
-                           type="file" accept="image/*" onchange="preview(`${id}`)"/>
-                </div>
+        <div class="form-item">
+            <div class="form-item-title requied">开户银行账号</div>
+            <input class="form-item-edit" type="text" maxlength="30" name="openingBankAccount"
+                   id="openingBankAccount">
+        </div>
 
-            </div>
-            <div class="form-item-img">
-                <div class="form-item-title-img requied">法人身份证正面</div>
-                <div class="img-upload-box" data-url="" style="position: relative;">
-                    <img id="preview-corporateCredentialsFront" class="preview" src="../image/图片1.png">
-                    <input id="corporateCredentialsFront"
-                           style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
-                           type="file" accept="image/*" onchange="preview(`${id}`)"/>
-                </div>
-            </div>
-            <div class="form-item-img">
-                <div class="form-item-title-img requied">法人身份证反面</div>
-                <div class="img-upload-box" data-url="" style="position: relative;">
-                    <img id="preview-corporateCredentialsObverse" class="preview" src="../image/图片2.png">
-                    <input id="corporateCredentialsObverse"
-                           style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
-                           type="file" accept="image/*" onchange="preview(`${id}`)"/>
-                </div>
-            </div>
+        <div class="form-item-area">
+            <div class="form-item-title-area">其他社会团体会籍</div>
+            <textarea name="otherMembership"
+                      id="otherMembership"
+                      class="text-area"
+                      maxlength="300"
+                      placeholder="请填写其他社会团体会籍(选填)"></textarea>
+        </div>
 
-            <div class="form-item-img">
-                <div class="form-item-title-img requied">入会人员正面</div>
-                <div class="img-upload-box" data-url="" style="position: relative;">
-                    <img id="preview-memberCredentialsFront" class="preview" src="../image/图片1.png">
-                    <input id="memberCredentialsFront"
-                           style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
-                           type="file" accept="image/*" onchange="preview(`${id}`)"/>
-                </div>
-            </div>
+        <div class="form-item-area">
+            <div class="form-item-title-area">单位荣誉奖项</div>
+            <textarea name="companyHonor"
+                      id="companyHonor"
+                      class="text-area"
+                      maxlength="300"
+                      placeholder="请填写单位荣誉奖项(选填)"></textarea>
+        </div>
 
-            <div class="form-item-img">
-                <div class="form-item-title-img requied">入会人员反面</div>
-                <div class="img-upload-box" data-url="" style="position: relative;">
-                    <img id="preview-memberCredentialsObverse" class="preview" src="../image/图片2.png">
-                    <input id="memberCredentialsObverse"
-                           style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
-                           type="file" accept="image/*" onchange="preview(`${id}`)"/>
-                </div>
-            </div>
-
+        <div class="form-item-area">
+            <div class="form-item-title-area requied">单位概况综述</div>
+            <textarea name="companySurvey"
+                      id="companySurvey"
+                      class="text-area"
+                      maxlength="500"
+                      placeholder="请填写单位概况综述"></textarea>
         </div>
     </div>
 
-    <div class="submit" onclick="submit()">提交</div>
+    <div class="form-area-title">入会人信息</div>
+    <div class="form-area">
+        <div class="form-item">
+            <div class="form-item-title requied">入会人姓名</div>
+            <input class="form-item-edit" type="text" maxlength="10" name="memberName" id="memberName">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">入会人性别</div>
+            <input type="radio" name="gender" id="male" value="true" checked> <label for="male">男</label>
+            <input type="radio" name="gender" id="female" value="false"> <label for="female">女</label>
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">出生日期</div>
+            <input class="form-item-edit" type="date" maxlength="10" placeholder="如:2021-01-01" name="birthday"
+                   id="birthday">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">单位职务</div>
+            <input class="form-item-edit" type="text" maxlength="20" name="companyTitle" id="companyTitle">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">民族</div>
+            <input class="form-item-edit" type="text" maxlength="10" name="ethnic" id="ethnic">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">籍贯</div>
+            <input class="form-item-edit" type="text" maxlength="20" name="hometown" id="hometown">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">协会职务</div>
+            <input class="form-item-edit" type="text" maxlength="20" name="associationTitle" id="associationTitle">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">全职/兼职</div>
+            <input type="radio" name="fullTime" id="all" value="true" checked> <label for="all">全职</label>
+            <input type="radio" name="fullTime" id="part" value="false"> <label for="part">兼职</label>
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">最高学历</div>
+            <input class="form-item-edit" type="text" maxlength="10" name="highestEducation" id="highestEducation">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">身份证号</div>
+            <input class="form-item-edit" type="text" maxlength="18" name="cardId" id="cardId">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">毕业(在读)院校</div>
+            <input class="form-item-edit" type="text" maxlength="20" name="colleges" id="colleges">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">政治面貌</div>
+            <!--<div class="radio-box">-->
+            <div><input type="radio" name="politicalStatus" id="0" value='0'/><label for="0">共产党员</label></div>
+            <div><input type="radio" name="politicalStatus" id="1" value='1'/><label for="1">共青团员</label></div>
+            <div><input type="radio" name="politicalStatus" id="2" value='2'/><label for="2">其他党派</label></div>
+            <div><input type="radio" name="politicalStatus" id="3" value='3' checked/><label for="3">群众</label>
+            </div>
+            <!--</div>-->
+
+            <!--
+                        <div class="select-box">
+                            <select id="politicalStatus">
+                                <option value="0">共产党员</option>
+                                <option value="1">共青团员</option>
+                                <option value="2">其他党派</option>
+                                <option value="3" selected>群众</option>
+                            </select>
+                        </div>-->
+        </div>
+        <div class="form-item">
+            <div class="form-item-title">入党时间</div>
+            <input class="form-item-edit" type="date" maxlength="100" name="gmtJoinParty" id="gmtJoinParty">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">手机号码</div>
+            <input class="form-item-edit" type="text" maxlength="100" name="phone" id="phone">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">邮箱</div>
+            <input class="form-item-edit" type="email" maxlength="30" name="email" id="email">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title">党组织关系</div>
+            <input class="form-item-edit" type="text" maxlength="100" name="partyRelation" id="partyRelation">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">是否退役军人</div>
+            <input type="radio" id="retiredSoldiert" name="retiredSoldier" value="true"> <label
+                for="retiredSoldiert">是</label>
+            <input type="radio" id="retiredSoldierf" name="retiredSoldier" value="false" checked> <label
+                for="retiredSoldierf">否</label>
+        </div>
+        <div class="form-item">
+            <div class="form-item-title">其他社会职务</div>
+            <input class="form-item-edit" type="text" maxlength="20" name="otherSocietyTitle"
+                   id="otherSocietyTitle">
+        </div>
+        <div class="form-item-area">
+            <div class="form-item-title-area">个人荣誉奖项</div>
+            <textarea name="personalHonor"
+                      id="personalHonor"
+                      class="text-area"
+                      maxlength="300"
+                      placeholder="请填写个人荣誉奖项"></textarea>
+        </div>
+        <div class="form-item-area">
+            <div class="form-item-title-area requied">入会人主要简历</div>
+            <textarea name="curriculumVitae"
+                      id="curriculumVitae"
+                      class="text-area"
+                      maxlength="300"
+                      placeholder="请填写个人荣誉奖项"></textarea>
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">联系人姓名</div>
+            <input class="form-item-edit" type="text" maxlength="10" name="contactName"
+                   id="contactName">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">联系人性别</div>
+            <input id="contactGender-male" type="radio" name="contactGender" value="true" checked> <label
+                for="contactGender-male">男</label>
+            <input id="contactGender-fmale" type="radio" name="contactGender" value="false"> <label
+                for="contactGender-fmale">女</label>
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">联系人职务</div>
+            <input class="form-item-edit" type="text" maxlength="20" name="contactTitle"
+                   id="contactTitle">
+        </div>
+        <div class="form-item">
+            <div class="form-item-title requied">联系方式</div>
+            <input class="form-item-edit" type="text" maxlength="11" name="contactPhone"
+                   id="contactPhone">
+        </div>
+
+
+    </div>
+    <div class="form-area-title">上传证件信息</div>
+    <div class="form-area">
+        <div class="form-item-img">
+            <div class="form-item-title-img requied">营业执照</div>
+            <div class="img-upload-box" data-url="" style="position: relative;">
+                <img id="preview-businessLicense" class="preview" src="../image/营业执照.png">
+                <input id="businessLicense"
+                       style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
+                       type="file" accept="image/*" onchange="preview('businessLicense')"/>
+            </div>
+        </div>
+        <div class="form-item-img">
+            <div class="form-item-title-img requied">入会人一寸照片</div>
+            <div class="img-upload-box" data-url="" style="position: relative;">
+                <img id="preview-memberPhoto" class="preview" src="../image/人物，男士，头像.png">
+                <input id="memberPhoto" style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
+                       name="uploadImg"
+                       type="file" accept="image/*" onchange="preview(`${id}`)"/>
+            </div>
+
+        </div>
+        <div class="form-item-img">
+            <div class="form-item-title-img requied">法人身份证正面</div>
+            <div class="img-upload-box" data-url="" style="position: relative;">
+                <img id="preview-corporateCredentialsFront" class="preview" src="../image/图片1.png">
+                <input id="corporateCredentialsFront"
+                       style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
+                       type="file" accept="image/*" onchange="preview(`${id}`)"/>
+            </div>
+        </div>
+        <div class="form-item-img">
+            <div class="form-item-title-img requied">法人身份证反面</div>
+            <div class="img-upload-box" data-url="" style="position: relative;">
+                <img id="preview-corporateCredentialsObverse" class="preview" src="../image/图片2.png">
+                <input id="corporateCredentialsObverse"
+                       style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
+                       type="file" accept="image/*" onchange="preview(`${id}`)"/>
+            </div>
+        </div>
+
+        <div class="form-item-img">
+            <div class="form-item-title-img requied">入会人员正面</div>
+            <div class="img-upload-box" data-url="" style="position: relative;">
+                <img id="preview-memberCredentialsFront" class="preview" src="../image/图片1.png">
+                <input id="memberCredentialsFront"
+                       style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
+                       type="file" accept="image/*" onchange="preview(`${id}`)"/>
+            </div>
+        </div>
+
+        <div class="form-item-img">
+            <div class="form-item-title-img requied">入会人员反面</div>
+            <div class="img-upload-box" data-url="" style="position: relative;">
+                <img id="preview-memberCredentialsObverse" class="preview" src="../image/图片2.png">
+                <input id="memberCredentialsObverse"
+                       style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
+                       type="file" accept="image/*" onchange="preview(`${id}`)"/>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="submit" onclick="submit()">提交</div>
 <!--</div>-->
 </div>
 
@@ -885,7 +961,6 @@
     /*  $('.modal-backdrop').hide();
      $('.tips-box').hide();*/
     $('.modal-backdrop').click(function () {
-        console.log("sssssssssssss")
         $('#close').text(`(5)我知道了`);
         $("#close").removeClass('close');
         $("#close").addClass('close-gray');
@@ -974,7 +1049,7 @@
         // 检查必填项-input
         for (let i = 0; i < requirdArr.length; i++) {
             let input = $(requirdArr[i]).next();//js节点对象与jQuery节点对象之间的转换
-            if (input.is('input') && !input.val()) {
+            if (input.attr('type') != "file" && input.attr('type') != "radio" && input.is('input') && !input.val()) {
                 console.log(requirdArr[i].textContent)
                 alert("请填写" + requirdArr[i].textContent);
                 return
@@ -1011,9 +1086,8 @@
         // 收集input数据
         let inputArr = $('.detail-content-wrapper input');
         for (let i = 0; i < inputArr.length; i++) {
-            if (inputArr[i].value) {
-                console.log("??", inputArr[i].value)
-
+            if (inputArr[i].type != "radio" &&inputArr[i].type != "file" && inputArr[i].value) {
+                console.log(inputArr[i].name, "??", inputArr[i].value)
                 param[inputArr[i].name] = inputArr[i].value;
             }
         }
@@ -1022,7 +1096,7 @@
         let textAreaArr = $('.detail-content-wrapper textarea');
         for (let i = 0; i < textAreaArr.length; i++) {
             if (textAreaArr[i].value) {
-                console.log("textAreaArr", textAreaArr[i].value)
+                console.log("textAreaArr---", textAreaArr[i].value)
 
                 param[textAreaArr[i].name] = textAreaArr[i].value;
             }
@@ -1030,12 +1104,17 @@
 
         // 收集下拉框数据
         param.gender = $(".detail-content-wrapper input[name='gender']:checked").val();//性别
-        param.companySize = $("#companySize option:selected").val();
-        param.companyType = $("#companyType option:selected").val();
-        param.productField = $("#productField option:selected").val();
-        param.applyMembership = $("#applyMembership option:selected").val();
-        param.politicalStatus = $("#politicalStatus option:selected").val();
+//        param.companySize = $("#companySize option:selected").val();
+//        param.companyType = $("#companyType option:selected").val();
+//        param.productField = $("#productField option:selected").val();
+//        param.applyMembership = $("#applyMembership option:selected").val();
+//        param.politicalStatus = $("#politicalStatus option:selected").val();
         // 收集checkbox数据
+        param.productField = $(".detail-content-wrapper input[name='productField']:checked").val();//性别
+        param.applyMembership = $(".detail-content-wrapper input[name='applyMembership']:checked").val();//性别
+        param.politicalStatus = $(".detail-content-wrapper input[name='politicalStatus']:checked").val();//性别
+        param.companySize = $(".detail-content-wrapper input[name='companySize']:checked").val();//性别
+        param.companyType = $(".detail-content-wrapper input[name='companyType']:checked").val();//性别
         param.fullTime = $(".detail-content-wrapper input[name='fullTime']:checked").val();//性别
         param.retiredSoldier = $(".detail-content-wrapper input[name='retiredSoldier']:checked").val();//性别
         param.contactGender = $(".detail-content-wrapper input[name='contactGender']:checked").val();//性别
