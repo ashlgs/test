@@ -30,7 +30,7 @@
             height: 500px;
             /* border: 2px solid #0066b0; */
             position: fixed;
-            top: 10%;
+            top: 20%;
             left: 450px;
             z-index: 1041;
             background: #fff;
@@ -176,7 +176,7 @@
             text-overflow: ellipsis;
             text-align: left;
             box-sizing: border-box;
-            height: 140px;
+            height: 100px;
             overflow-y: auto;
             resize: none;
         }
@@ -628,16 +628,7 @@
                        type="file" accept="image/*" onchange="preview('businessLicense')"/>
             </div>
         </div>
-        <div class="form-item-img">
-            <div class="form-item-title-img requied">入会人一寸照片</div>
-            <div class="img-upload-box" data-url="" style="position: relative;">
-                <img id="preview-memberPhoto" class="preview" src="../image/人物，男士，头像.png">
-                <input id="memberPhoto" style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
-                       name="uploadImg"
-                       type="file" accept="image/*" onchange="preview(`${id}`)"/>
-            </div>
 
-        </div>
         <div class="form-item-img">
             <div class="form-item-title-img requied">法人身份证正面</div>
             <div class="img-upload-box" data-url="" style="position: relative;">
@@ -656,7 +647,16 @@
                        type="file" accept="image/*" onchange="preview(`${id}`)"/>
             </div>
         </div>
+        <div class="form-item-img">
+            <div class="form-item-title-img requied">入会人一寸照片</div>
+            <div class="img-upload-box" data-url="" style="position: relative;">
+                <img id="preview-memberPhoto" class="preview" src="../image/人物，男士，头像.png">
+                <input id="memberPhoto" style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0"
+                       name="uploadImg"
+                       type="file" accept="image/*" onchange="preview(`${id}`)"/>
+            </div>
 
+        </div>
         <div class="form-item-img">
             <div class="form-item-title-img requied">入会人员正面</div>
             <div class="img-upload-box" data-url="" style="position: relative;">
@@ -960,14 +960,14 @@
 <script>
     /*  $('.modal-backdrop').hide();
      $('.tips-box').hide();*/
-    $('.modal-backdrop').click(function () {
-        $('#close').text(`(5)我知道了`);
-        $("#close").removeClass('close');
-        $("#close").addClass('close-gray');
-        clearInterval(time);
-        $('.modal-backdrop').hide();
-        $('.tips-box').hide();
-    });
+    /*    $('.modal-backdrop').click(function () {
+     $('#close').text(`(5)我知道了`);
+     $("#close").removeClass('close');
+     $("#close").addClass('close-gray');
+     clearInterval(time);
+     $('.modal-backdrop').hide();
+     $('.tips-box').hide();
+     });*/
 
     let restTime = 4;
     let time = setInterval(function () {
@@ -1086,7 +1086,7 @@
         // 收集input数据
         let inputArr = $('.detail-content-wrapper input');
         for (let i = 0; i < inputArr.length; i++) {
-            if (inputArr[i].type != "radio" &&inputArr[i].type != "file" && inputArr[i].value) {
+            if (inputArr[i].type != "radio" && inputArr[i].type != "file" && inputArr[i].value) {
                 console.log(inputArr[i].name, "??", inputArr[i].value)
                 param[inputArr[i].name] = inputArr[i].value;
             }
