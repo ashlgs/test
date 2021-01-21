@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/swiper.min.css">
 
     <style>
         body {
@@ -16,10 +15,10 @@
 
         .content-box {
             width: 100%;
-            /*height: 700px;*/
             position: relative;
         }
-        .bg{
+
+        .bg {
             width: 100%;
             display: block;
             object-fit: cover;
@@ -30,37 +29,98 @@
         }
 
         .main {
-            padding-top: 170px;
-            margin:0 auto;
+            width: 1400px;
+            padding-top: 100px;
+            margin: 0 auto;
+            position: relative;
         }
 
         .banner {
-            width: 1255px;
-            border-right: 1px solid #EBECEF;
+            width: 1260px;
             position: relative;
-        }
-
-        .banner .content {
-            display: flex;
-            width: 1255px;
-            height: 322px;
             margin: 0 auto;
-            position: relative;
-            /*right: 432px;*/
+            overflow: hidden;
         }
 
-        .banner .item {
+        .event-box {
             display: flex;
+            transition: all ease 0.3s;
+        }
+
+        .event-item {
+            padding: 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
             background: white;
             width: 400px;
             height: 320px;
-            border: 1px solid #EBECEF;
+            margin-right: 30px;
+            border: 1px solid #E5E6EA;
+            flex-shrink: 0;
+            position: relative;
+            cursor: pointer;
         }
 
-        .banner .item .month {
+/*        .event-item:hover {
+
+            border: 1px solid #0066b0;
+            color: #0066b0;
+        }
+        .event-item:hover .triangle {
+            border: 12px solid #0066b0;
+            height: 0;
+            width: 0;
+            border-right-color: #fff;
+            border-bottom-color: #fff;
+            position: absolute;
+            right: -1px;
+            bottom: -1px;
+            display: block;
+        }*/
+
+        .event-box .title {
+            font-size: 26px;
+            line-height: 1;
+        }
+
+        .event-item[data-state=active] {
+            padding: 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            background: white;
             width: 400px;
-            line-height: 2;
-            margin-left: 40px;
+            height: 320px;
+            margin-right: 30px;
+            border: 1px solid #0066b0;
+            color: #0066b0;
+            flex-shrink: 0;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .event-item[data-state=active] .triangle {
+            border: 12px solid #0066b0;
+            height: 0;
+            width: 0;
+            border-right-color: #fff;
+            border-bottom-color: #fff;
+            position: absolute;
+            right: -1px;
+            bottom: -1px;
+            display: block;
+        }
+
+        .event-content {
+            padding-top: 20px;
+            font-size: 15px;
+            line-height: 30px;
+            color: #666666;
+        }
+
+        .triangle {
+            display: none;
         }
 
         .banner .item .title {
@@ -69,67 +129,75 @@
             margin-top: 40px;
         }
 
-        .banner .item .month-remark {
-            display: flex;
-            margin-top: 25px;
-        }
-
         .left {
             position: absolute;
             cursor: pointer;
-            left: 250px;
+            left: 0px;
             margin-top: 140px;
+            background: transparent;
+            z-index: 1;
+
         }
 
         .right {
             position: absolute;
-            right: 250px;
+            right: 0px;
             margin-top: 140px;
             cursor: pointer;
-        }
+            z-index: 1;
 
-        .pre, .nex {
-            display: none;
         }
 
         .time {
             width: 1280px;
-            height: 80px;
-            margin: 60px auto;
+            margin: 60px auto 0;
         }
 
         .time .time-top {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             width: 1260px;
-            height: 20px;
-            margin-left: 10px;
+            margin: 0 auto 3px auto;
         }
 
         .time .line {
-            width: 35px;
+            width: 1px;
             height: 12px;
-            border-left: 1px solid #C7C7C7;
-            right: 10px;
+            background: #C7C7C7;
         }
 
-        .time .time-center {
+        .time-bar {
             display: flex;
-            margin-top: -5px;
             width: 1280px;
             height: 7px;
-            background: linear-gradient(to right, #0066b0 600px, #908f8f 0%);
+            background: linear-gradient(to right, #0066b0 0px, #7c7c7c 0%);
+            transition: all ease 0.3s;
         }
 
-        .time .time-bottom {
-            width: 1190px;
-            margin: 10px 35px;
+        .time-bottom {
+            width: 100%;
+            margin-top: 2px;
+            display: flex;
+            justify-content: space-around;
+            overflow: hidden;
         }
 
-        .time-bottom .year {
+        .year {
             flex-shrink: 0;
-            width: 230px;
-            height: 20px;
+            font-size: 16px;
+            color: #666;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .year:hover {
+            color: #0066b0;
+        }
+
+        .year[data-state=active] {
+            flex-shrink: 0;
+            font-size: 16px;
+            color: #0066b0;
         }
     </style>
 </head>
@@ -207,73 +275,113 @@
 
     <div class="main">
         <div class="left">
-            <img src="../image/left.png">
+            <img src="../image/2-5-left.png">
         </div>
         <div class="right">
-            <img src="../image/right.png">
+            <img src="../image/2-5-right.png">
         </div>
-        <div class="swiper-container banner">
-            <div class="swiper-wrapper content">
-                <div class="item swiper-slide">
-                    <div class="month">
-                        <div class="title">2017年</div>
-                        <span class="month-remark">3月,年度中国商业地产特别贡献奖
-                            5月,年度中国商业地产杰出领袖人物
-                            6月，年度中国购物中心十大管理人物
-                            8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
-                            10月,首届百名行业领军人物</span>
+        <!--显示区域-->
+        <div class="banner">
+            <div class="event-box">
+                <div class="event-item">
+                    <div class="title">2017年</div>
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
                     </div>
+                    <div class="triangle"></div>
                 </div>
-                <div class="item swiper-slide">
-                    <div class="month">
-                        <div class="title">2018年</div>
-                        <span class="month-remark">五月</span>
-                    </div>
-                </div>
-                <div class="item swiper-slide">
-                    <div class="month">
-                        <div class="title">2019年</div>
-                        <span class="month-remark">7月</span>
-                    </div>
-                </div>
-                <div class="item swiper-slide">
-                    <div class="month">
-                        <div class="title">2020年</div>
-                        <span class="month-remark">11月</span>
-                    </div>
-                </div>
-                <div class="item swiper-slide">
-                    <div class="month">
-                        <div class="title">2021年</div>
-                        <span class="month-remark">11月</span>
-                    </div>
-                </div>
-                <div class="item swiper-slide">
-                    <div class="month">
-                        <div class="title">2022年</div>
-                        <span class="month-remark">11月</span>
-                    </div>
-                </div>
-                <div class="item swiper-slide">
-                    <div class="month">
-                        <div class="title">2023年</div>
-                        <span class="month-remark">11月</span>
-                    </div>
-                </div>
-                <div class="item swiper-slide">
-                    <div class="month">
-                        <div class="title">2024年</div>
-                        <span class="month-remark">11月</span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-button-prev pre">
+                <div class="event-item">
+                    <div class="title">2018年</div>
 
-            </div>
-            <div class="swiper-button-next nex">
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
+                    </div>
+                    <div class="triangle"></div>
 
+                </div>
+                <div class="event-item">
+                    <div class="title">2019年</div>
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
+                    </div>
+                    <div class="triangle"></div>
+
+                </div>
+                <div class="event-item">
+                    <div class="title">2020年</div>
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
+                    </div>
+                    <div class="triangle"></div>
+
+                </div>
+                <div class="event-item">
+                    <div class="title">2021年</div>
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
+                    </div>
+                    <div class="triangle"></div>
+                </div>
+                <div class="event-item">
+                    <div class="title">2022年</div>
+                    <div class="event-content">2017
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
+                    </div>
+                    <div class="triangle"></div>
+
+                </div>
+                <div class="event-item">
+                    <div class="title">2023年</div>
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
+                    </div>
+                    <div class="triangle"></div>
+
+                </div>
+                <div class="event-item">
+                    <div class="title">2024年</div>
+                    <div class="event-content">
+                        3月,年度中国商业地产特别贡献奖
+                        5月,年度中国商业地产杰出领袖人物
+                        6月，年度中国购物中心十大管理人物
+                        8月,清华大学苏世民书院聘请丁立业先生担任荣誉校董
+                        10月,首届百名行业领军人物
+                    </div>
+                    <div class="triangle"></div>
+
+                </div>
             </div>
         </div>
+
+
         <div class="time">
             <div class="time-top">
                 <span class="line"></span>
@@ -312,20 +420,18 @@
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
+                <span class="line"></span>
             </div>
-            <div class="time-center">
-            </div>
-            <div class="time-bottom  swiper-container">
-                <div class="time-bottom-year swiper-wrapper">
-                    <div class="year swiper-slide">2017</div>
-                    <div class="year swiper-slide">2018</div>
-                    <div class="year swiper-slide">2019</div>
-                    <div class="year swiper-slide">2020</div>
-                    <div class="year swiper-slide">2021</div>
-                    <div class="year swiper-slide">2022</div>
-                    <div class="year swiper-slide">2023</div>
-                    <div class="year swiper-slide">2024</div>
-                </div>
+            <div class="time-bar"></div>
+            <div class="time-bottom">
+                <div class="year">2017</div>
+                <div class="year">2018</div>
+                <div class="year">2019</div>
+                <div class="year">2020</div>
+                <div class="year">2021</div>
+                <div class="year">2022</div>
+                <div class="year">2023</div>
+                <div class="year">2024</div>
             </div>
         </div>
     </div>
@@ -603,64 +709,182 @@
 <script src="../js/jq.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/pagination.js"></script>
-<script src="../js/swiper.min.js"></script>
 <script>
-    $(".time-bottom-year .year").click(function (a) {
-        let index = $(".time-bottom-year .year").index(this) + 1;
-        let px = 430;
-        let sum = px * index;
-        let findIndex;
+    // todo 获取事件总长度
+    //    let originTrans = 0;
+    //    let currentLeftItemIndex = 0;//当前最左事件索引
+    let eventItemW = 430;
+    let eventTotal = $('.event-box').children().length;
+    let currentActiveIndex = 0
+    //    let currentRightItemIndex = (currentLeftItemIndex + 2) - (eventTotal - 1) > 0 ? (eventTotal - 1) : (currentLeftItemIndex + 2);//当前最右事件索引
 
-        $(".year").removeAttr("style");
-        $(".item").css("border", "1px solid #EBECEF")
-        // let year = a.target;
-        // let p = year.offsetWidth;
-        // let value = "linear-gradient(to right, #0066b0 " + p + "px," + " #908f8f 0%)";
-        // $(".time-center").css("background", value);
-        a.target.setAttribute("style", "color:#0368B1;font-weight:500")
-        if (index !== 1) {
-            $(".content").css("right", sum - 860);
-        }
-        if (index == 1) {
-            $(".content").css("right", "0");
-        }
-        findIndex = $(".banner .item").eq(index - 1);
-        findIndex.css("border", "1px solid #4790C6")
+    changeActiveByIndex(0);
+    console.log("event总数:", eventTotal);
+    /*if (currentLeftItemIndex == currentRightItemIndex) {//only 1 items
+     $('.event-box').css({
+     'transform': `translateX(${eventItemW}px)`
+     });
+     }
+     if (currentRightItemIndex - currentLeftItemIndex == 1) {//only 2 items
+     $('.event-box').css({
+     'transform': `translateX(${eventItemW / 2}px)`
+     });
+     }*/
 
-    });
 
-    // $(".time-bottom").mouseout(function () {
-    //     $(".content").css("right", "0");
-    // });
-
-    $(".left").click(function () {
-        $(".pre").click();
+    //    refreshLR();// 刷新左右按钮显示状态
+    $(".right").click(function () {
+        console.log("right")
+        changeActiveByIndex(currentActiveIndex + 1);
+        /*if (currentRightItemIndex < eventTotal - 1) {
+         originTrans -= eventItemW;
+         currentLeftItemIndex += 1;
+         currentRightItemIndex += 1;
+         $('.event-box').css({
+         'transform': `translateX(${originTrans}px)`
+         });
+         $(".right").show();
+         }
+         refreshLR();*/
     })
 
-    $(".right").click(function () {
-        $(".nex").click();
+    $(".left").click(function () {
+        console.log("left")
+        changeActiveByIndex(currentActiveIndex - 1);
+
+        /*if (currentLeftItemIndex > 0) {
+         currentLeftItemIndex -= 1;
+         currentRightItemIndex -= 1;
+         originTrans += eventItemW;
+         $('.event-box').css({
+         'transform': `translateX(${originTrans}px)`
+         });
+         }
+         refreshLR();*/
     });
 
-    const banner = new Swiper('.swiper-container.banner', {
-        autoplay: false,//可选选项，自动滑动
-        loop: false,
-        slidesPerView: 3,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: '.nex',
-            prevEl: '.pre',
-        },
-        observer: true,
-        observeParents: true,
+    // 鼠标经过active切换
+    $('.event-item').click(function () {
+        let currIndex = $(this).index();
+        changeActiveByIndex(currIndex);
+//        slideEventByIndex(currIndex);
     });
 
-    const time = new Swiper('.swiper-container.time-bottom', {
-        autoplay: false,//可选选项，自动滑动
-        loop: false,
-        slidesPerView: 'auto',
-        observer: true,
-        observeParents: true,
+    //    底部年份点击事件
+    $('.year').mouseover(function () {
+        let currIndex = $(this).index();
+        changeActiveByIndex(currIndex);
+//        slideEventByIndex(currIndex);
     });
+
+
+    /**
+     * 根据index刷新active状态
+     * @param index
+     */
+    function changeActiveByIndex(index) {
+        changeBarByIndex(index);
+        changeYearActiveByIndex(index);
+        changeEventActiveByIndex(index);
+        slideEventByIndex(index)
+        currentActiveIndex = index;
+        changeLRArrows(index);
+    }
+    /**
+     * 修改左右箭头显示状态
+     * @param index
+     */
+    function changeLRArrows(index) {
+        if (eventTotal <= 1) {
+            $(".left").hide();
+            $(".right").hide();
+            return
+        }
+        if (index == 0) {
+            $(".left").hide();
+            $(".right").show();
+            return
+        }
+        if (index == eventTotal - 1) {
+            $(".left").show();
+            $(".right").hide();
+            return
+        }
+        $(".left").show();
+        $(".right").show();
+    }
+    /**
+     * 根据index刷新进度条
+     * @param index
+     */
+    function changeBarByIndex(index) {
+        let total = $('.time-bottom').children().length;
+        let ratio = (index + 1) * 100 / total;
+        console.log("total:", total, "ratio", ratio);
+        $('.time-bar').css('background', `linear-gradient(to right, #0066b0 ${ratio}%, #7c7c7c 0%)`);
+    }
+    /**
+     * 根据inde获取应该滑动到的位置
+     * @param index
+     */
+    function getProperSlideDistance(index) {
+        if (eventTotal == 0) {
+            return 0;
+        }
+        if (eventTotal == 1) {
+            return 430;
+        }
+        if (eventTotal == 2) {
+            return 215;
+        }
+
+        if (index == 0) {
+            return 0;
+        }
+        if (index == eventTotal - 1) {
+            return -(eventTotal - 3) * eventItemW;
+        }
+        return -eventItemW * (index - 1);
+    }
+    /**
+     * 根据index滑动事件
+     * @param index
+     */
+    function slideEventByIndex(index) {
+        $('.event-box').css({
+            'transform': `translateX(${getProperSlideDistance(index)}px)`
+        });
+
+    }
+
+    /**
+     * 根据index刷新active状态
+     * @param index
+     */
+    function changeYearActiveByIndex(index) {
+        let oldYear = $('.year[data-state="active"]');
+        let newYear = $($('.time-bottom').children().get(index));
+        console.log("newYear:", newYear.text());
+
+        if (!newYear.is(oldYear)) {//非同一个
+            oldYear.attr('data-state', '');//old置空
+            newYear.attr('data-state', 'active');
+        }
+    }
+    /**
+     * 根据index刷新active状态
+     * @param index
+     */
+    function changeEventActiveByIndex(index) {
+        let oldEvent = $('.event-item[data-state="active"]');
+        let newEvent = $($('.event-box').children().get(index));
+
+        if (!newEvent.is(oldEvent)) {//非同一个
+            oldEvent.attr('data-state', '');//old置空
+            newEvent.attr('data-state', 'active');//当前选中置为active
+        }
+    }
+
 </script>
 </body>
 
