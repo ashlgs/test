@@ -9,7 +9,7 @@
 .form-area-title {
     font-size: 26px;
     color: #0066b0;
-    padding: 30px 12px 10px 12px;
+    padding: 40px 12px 10px 12px;
 }
 
 .form-area {
@@ -70,6 +70,10 @@
     align-items: center;
     align-content: flex-start;
     padding-top: 6px;
+}
+
+.radio-box1 {
+    display: flex;
 }
 
 .form-item-img {
@@ -140,7 +144,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .img-upload-box {
     margin-left: 20px;
-    border: 1px solid #e3e7ed;
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+    width:150px;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.img-upload-box:hover {
+    border: 1px solid #dee0ea;
 }
 
 .form-item-edit {
@@ -149,12 +161,37 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: 1px solid #e3e7ed;
 }
 
-/*input[type="radio"] {
-    height: 24px;
-    padding: 5px 4px;
-    margin: 0 10px;
-    color: #27334f;
-}*/
+input[type="radio"] {
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+}
+
+input[type="radio"] + label {
+    /*background-color: pink;*/
+    /*border: 1px solid #349EDF;*/
+}
+
+input[type="radio"] + label:before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: url(../image/RadioButton.png) no-repeat 0px center;
+    /*background-image: url('../image/close.png')*/
+}
+
+input[type="radio"]:checked + label:before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: url(../image/radio.png) no-repeat 0px center;
+}
 
 input[type="date"] {
     width: 400px;
@@ -244,6 +281,25 @@ input[type="number"] {
     box-sizing: border-box;
 }
 
+input[type="file"] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+
+}
+
+input[type="file"]:focus {
+    border: 1px solid #dee0ea;
+
+}
+
 input:focus {
     border: 1px solid #2DA7E0;
     /* 解决input按钮自动填充后 浏览器渲染的默认背景问题 */
@@ -253,6 +309,6 @@ input:focus {
 .preview {
     display: block;
     object-fit: contain;
-    width: 140px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
 }

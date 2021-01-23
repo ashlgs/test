@@ -654,6 +654,7 @@ input[type="text"] {
 }
 .news-item:hover .news-content-box .news-title a {
     color: #0066b0;
+    /*font-weight: bold;*/
 }
 
 .news-item .imgbox {

@@ -54,6 +54,14 @@ body {
     border: 1px solid #E5E6EA;
 }
 
+.top-container-left:hover .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    display: inline-block;
+}
+
+.top-container-left:hover .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    display: inline-block;
+}
+
 .bottom-container:hover .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
     display: inline-block;
 }
