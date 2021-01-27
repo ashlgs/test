@@ -426,10 +426,10 @@
             <div class="form-item-title requied">籍贯</div>
             <input class="form-item-edit" type="text" maxlength="5" name="hometown" id="hometown">
         </div>
-        <div class="form-item">
+     <!--   <div class="form-item">
             <div class="form-item-title requied">协会职务</div>
             <input class="form-item-edit" type="text" maxlength="10" name="associationTitle" id="associationTitle">
-        </div>
+        </div>-->
         <div class="form-item">
             <div class="form-item-title requied">全职/兼职</div>
             <div class="radio-box1">
@@ -919,7 +919,7 @@
         }
 
         $.ajax({
-            url: "http://192.168.1.209:8081/upload/image",
+            url: "http://192.168.1.204:8081/upload/image",
             type: 'POST',
             cache: false,
             data: param,
@@ -1036,7 +1036,7 @@
 
         $.ajax(
             {
-                url: 'http://192.168.1.209:8081/api/companyApply',
+                url: 'http://192.168.1.204:8081/api/companyApply',
                 data: JSON.stringify(param),
                 type: 'POST',
                 dataType: 'json',

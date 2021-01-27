@@ -183,14 +183,18 @@ body {
     align-items: center;
     color: #333333;
 }
+.top-banner .item[data-state=active] {
+    color: #fff;
+    background: #0066b0;
+}
 
-.top-banner .item:hover {
+/*.top-banner .item:hover {
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
     color: #0066b0;
-}
+}*/
 
 .top-banner .item-active {
     display: flex;
@@ -203,6 +207,12 @@ body {
 }
 
 .news-list {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.news-list[data-state=active] {
     display: flex;
     flex: 1;
     flex-direction: column;

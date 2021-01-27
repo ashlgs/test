@@ -146,11 +146,12 @@
     </div>
     <div class="news-box-right">
         <div class="top-banner">
-            <div class="item-active">协会新闻</div>
+            <div data-state="active" class="item">协会新闻</div>
             <div class="item">会员动态</div>
             <div class="item">产业资讯</div>
         </div>
-        <div class="news-list">
+        <!--1-->
+        <div class="news-list" data-state="active">
             <div class="news-list-item">
                 <div class="date-box">
                     <div class="sp1">20</div>
@@ -184,6 +185,96 @@
                     <div class="sp1">20</div>
                     <div class="sp2">12</div>
                     <div class="sp3">2020</div>
+                </div>
+                <div class="content-wraper">
+                    <div class="title">创意试试昂环球聚焦文创新梦盛典</div>
+                    <div class="content">暨中国智慧城市国际博览会暨党支部书记,蓝色行动"做一天百分之一"参加22th香港国际影视.</div>
+                </div>
+                <div class="img-wraper">
+                    <img class="image" src="../image/3.png">
+                </div>
+            </div>
+        </div>
+        <!--2-->
+        <div class="news-list">
+            <div class="news-list-item">
+                <div class="date-box">
+                    <div class="sp1">20</div>
+                    <div class="sp2">12</div>
+                    <div class="sp3">2021</div>
+                </div>
+                <div class="content-wraper">
+                    <div class="title">美国佛罗里达州有意接盘2021奥运会 已向IOC发信</div>
+                    <div class="content">北京时间1月27日，美国佛罗里达州首席财务官建议国际奥委会(IOC)考虑将2021年奥运会的举办地迁至佛罗里达。</div>
+                </div>
+                <div class="img-wraper">
+                    <img class="image" src="https://resource.ttplus.cn/publish/app/data/2021/01/27/357180/cb15d5e0-773c-445a-bb36-998ee9837468.png">
+                </div>
+            </div>
+            <div class="news-list-item">
+                <div class="date-box">
+                    <div class="sp1">20</div>
+                    <div class="sp2">12</div>
+                    <div class="sp3">2021</div>
+                </div>
+                <div class="content-wraper">
+                    <div class="title">美国佛罗里达州有意接盘2021奥运会 已向IOC发信</div>
+                    <div class="content">北京时间1月27日，美国佛罗里达州首席财务官建议国际奥委会(IOC)考虑将2021年奥运会的举办地迁至佛罗里达。</div>
+                </div>
+                <div class="img-wraper">
+                    <img class="image" src="https://resource.ttplus.cn/publish/app/data/2021/01/27/357180/cb15d5e0-773c-445a-bb36-998ee9837468.png">
+                </div>
+            </div>
+            <div class="news-list-item">
+                <div class="date-box">
+                    <div class="sp1">20</div>
+                    <div class="sp2">12</div>
+                    <div class="sp3">2021</div>
+                </div>
+                <div class="content-wraper">
+                    <div class="title">美国佛罗里达州有意接盘2021奥运会 已向IOC发信</div>
+                    <div class="content">北京时间1月27日，美国佛罗里达州首席财务官建议国际奥委会(IOC)考虑将2021年奥运会的举办地迁至佛罗里达。</div>
+                </div>
+                <div class="img-wraper">
+                    <img class="image" src="https://resource.ttplus.cn/publish/app/data/2021/01/27/357180/cb15d5e0-773c-445a-bb36-998ee9837468.png">
+                </div>
+            </div>
+        </div>
+        <!--3-->
+        <div class="news-list">
+            <div class="news-list-item">
+                <div class="date-box">
+                    <div class="sp1">20</div>
+                    <div class="sp2">12</div>
+                    <div class="sp3">2022</div>
+                </div>
+                <div class="content-wraper">
+                    <div class="title">第二届创意时尚"带动美"环球聚焦文创新梦盛典sssssssssssssssssssssssssss</div>
+                    <div class="content">暨中国智慧城市国际博览会暨党支部书记,蓝色行动"做一天百分之一"参加22th香港国际影视.ssssssss</div>
+                </div>
+                <div class="img-wraper">
+                    <img class="image" src="../image/1.png">
+                </div>
+            </div>
+            <div class="news-list-item">
+                <div class="date-box">
+                    <div class="sp1">20</div>
+                    <div class="sp2">12</div>
+                    <div class="sp3">2022</div>
+                </div>
+                <div class="content-wraper">
+                    <div class="title">创意试试昂环球聚焦文创新梦盛典</div>
+                    <div class="content">暨中国智慧城市国际博览会暨党支部书记,蓝色行动"做一天百分之一"参加22th香港国际影视.</div>
+                </div>
+                <div class="img-wraper">
+                    <img class="image" src="../image/2.png">
+                </div>
+            </div>
+            <div class="news-list-item">
+                <div class="date-box">
+                    <div class="sp1">20</div>
+                    <div class="sp2">12</div>
+                    <div class="sp3">2022</div>
                 </div>
                 <div class="content-wraper">
                     <div class="title">创意试试昂环球聚焦文创新梦盛典</div>
@@ -1485,7 +1576,35 @@
 <script src="../js/common.js"></script>
 <script src="../js/scrollReveal.min.js"></script>
 <script>
+    $('.top-banner .item').mouseover(function () {
+        let currIndex = $(this).index();
+        changeActiveByIndex(currIndex);
+        changeActiveNews(currIndex);
+    })
+    /**
+     * 根据index刷新active状态
+     * @param index
+     */
+    function changeActiveByIndex(index) {
+        let oldItem = $('.top-banner .item[data-state="active"]');
+        let newItem = $($('.top-banner').children().get(index));
 
+        if (!newItem.is(oldItem)) {//非同一个
+            console.log("newItem:", newItem.text());
+            oldItem.attr('data-state', '');//old置空
+            newItem.attr('data-state', 'active');
+        }
+    }
+    function changeActiveNews(index) {
+        let oldItem = $('.news-box-right .news-list[data-state="active"]');
+        let newItem = $($('.news-box-right .news-list').get(index));
+
+        if (!newItem.is(oldItem)) {//非同一个
+            console.log("newItem:", newItem.text());
+            oldItem.attr('data-state', '');//old置空
+            newItem.attr('data-state', 'active');
+        }
+    }
 
     window.scrollReveal = new scrollReveal({
         reset: true,
