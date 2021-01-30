@@ -1,0 +1,9 @@
+body {
+    min-width: 1400px;
+}
+
+.banner-box {
+    height: 750px;
+    display: block;
+    object-fit:cover ;
+}

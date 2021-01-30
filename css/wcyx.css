@@ -162,7 +162,7 @@ body {
     display: none;
     min-width: 160px;
     padding: 5px 0;
-    margin: 2px 0 0;
+    /* margin: 2px 0 0; */
     font-size: 14px;
     text-align: left;
     list-style: none;
@@ -170,9 +170,9 @@ body {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: 2px;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    /* border-radius: 2px; */
+    -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
 }
 
 .select-box[data-state=close] .slelect-option-ui {

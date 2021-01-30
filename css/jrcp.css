@@ -1,175 +1,226 @@
-    /* 金融产品页面样式 */
-    /* 产品分类标签样式 */
-    body {
-        min-width: 1400px;
-        padding-top: 85px;
+/* 金融产品页面样式 */
+/* 产品分类标签样式 */
+body {
+    min-width: 1400px;
+    padding-top: 85px;
 
-    }
-    .main-nav-wrapper {
-        margin-bottom: 20px;
-    }
-    
-    .nav-bar {
-        width: 960px;
-        height: 60px;
-        border: 1px solid #e5e6ea;
-    }
-    
-    .nav-bar li {
-        float: left;
-        padding: 0 30px;
-        color: #555c68;
-        font-size: 20px;
-        line-height: 60px;
-    }
-    
-    .nav-bar li.active {
-        color: #0066b0;
-        cursor: default;
-        border-top: 3px solid #0066b0;
-        margin-top: -1px;
-        background: #fff;
-    }
-    
-    .nav-bar li.cut-line {
-        width: 1px;
-        height: 59px;
-        background: #e5e6ea;
-        padding: 0;
-    }
-    
-    .tags-area {
-        border: 1px solid #e5e6ea;
-        border-top: none;
-    }
-    
-    .tags-area .tag-row {
-        position: relative;
-        padding: 15px 0;
-        border-bottom: 1px dotted #eeeeee;
-    }
-    
-    .tags-area .tag-row:last-child {
-        border-bottom: none;
-    }
-    
-    .tags-area .tag-row .row-head {
-        position: absolute;
-        left: 20px;
-        margin-right: 20px;
-    }
-    
-    .tags-area .tag-row .row-head .title {
-        display: inline-block;
-        max-width: 90px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 16px;
-        color: #333;
-    }
-    
-    .tags-area .tag-row .row-body {
-        padding: 0 56px 0 106px;
-    }
-    
-    .tags-area .tag-row .row-body li {
-        float: left;
-        margin-bottom: 0px;
-        margin-right: 30px;
-    }
-    
-    .tags-area .tag-row-show2line .row-body li {
-        margin-bottom: 5px;
-    }
-    
-    .tags-area .tag-row .row-body li a {
-        display: block;
-        height: 30px;
-        line-height: 30px;
-        padding: 0px 10px;
-        font-size: 14px;
-        color: #666;
-    }
-    
-    .tags-area .tag-row .row-body li a:hover {
-        color: #0066b0;
-    }
-    
-    .tags-area .tag-row .row-body li.active a {
-        color: #fff;
-        background: #0066b0;
-        border-radius: 14px;
-        cursor: default;
-    }
-    /* 右侧按钮 */
-    
-    .tags-area .tag-row .row-foot {
-        position: absolute;
-        right: 20px;
-        top: 18px;
-        display: none;
-    }
-    
-    .tags-area .tag-row-show2line .row-foot {
-        display: block;
-    }
-    
-    .tags-area .tag-row .row-foot .more-btn {
-        font-size: 14px;
-        color: #1a5284;
-        cursor: pointer;
-    }
-    
-    .tags-area .tag-row .row-foot .more-btn i {
-        display: inline-block;
-        width: 9px;
-        height: 5px;
-        background: url(../image/arrow-icon/up-arrow.png) no-repeat left/100% 100%;
-        margin-left: 5px;
-        vertical-align: 2px;
-    }
-    /* 产品列表样式 */
-    
-    .finance-product-container .news-content-box .news-title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    .finance-product-container .news-content-box .news-title a {
-        max-width: 500px;
-    }
-    
-    .finance-product-container .news-content-box .news-title span {
-        color: #333;
-        font-size: 16px;
-    }
-    
-    .finance-product-container .desc {
-        margin-top: 15px;
-    }
-    
-    .finance-product-container .desc .desc-row span {
-        color: #666;
-        font-size: 14px;
-        line-height: 24px;
-    }
-    
-    .finance-product-container .desc .type {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-    
-    .finance-product-container .desc .type .type-item {
-        margin-right: 90px;
-    }
-    
-    .finance-product-container .news-content-box .bottom {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-end;
-    }
+}
+
+.main-nav-wrapper {
+    margin-bottom: 20px;
+    border: 1px solid #e5e6ea;
+}
+
+.nav-bar {
+    display: flex;
+    width: 960px;
+    height: 60px;
+    position: relative;
+}
+
+.nav-bar-bottom-line {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #e5e6ea;
+}
+
+.nav-bar .item {
+    padding: 0 30px;
+    color: #555c68;
+    font-size: 20px;
+    line-height: 60px;
+    min-width: 140px;
+    border-right: 1px solid #e5e6ea;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.nav-bar .item[data-state=active] {
+    color: #0066b0;
+    cursor: default;
+    /*border-top: 3px solid #0066b0;*/
+    background: #fff;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.nav-bar .item[data-state=active]:before {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0066b0;
+    content: '';
+    display: inline-block;
+}
+
+.nav-bar li.cut-line {
+    width: 1px;
+    height: 59px;
+    background: #e5e6ea;
+    padding: 0;
+}
+
+.tags-area {
+    /*border: 1px solid #e5e6ea;*/
+    border-bottom: 1px solid #e5e6ea;
+    border-top: none;
+}
+
+.tag-area-box {
+    display: none;
+}
+
+.tag-area-box[data-state=active] {
+    display: inline-block;
+}
+
+.tags-area:last-child {
+    /*border: 1px solid #e5e6ea;*/
+    border-bottom: 0px;
+}
+
+.tags-area .tag-row {
+    position: relative;
+    padding: 15px 0;
+    border-bottom: 1px dotted #eeeeee;
+}
+
+.tags-area .tag-row:last-child {
+    border-bottom: none;
+}
+
+.tags-area .tag-row .row-head {
+    position: absolute;
+    left: 20px;
+    margin-right: 20px;
+}
+
+.tags-area .tag-row .row-head .title {
+    display: inline-block;
+    max-width: 90px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: #333;
+}
+
+.tags-area .tag-row .row-body {
+    padding: 0 56px 0 106px;
+}
+
+.tags-area .tag-row .row-body li {
+    float: left;
+    margin-bottom: 0px;
+    margin-right: 30px;
+}
+
+.tags-area .tag-row-show2line .row-body li {
+    margin-bottom: 5px;
+}
+
+.tags-area .tag-row .row-body li .tag {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.tags-area .tag-row .row-body li .tag:hover {
+    color: #0066b0;
+}
+
+/*.tags-area .tag-row .row-body li.active a {
+    color: #fff;
+    background: #0066b0;
+    border-radius: 14px;
+    cursor: default;
+}*/
+.tags-area .tag-row .row-body li[data-state=active] .tag {
+    color: #fff;
+    background: #0066b0;
+    border-radius: 14px;
+    cursor: default;
+}
+
+/* 右侧按钮 */
+
+.tags-area .tag-row .row-foot {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    display: none;
+}
+
+.tags-area .tag-row-show2line .row-foot {
+    display: block;
+}
+
+.tags-area .tag-row .row-foot .more-btn {
+    font-size: 14px;
+    color: #1a5284;
+    cursor: pointer;
+}
+
+.tags-area .tag-row .row-foot .more-btn i {
+    display: inline-block;
+    width: 9px;
+    height: 5px;
+    background: url(../image/arrow-icon/up-arrow.png) no-repeat left/100% 100%;
+    margin-left: 5px;
+    vertical-align: 2px;
+}
+
+/* 产品列表样式 */
+
+.finance-product-container .news-content-box .news-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.finance-product-container .news-content-box .news-title a {
+    max-width: 500px;
+}
+
+.finance-product-container .news-content-box .news-title span {
+    color: #333;
+    font-size: 16px;
+}
+
+.finance-product-container .desc {
+    margin-top: 15px;
+}
+
+.finance-product-container .desc .desc-row span {
+    color: #666;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.finance-product-container .desc .type {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.finance-product-container .desc .type .type-item {
+    margin-right: 90px;
+}
+
+.finance-product-container .news-content-box .bottom {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

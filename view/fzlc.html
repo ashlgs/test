@@ -710,71 +710,32 @@
 <script src="../js/common.js"></script>
 <script src="../js/pagination.js"></script>
 <script>
-    // todo 获取事件总长度
-    //    let originTrans = 0;
-    //    let currentLeftItemIndex = 0;//当前最左事件索引
     let eventItemW = 430;
     let eventTotal = $('.event-box').children().length;
     let currentActiveIndex = 0
-    //    let currentRightItemIndex = (currentLeftItemIndex + 2) - (eventTotal - 1) > 0 ? (eventTotal - 1) : (currentLeftItemIndex + 2);//当前最右事件索引
 
     changeActiveByIndex(0);
     console.log("event总数:", eventTotal);
-    /*if (currentLeftItemIndex == currentRightItemIndex) {//only 1 items
-     $('.event-box').css({
-     'transform': `translateX(${eventItemW}px)`
-     });
-     }
-     if (currentRightItemIndex - currentLeftItemIndex == 1) {//only 2 items
-     $('.event-box').css({
-     'transform': `translateX(${eventItemW / 2}px)`
-     });
-     }*/
-
-
-    //    refreshLR();// 刷新左右按钮显示状态
     $(".right").click(function () {
         console.log("right")
         changeActiveByIndex(currentActiveIndex + 1);
-        /*if (currentRightItemIndex < eventTotal - 1) {
-         originTrans -= eventItemW;
-         currentLeftItemIndex += 1;
-         currentRightItemIndex += 1;
-         $('.event-box').css({
-         'transform': `translateX(${originTrans}px)`
-         });
-         $(".right").show();
-         }
-         refreshLR();*/
     })
 
     $(".left").click(function () {
         console.log("left")
         changeActiveByIndex(currentActiveIndex - 1);
-
-        /*if (currentLeftItemIndex > 0) {
-         currentLeftItemIndex -= 1;
-         currentRightItemIndex -= 1;
-         originTrans += eventItemW;
-         $('.event-box').css({
-         'transform': `translateX(${originTrans}px)`
-         });
-         }
-         refreshLR();*/
     });
 
     // 鼠标经过active切换
     $('.event-item').click(function () {
         let currIndex = $(this).index();
         changeActiveByIndex(currIndex);
-//        slideEventByIndex(currIndex);
     });
 
     //    底部年份点击事件
     $('.year').mouseover(function () {
         let currIndex = $(this).index();
         changeActiveByIndex(currIndex);
-//        slideEventByIndex(currIndex);
     });
 
 
@@ -854,7 +815,6 @@
         $('.event-box').css({
             'transform': `translateX(${getProperSlideDistance(index)}px)`
         });
-
     }
 
     /**

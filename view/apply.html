@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>协会新闻详情页</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/base.css">
@@ -131,7 +133,7 @@
         }
 
         .text-area:focus {
-            border: 1px solid #2DA7E0;
+            border: 1px solid #dee0ea;
         }
 
         input::-webkit-outer-spin-button,
@@ -426,10 +428,10 @@
             <div class="form-item-title requied">籍贯</div>
             <input class="form-item-edit" type="text" maxlength="5" name="hometown" id="hometown">
         </div>
-     <!--   <div class="form-item">
-            <div class="form-item-title requied">协会职务</div>
-            <input class="form-item-edit" type="text" maxlength="10" name="associationTitle" id="associationTitle">
-        </div>-->
+        <!--   <div class="form-item">
+               <div class="form-item-title requied">协会职务</div>
+               <input class="form-item-edit" type="text" maxlength="10" name="associationTitle" id="associationTitle">
+           </div>-->
         <div class="form-item">
             <div class="form-item-title requied">全职/兼职</div>
             <div class="radio-box1">
@@ -550,7 +552,8 @@
             <div class="img-upload-box" data-url="" style="position: relative;">
                 <img id="preview-corporateCredentialsObverse" class="preview" src="../image/人像.png">
                 <input id="corporateCredentialsObverse"
-                       type="file" accept="image/*" onchange="preview(`${id}`)"/>
+                       type="file" accept="image/*" onchange="'preview('+id+')'"/>
+                <!--type="file" accept="image/*" onchange="preview(`${id}`)"/>-->
             </div>
         </div>
         <div class="form-item-img">
@@ -558,7 +561,7 @@
             <div class="img-upload-box" data-url="" style="position: relative;">
                 <img id="preview-corporateCredentialsFront" class="preview" src="../image/国徽.png">
                 <input id="corporateCredentialsFront"
-                       type="file" accept="image/*" onchange="preview(`${id}`)"/>
+                       type="file" accept="image/*" onchange="'preview('+'id'+')'"/>
             </div>
         </div>
 
@@ -568,7 +571,7 @@
                 <img id="preview-memberPhoto" class="preview" src="../image/一寸照片.png">
                 <input id="memberPhoto"
                        name="uploadImg"
-                       type="file" accept="image/*" onchange="preview(`${id}`)"/>
+                       type="file" accept="image/*" onchange="'preview('+'id'+')'"/>
             </div>
 
         </div>
@@ -577,7 +580,7 @@
             <div class="img-upload-box" data-url="" style="position: relative;">
                 <img id="preview-memberCredentialsObverse" class="preview" src="../image/人像.png">
                 <input id="memberCredentialsObverse"
-                       type="file" accept="image/*" onchange="preview(`${id}`)"/>
+                       type="file" accept="image/*" onchange="'preview('+'id'+')'"/>
             </div>
         </div>
         <div class="form-item-img">
@@ -585,7 +588,7 @@
             <div class="img-upload-box" data-url="" style="position: relative;">
                 <img id="preview-memberCredentialsFront" class="preview" src="../image/国徽.png">
                 <input id="memberCredentialsFront"
-                       type="file" accept="image/*" onchange="preview(`${id}`)"/>
+                       type="file" accept="image/*" onchange="'preview('+'id'+')'"/>
             </div>
         </div>
 
@@ -868,17 +871,18 @@
     </p>
 </div>
 
+
 <script src="../js/jq.js"></script>
 <script src="../js/common.js"></script>
 <script>
     let restTime = 4;
     let time = setInterval(function () {
-        $('#close').text(`(${restTime}) 我知道了`);
+        $('#close').text('(' + restTime + ') 我知道了');
         restTime -= 1;
 
         console.log(restTime)
         if (restTime < 0) {
-            $('#close').text(`我知道了`);
+            $('#close').text('我知道了');
             $("#close").removeClass('close-gray');
             $("#close").addClass('close');
             clearInterval(time);
@@ -905,7 +909,7 @@
         console.log("e", e)
 //        console.log($('#memberPhoto')[0].files[0], "onchange img", $('#memberPhoto')[0].value)
         // 添加请求头
-        let file = $(`#${e}`)[0].files[0];
+        let file = $('#'+e)[0].files[0];
         if (!file) {
             return
         }

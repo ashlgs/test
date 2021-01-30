@@ -30,8 +30,7 @@ $(window).keydown(function (event) {
             console.log("search:::", $('#searchInput').get(0).value);//获取输入框的值
             let keyword = $('#searchInput').get(0).value;
             $('#searchInput').get(0).value = "";//清空输入框
-            window.location.href=`search_result.html?keyword=${keyword}`;
-
+            window.location.href='search_result.html?keyword='+keyword;
         }
     }
     if (event.keyCode == "27") {//监听Esc
@@ -50,9 +49,7 @@ $(".search-tag").click(function () {
     $('#searchInput').get(0).value = "";//清空输入框
     // window.location.href="http://www.baidu.com";
     // window.open("http://www.baidu.com",'top');
-    window.location.href=`search_result.html?keyword=${keyword}`;
-
-
+    window.location.href='search_result.html?keyword='+keyword;
 })
 
 $(".foot-link-item").click(function () {

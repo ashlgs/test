@@ -293,7 +293,7 @@ body {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-
+    display:block;
 }
 
 .news-list-item .content-wraper .content {

@@ -38,7 +38,7 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    border: 1px solid #E5E6EA;
+    /*border: 1px solid #E5E6EA;*/
 }
 
 .little-img-item {
