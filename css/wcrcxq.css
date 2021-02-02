@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: PingFang SC, Lantinghei SC, Helvetica Neue, Helvetica, Arial, Microsoft YaHei, 微软雅黑, STHeitiSC-Light, simsun, 宋体, WenQuanYi Zen Hei, WenQuanYi Micro Hei, "sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     min-width: 1400px;
 }
@@ -5,5 +13,358 @@ body {
 .banner-box {
     height: 750px;
     display: block;
-    object-fit:cover ;
+    object-fit: cover;
+    width: 100%;
+}
+
+.top-box {
+    /*min-width: 1900px;*/
+    width: 100%;
+    position: relative;
+}
+
+/*右上角背景图*/
+.r-t-bg {
+    width: 260px;
+    height: 260px;
+    object-fit: contain;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 380px;
+    z-index: -1;
+}
+
+.top-box .content-box {
+    width: 1200px;
+    margin: 70px auto 45px;
+}
+
+.top-box .title-box {
+    display: flex;
+    justify-content: center;
+}
+
+/*.top-box .title {
+    letter-spacing: 2px;
+    font-size: 40px;
+    color: #1f3249;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: url("../image/wcrcxq/标题左右.png") no-repeat center;
+    font-family: "PingFang SC Heavy";
+}*/
+.big-title {
+    letter-spacing: 2px;
+    font-size: 40px;
+    color: #1f3249;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: url("../image/wcrcxq/标题左右.png") no-repeat center;
+    font-family: "PingFang SC Heavy";
+}
+
+.title-top-padding {
+    margin-top: 135px;
+}
+
+.top-box .content {
+    padding-top: 20px;
+    font-size: 18px;
+    color: #4e4e4e;
+    line-height: 30px;
+    font-family: "PingFang SC Regular";
+}
+
+.top-box .content p {
+    padding-top: 30px;
+}
+
+.top-box .label-list-box {
+    margin: 30px 0 70px;
+    display: flex;
+    /*justify-content: space-around;*/
+    justify-content: space-between;
+}
+
+.top-box .label-item {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.top-box .label-item img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    object-fit: contain;
+}
+
+.top-box .label-title {
+    font-size: 20px;
+    color: #0066b0;
+    padding-top: 8px;
+    font-family: "PingFang SC Regular";
+}
+
+/*------------------------------------*/
+.middle-box {
+    width: 100%;
+    position: relative;
+}
+
+.middle-box .content-box {
+    width: 1200px;
+    margin: 45px auto 0;
+}
+
+/*左上角背景图*/
+.middle-box .left-bg {
+    width: 190px;
+    height: 360px;
+    object-fit: contain;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0px;
+    z-index: -1;
+}
+
+.middle-box .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+}
+
+.middle-box .category-item {
+    font-size: 16px;
+    color: #0066b0;
+    padding: 0 16px;
+    line-height: 46px;
+    width: 158px;
+    border: 2px solid #0066b0;
+    border-radius: 25px;
+    margin-right: 50px;
+    margin-top: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+.middle-box .category-item:nth-child(6) {
+    margin-right: 0px;
+    margin-top: 20px;
+}
+
+.middle-box .category-item[data-state=active] {
+    color: #fff;
+    background: #0066b0;
+}
+
+.employment-box {
+    min-height: 100px;
+    border-radius: 20px;
+    border: 2px solid #0066b0;
+    padding: 15px 30px;
+    margin-top: 20px;
+    transition: all ease 0.3s;
+    box-sizing: border-box;
+
+}
+
+.employment-box .main {
+    display: flex;
+    align-items: center;
+}
+
+/*招聘左侧内容*/
+.employment-box .main .left-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.employment-box .main .left-box .need-box {
+    display: flex;
+    font-size: 14px;
+    color: #666666;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.employment-box .main .left-box .need-box .need[data-tag=salary] {
+    display: flex;
+    font-size: 16px;
+    color: #dd4440;
+}
+
+.employment-box .main .left-box .need-box .need[data-tag=salary]:before {
+    display: none;
+
+}
+
+.employment-box .main .left-box .need-box .need {
+    display: flex;
+    font-size: 14px;
+    color: #666666;
+    font-family: PingFang SC Medium, PingFang SC Regular;
+}
+
+.employment-box .main .left-box .need-box .need:before {
+    display: block;
+    content: '|';
+    height: 18px;
+    color: #666666;
+    margin: 0 12px;
+    vertical-align: middle;
+}
+
+.employment-box .main .left-box .title {
+    font-size: 22px;
+    color: #1f3249;
+    font-family: "PingFang SC";
+    font-weight: bold;
+}
+
+.employment-box .main .btn-up {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    font-family: "PingFang SC Regular";
+    background: #0066b0;
+    border-radius: 25px;
+    margin-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.employment-box .main .btn-up:hover {
+    background: #005999;
+}
+
+.employment-box .main .drop {
+    width: 35px;
+    height: 35px;
+    background: url("../image/wcrcxq/展开.png");
+}
+
+.employment-box .more {
+    display: none;
+    transition: all ease 0.3s;
+}
+
+.employment-box[data-state=active] {
+
+}
+
+.employment-box[data-state=active] .main .drop {
+    width: 35px;
+    height: 35px;
+    background: url("../image/wcrcxq/收起.png");
+
+}
+
+.employment-box[data-state=active] .more {
+    border-top: 1px dashed #0066b0;
+    display: block;
+    margin-top: 16px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+
+}
+
+/*底部中间图片*/
+.mid-bottom-pic {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+/*--------------------------------------------------------------------------------*/
+.bottom-box {
+    width: 100%;
+    position: relative;
+    min-height: 460px;
+    background: #b6e4d6 url("../image/wcrcxq/底3-460.png") bottom no-repeat;
+}
+
+.bottom-box .content-box {
+    width: 1200px;
+    margin: 0px auto;
+    background: transparent;
+    padding-bottom: 200px;
+
+}
+
+.link-box {
+    display: flex;
+    align-items: center;
+    color: #1f3249;
+    font-family: PingFang SC Medium, PingFang SC Regular;
+    font-size: 20px;
+    flex-direction: column;
+    line-height: 48px;
+    margin-top: 40px;
+
+}
+
+.link-item {
+    display: flex;
+}
+
+.qr-box {
+    display: flex;
+    margin-top: 24px;
+}
+
+.link-item .key {
+    padding-right: 10px;
+}
+
+.qr-item {
+    width: 164px;
+    height: 164px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.qr-item:last-child {
+    margin-right: 0px;
+}
+
+.qr-item img {
+    width: 140px;
+    height: 140px;
+    display: block;
+    object-fit: cover;
+}
+
+input[type="file"] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+
 }

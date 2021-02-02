@@ -172,7 +172,7 @@ body {
     margin-left: 10px;
 }
 
-.bottom-box {
+.middle-box {
     display: flex;
     justify-content: space-between;
     width: 1400px;

@@ -37,6 +37,7 @@ body {
     text-align: center;
     box-sizing: border-box;
     position: relative;
+    cursor: pointer;
 
 }
 
@@ -89,7 +90,7 @@ body {
 .tags-area .tag-row {
     position: relative;
     padding: 15px 0;
-    border-bottom: 1px dotted #eeeeee;
+    border-bottom: 1px dashed #eeeeee;
 }
 
 .tags-area .tag-row:last-child {
@@ -112,8 +113,28 @@ body {
     color: #333;
 }
 
+.tags-area .tag-row[data-state=expand] .row-body {
+    padding: 0 56px 0 106px;
+    height: auto;
+    overflow: visible;
+}
+
+.tags-area .tag-row[data-state=fold] .row-body {
+    height: auto;
+    height: 30px;
+    overflow: hidden;
+}
+
 .tags-area .tag-row .row-body {
     padding: 0 56px 0 106px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.tags-area .tag-row .row-body[data-state=active] {
+    padding: 0 56px 0 106px;
+    /*height: 30px;*/
+    /*overflow: hidden;*/
 }
 
 .tags-area .tag-row .row-body li {
@@ -133,6 +154,7 @@ body {
     padding: 0px 10px;
     font-size: 14px;
     color: #666;
+    cursor: pointer;
 }
 
 .tags-area .tag-row .row-body li .tag:hover {
@@ -154,6 +176,38 @@ body {
 
 /* 右侧按钮 */
 
+.tags-area .tag-row[data-state=fold] .row-foot {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    display: block;
+}
+
+.tags-area .tag-row[data-state=expand] .row-foot {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    display: block;
+}
+
+.tags-area .tag-row[data-state=expand] .row-foot:before {
+    content: '收起';
+    font-size: 14px;
+    color: #1a5284;
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+.tags-area .tag-row[data-state=fold] .row-foot:before {
+    content: '展开';
+    font-size: 14px;
+    color: #1a5284;
+    cursor: pointer;
+    display: inline-block;
+
+}
+
 .tags-area .tag-row .row-foot {
     position: absolute;
     right: 20px;
@@ -171,11 +225,29 @@ body {
     cursor: pointer;
 }
 
-.tags-area .tag-row .row-foot .more-btn i {
+.tags-area .tag-row[data-state=expand] .row-foot .more-btn i {
     display: inline-block;
     width: 9px;
     height: 5px;
     background: url(../image/arrow-icon/up-arrow.png) no-repeat left/100% 100%;
+    margin-left: 5px;
+    vertical-align: 2px;
+}
+
+.tags-area .tag-row[data-state=fold] .row-foot .more-btn i {
+    display: inline-block;
+    width: 9px;
+    height: 5px;
+    background: url(../image/arrow-icon/down-arrow.png) no-repeat left/100% 100%;
+    margin-left: 5px;
+    vertical-align: 2px;
+}
+
+.tags-area .tag-row .row-foot .more-btn i {
+    display: inline-block;
+    width: 9px;
+    height: 5px;
+    background: url(../image/arrow-icon/down-arrow.png) no-repeat left/100% 100%;
     margin-left: 5px;
     vertical-align: 2px;
 }

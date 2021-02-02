@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=0, maximum-scale=1, minimum-scale=0, user-scalable=yes">
     <title>金融产品</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/base.css">
@@ -93,7 +93,7 @@
                 <!--1-->
                 <div class="tag-area-box" data-state="active">
                     <ul class="tags-area">
-                        <li class="tag-row tag-row-show2line">
+                        <li class="tag-row">
                             <div class="row-head">
                                 <span class="title">投资领域:</span>
                             </div>
@@ -127,9 +127,9 @@
                                 </li>
 
                             </ul>
-                            <div class="row-foot"><span class="more-btn">收起<i></i></span></div>
+                            <div class="row-foot"><span class="more-btn"><i></i></span></div>
                         </li>
-                        <li class="tag-row tag-row-show2line">
+                        <li class="tag-row">
                             <div class="row-head">
                                 <span class="title">产品类型:</span>
                             </div>
@@ -163,7 +163,7 @@
                                 </li>
 
                             </ul>
-                            <div class="row-foot"><span class="more-btn">收起<i></i></span></div>
+                            <div class="row-foot"><span class="more-btn"><i></i></span></div>
                         </li>
                         <li class="tag-row">
                             <div class="row-head">
@@ -189,7 +189,7 @@
                                     <div class="tag">其他投资公司</div>
                                 </li>
                             </ul>
-                            <div class="row-foot"><span class="more-btn">收起<i></i></span></div>
+                            <div class="row-foot"><span class="more-btn"><i></i></span></div>
                         </li>
                         <li class="tag-row">
                             <div class="row-head">
@@ -225,13 +225,13 @@
                                 </li>
 
                             </ul>
-                            <div class="row-foot"><span class="more-btn">收起<i></i></span></div>
+                            <div class="row-foot"><span class="more-btn"><i></i></span></div>
                         </li>
 
                     </ul>
                 </div>
                 <!--2-->
-                <div class="tag-area-box">
+                <!--<div class="tag-area-box">
                     <ul class="tags-area">
                         <li class="tag-row tag-row-show2line">
                             <div class="row-head">
@@ -347,7 +347,7 @@
                         </li>
 
                     </ul>
-                </div>
+                </div>-->
             </div>
             <div class="news-list">
                 <div class="news-item">
@@ -1330,10 +1330,47 @@
 <script src="../js/common.js"></script>
 <script src="../js/pagination.js "></script>
 <script>
-    console.log('window.location.href:', window.location.href)
-    console.log('window.location.host:', window.location.host, window.location.pathname)
-    console.log('window.location.search:', window.location.search)
-    console.log('search:', getSearchValues());
+    let rows = $('.clearfix.row-body');
+    //循环ul 初始化展开收起状态
+    for (let i = 0; i < rows.length; i++) {
+        console.log(".clearfix.row-body w::::", $(rows[i]).width());
+        let items = $(rows[i]).find('li');
+        let totalW = 0;//tag总长度
+        //循环tag
+        for (let j = 0; j < items.length; j++) {
+            console.log("width:", $(items[j]).outerWidth(true));
+            totalW += $(items[j]).outerWidth(true)
+        }
+        if (totalW > $(rows[i]).width()) {
+            $(rows[i]).parent().attr('data-state', 'fold')
+//            $(rows[i]).next().attr('data-state', 'fold')
+            console.log('多行')
+
+        } else {
+            console.log('1行')
+
+        }
+        console.log("-------------total:::", totalW)
+    }
+
+    $('.tags-area .tag-row .row-foot').click(function () {
+        if ($(this).parent().attr('data-state') == 'expand') {
+//            $(this).prev().attr('data-state', 'fold');
+            $(this).parent().attr('data-state', 'fold');
+            return
+        }
+        if ($(this).parent().attr('data-state') == 'fold') {
+//            $(this).prev().attr('data-state', 'expand');
+            $(this).parent().attr('data-state', 'expand');
+            return
+        }
+    })
+
+
+    /*  console.log('window.location.href:', window.location.href)
+     console.log('window.location.host:', window.location.host, window.location.pathname)
+     console.log('window.location.search:', window.location.search)
+     console.log('search:', getSearchValues());*/
     initTabActive();
     initTagActive();
     $('.nav-bar .item').click(function () {
@@ -1413,13 +1450,19 @@
     }
 
     /**
-     * 设置tag为active
+     * 通过tagid设置tag为active
      * @param id
      */
     function changeTagActiveById(tagId) {
         let activeTag = $(`.tags-area .tag-row .row-body li .tag[data-id=${tagId}]`);
         $($(activeTag).parent()).attr('data-state', 'active');
         $($(activeTag).parent()).siblings().attr('data-state', '');
+
+        let rowTag = $(activeTag).parent().parent().parent();
+        console.log(rowTag.attr('data-state'))
+        if (rowTag.attr('data-state') == 'fold') {
+            rowTag.attr('data-state', 'expand')
+        }
     }
 
     function changeTabActiveById(tabId) {

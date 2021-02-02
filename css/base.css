@@ -290,7 +290,8 @@ ul li {
 }
 
 .top-nav-item {
-    width: 175px;
+    white-space: nowrap;
+    min-width: 175px;
     height: 50px;
     background-color: #fff;
     margin: 10px 50px 10px 0px;
@@ -300,10 +301,15 @@ ul li {
     color: #333333;
     border: 1px solid #e5e6ea;
     cursor: pointer;
+    padding: 0 10px;
+    box-sizing: border-box;
+
 }
 
 .top-nav-item-active {
-    width: 175px;
+    white-space: nowrap;
+
+    min-width: 175px;
     height: 50px;
     background-color: #0066b0;
     margin: 10px 50px 10px 0px;
@@ -313,10 +319,15 @@ ul li {
     color: #fff;
     border: 1px solid #e5e6ea;
     cursor: pointer;
+    padding: 0 10px;
+    box-sizing: border-box;
+
 }
 
 .top-nav-item-active:last-child {
-    width: 175px;
+    white-space: nowrap;
+
+    min-width: 175px;
     height: 50px;
     background-color: #0066b0;
     margin: 10px 0px 10px 0px;
@@ -326,6 +337,8 @@ ul li {
     color: #fff;
     border: 1px solid #e5e6ea;
     cursor: pointer;
+    box-sizing: border-box;
+
 }
 
 .top-nav-item:hover {
@@ -337,7 +350,9 @@ ul li {
 }
 
 .top-nav-item:last-child {
-    width: 175px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    min-width: 175px;
     height: 50px;
     background-color: #fff;
     margin: 10px 0px;
@@ -600,6 +615,10 @@ input[type="text"] {
     font-size: 12px;
 }
 
+.website-records p span[data-state=big] {
+    font-size: 14px;
+}
+
 .website-records p img {
     vertical-align: middle;
 }
@@ -649,9 +668,11 @@ input[type="text"] {
     padding: 20px 0;
     border-bottom: 1px solid #eaeaea;
 }
+
 .news-item:hover .imgbox img {
     transform: scale(1.12);
 }
+
 .news-item:hover .news-content-box .news-title a {
     color: #0066b0;
     /*font-weight: bold;*/
@@ -844,7 +865,7 @@ input[type="text"] {
     color: #fff;
     line-height: 30px;
     font-size: 13px;
-    padding:0 10px;
+    padding: 0 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -861,7 +882,8 @@ input[type="text"] {
 .hot-news-list .news-item {
     padding: 15px 0;
 }
-.hot-news-list .news-item:hover .imgbox img{
+
+.hot-news-list .news-item:hover .imgbox img {
     transform: scale(1.12);
 }
 
