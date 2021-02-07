@@ -1,0 +1,120 @@
+body {
+    min-width: 1400px;
+    padding-top: 85px;
+
+}
+
+.jr-content-box {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 70px 0 0 0;
+}
+
+.nav-bar {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    border: 1px solid #e5e6ea;
+
+}
+
+.nav-bar .item {
+    padding: 0 30px;
+    color: #555c68;
+    font-size: 20px;
+    line-height: 60px;
+    min-width: 140px;
+    border-right: 1px solid #e5e6ea;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.nav-bar .item[data-state=active] {
+    color: #0066b0;
+    cursor: default;
+    /*border-top: 3px solid #0066b0;*/
+    background: #fff;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.nav-bar .item[data-state=active]:before {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0066b0;
+    content: '';
+    display: inline-block;
+}
+
+.content-top {
+    display: flex;
+    justify-content: space-between;
+    background: #fafafa;
+    margin-top: 40px;
+
+}
+
+.content-top img {
+    display: block;
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+    padding-right: 50px;
+}
+
+.content-top .right-box {
+    flex: 1;
+}
+
+.content-top .right-box .title {
+    padding-top: 25px;
+    font-size: 28px;
+    color: #262626;
+    font-family: PingFang SC Medium, PingFang SC Regular;
+}
+
+.content-top .right-box .company {
+    padding-top: 15px;
+    font-size: 16px;
+    color: #0066b0;
+    font-family: PingFang SC Regular;
+}
+
+.content-bottom {
+    font-size: 16px;
+    line-height: 32px;
+    color: #666666;
+    padding-top: 25px;
+}
+
+.content-bottom p {
+    padding-top: 20px;
+}
+
+.attr-list {
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.attr-list .item {
+    width: 410px;
+    display: flex;
+    font-size: 16px;
+    color: #878e9a;
+    line-height: 32px;
+}
+
+.attr-list .value {
+    color: #262626;
+    padding-left: 10px;
+}

@@ -20,7 +20,7 @@
     <div class="search-plate">
         <img class="clear" src="../image/close.png">
         <input id="searchInput" placeholder="请输入关键词">
-        <div class="desc">按Enter键进行搜索后Esc键关闭</div>
+        <div class="search-desc">按Enter键进行搜索后Esc键关闭</div>
         <div class="recommend-title">#推荐搜索#
         </div>
         <div class="search-tag-box">
@@ -198,7 +198,7 @@
         </div>-->
         <div class="swiper-container bottom-honor-box">
             <div class="swiper-wrapper" style="transform:translate3d(-32px, 0px, 0px)">
-                <div class="honor-item swiper-slide">
+                <!--<div class="honor-item swiper-slide">
                     <img class="honor-img"
                          src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2465964204,3612683526&fm=26&gp=0.jpg">
                 </div>
@@ -206,11 +206,11 @@
                     <img class="honor-img" -img
                          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fww3.sinaimg.cn%2Flarge%2F771a3ec3gw1eo60jeuvjbj20xc0xcwnp.jpg&refer=http%3A%2F%2Fwww.sina.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612495843&t=14f83d2c90da3263a9d9e89210f82ad2">
 
-                </div>
-                <div class="honor-item swiper-slide">
+                </div>-->
+              <!--  <div class="honor-item swiper-slide">
                     <img class="honor-img" -img
                          src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938795289,766540876&fm=26&gp=0.jpg">
-                </div>
+                </div>-->
                 <div class="honor-item swiper-slide">
                     <img class="honor-img"
                          src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1159010356,753789953&fm=15&gp=0.jpg">
@@ -564,10 +564,25 @@
     });
 
 
-    const swiperHonor = new Swiper('.swiper-container.bottom-honor-box', {
+   /* const swiperHonor = new Swiper('.swiper-container.bottom-honor-box', {
         autoplay: false,//可选选项，自动滑动
         loop: true,
         slidesPerView: 'auto',
+        slidesPerGroup: 2,
+        loopedSlides: 6,
+        spaceBetween: 0,
+        centeredSlides: true, //页面居中
+        navigation: {
+            nextEl: '.s4-next-1',
+            prevEl: '.s4-prev-1',
+        },
+        observer: true,
+        observeParents: true,
+    });*/
+    const swiperHonor = new Swiper('.swiper-container.bottom-honor-box', {
+//        autoplay: false,//可选选项，自动滑动
+        loop: true,
+        slidesPerView: false,
         slidesPerGroup: 2,
         loopedSlides: 6,
         spaceBetween: 0,

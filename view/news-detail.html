@@ -60,7 +60,7 @@
     <div class="search-plate">
         <img class="clear" src="../image/close.png">
         <input id="searchInput" placeholder="请输入关键词">
-        <div class="desc">按Enter键进行搜索后Esc键关闭</div>
+        <div class="search-desc">按Enter键进行搜索后Esc键关闭</div>
         <div class="recommend-title">#推荐搜索#
         </div>
         <div class="search-tag-box">
@@ -128,7 +128,7 @@
 <div class="detail-content-wrapper">
     <div class="plate-center content-box">
         <div class="content-left-box detail-article-container">
-            <div class="article-content">
+            <div id="print-area" class="article-content">
                 <h1>中华故土贝加尔湖（上）：世界储水最大的湖泊，自古以来所言非虚</h1>
                 <div class="clearfix article-info">
                     <div class="tag-box">
@@ -148,7 +148,7 @@
                     <div class="share-tool-box">
                         <ul class="share-tools">
                             <li>
-                                <a  class="share-link-icon"></a>
+                                <a class="share-link-icon"></a>
                             </li>
                             <li class="cut-line"></li>
                             <div style="display: flex" class="bshare-custom">
@@ -160,7 +160,8 @@
                             </div>
                             <li class="cut-line"></li>
                             <li>
-                                <a href="javascript:window.print()" class="print-icon"></a>
+                                <!--<a href="javascript:window.print('print-area')" class="print-icon"></a>-->
+                                <a class="print-icon" onclick="myPrint(document.getElementById('print-area'))"></a>
                             </li>
                         </ul>
 
@@ -657,7 +658,19 @@
         //改变图片跳转链接
         $('#relative-news-img').parent().attr("href", "http://baidu.com");
     });
+    function myPrint(obj) {
+        var newWindow = window.open("打印窗口", "_blank");
 
+        var docStr = obj.innerHTML;
+
+        newWindow.document.write(docStr);
+
+        newWindow.document.close();
+
+        newWindow.print();
+
+        newWindow.close();
+    }
     /*$('.pagination-box').pagination({
      totalData: 100, //总数量
      current: 10, //当前页数

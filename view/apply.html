@@ -12,6 +12,27 @@
     <link rel="stylesheet" href="../css/apply.css">
     <link rel="stylesheet" href="../css/news-detail.css">
     <style>
+        .success-box {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1040;
+            background-color: rgba(0, 0, 0, 0.5)
+        }
+
+        .success-dialog {
+            width: 500px;
+            height: 300px;
+            display: block;
+            z-index: 1041;
+            position: fixed;
+            top: 20%;
+            left: calc(50% - 250px);
+        }
+
         .modal-backdrop {
             position: fixed;
             top: 0;
@@ -153,7 +174,7 @@
     <div class="search-plate">
         <img class="clear" src="../image/close.png">
         <input id="searchInput" placeholder="请输入关键词">
-        <div class="desc">按Enter键进行搜索后Esc键关闭</div>
+        <div class="search-desc">按Enter键进行搜索后Esc键关闭</div>
         <div class="recommend-title">#推荐搜索#
         </div>
         <div class="search-tag-box">
@@ -206,6 +227,10 @@
 </div>
 
 <div class="modal-backdrop"></div>
+<div class="success-box">
+    <img class="success-dialog" src="../image/success.png">
+    </img>
+</div>
 <div class="tips-box">
     <div class="tip-title">会员申请须知</div>
     <div class="tips">
@@ -321,9 +346,12 @@
                 <div><input type="radio" name="productField" id="k" value='9'/><label for="k">工艺美术 </label></div>
                 <div><input type="radio" name="productField" id="l" value='10'/><label for="l">文化制造 </label></div>
                 <div><input type="radio" name="productField" id="m" value='11'/><label for="m">会展商贸 </label></div>
-                <div><input type="radio" name="productField" id="n" value='12'/><label
-                        for="n">文化融合（文化旅游/文化教育/文化体育/文化金融）</label></div>
-                <div><input type="radio" name="productField" id="p" value='13'/><label for="p">基地园区</label></div>
+                <div><input type="radio" name="productField" id="n" value='12'/><label for="n">文化融合（文化旅游/文化教育/文化体育/文化金融）</label></div>
+                <div><input type="radio" name="productField" id="o" value='13'/><label for="o">文化旅游</label></div>
+                <div><input type="radio" name="productField" id="p" value='14'/><label for="p">文化教育</label></div>
+                <div><input type="radio" name="productField" id="q" value='15'/><label for="q">文化体育</label></div>
+                <div><input type="radio" name="productField" id="r" value='16'/><label for="r">文化金融</label></div>
+                <div><input type="radio" name="productField" id="s" value='17'/><label for="s">基地园区</label></div>
             </div>
         </div>
         <div class="form-item-radio">
@@ -488,11 +516,21 @@
                         for="retiredSoldierf">否</label></div>
             </div>
         </div>
-        <div class="form-item">
+       <!-- <div class="form-item">
             <div class="form-item-title">其他社会职务</div>
             <input class="form-item-edit" type="text" maxlength="100" name="otherSocietyTitle"
                    id="otherSocietyTitle">
+        </div>-->
+
+        <div class="form-item-area">
+            <div class="form-item-title-area">其他社会职务</div>
+            <textarea name="otherSocietyTitle"
+                      id="otherSocietyTitle"
+                      class="text-area"
+                      maxlength="100"
+                      placeholder="请填写其他社会职务"></textarea>
         </div>
+
         <div class="form-item-area">
             <div class="form-item-title-area">个人荣誉奖项</div>
             <textarea name="personalHonor"
@@ -507,8 +545,10 @@
                       id="curriculumVitae"
                       class="text-area"
                       maxlength="500"
-                      placeholder="请填写个人荣誉奖项"></textarea>
+                      placeholder="请填写入会人主要简历"></textarea>
         </div>
+        <div class="form-item"></div>
+
         <div class="form-item">
             <div class="form-item-title requied">联系人姓名</div>
             <input class="form-item-edit" type="text" maxlength="4" name="contactName"
@@ -909,7 +949,7 @@
         console.log("e", e)
 //        console.log($('#memberPhoto')[0].files[0], "onchange img", $('#memberPhoto')[0].value)
         // 添加请求头
-        let file = $('#'+e)[0].files[0];
+        let file = $('#' + e)[0].files[0];
         if (!file) {
             return
         }
@@ -956,8 +996,12 @@
         return true;
     }
     function submit() {
-        window.location.reload()
+        $('.success-box').show();
 
+        setTimeout(function () {
+            console.log("跳转");
+            window.location.href = "http://baidu.com"
+        }, 2000)
         return
         console.log("submit", $('.detail-content-wrapper input'));
         let requirdArr = $('.form-item-title.requied');

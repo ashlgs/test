@@ -137,6 +137,11 @@ body {
     overflow-y: auto;
 
     direction: rtl;
+
+    scrollbar-color: #afbcc7 #f7f8fa;
+    scrollbar-track-color: #f7f8fa;
+    -ms-scrollbar-track-color: #f7f8fa;
+    scrollbar-width: thin;
 }
 
 .identity-list::-webkit-scrollbar { /*滚动条整体样式*/
@@ -172,7 +177,7 @@ body {
     margin-left: 10px;
 }
 
-.middle-box {
+.bottom-box {
     display: flex;
     justify-content: space-between;
     width: 1400px;
@@ -196,10 +201,12 @@ body {
     /*overflow-x: auto;*/
     padding-bottom: 34px;
 }
+
 .bottom-honor-box:hover .s4-next-1 {
     display: inline-block;
 
 }
+
 .bottom-honor-box:hover .s4-prev-1 {
     display: inline-block;
 
@@ -208,10 +215,12 @@ body {
 .honor-item {
     width: 300px;
     height: 200px;
-    padding:0 15px;
+    padding: 0 15px;
 }
 
-/*.bottom-honor-box::-webkit-scrollbar { !*滚动条整体样式*!
+/*.bottom-honor-box::
+
+ { !*滚动条整体样式*!
     width: 6px; !*高宽分别对应横竖滚动条的尺寸*!
     height: 6px;
 }
@@ -236,12 +245,13 @@ body {
     display: block;
     border: 1px solid #E5E6EA;
 }
+
 .s4-prev-1 {
     display: none;
     width: 22px;
     height: 40px;
     top: 120px;
-    left:0px;
+    left: 0px;
     margin: 0;
     padding: 0;
     z-index: 99;
@@ -250,12 +260,13 @@ body {
     cursor: pointer;
     background-image: url(../image/left.png);
 }
+
 .s4-next-1 {
     display: none;
     width: 22px;
     height: 40px;
     top: 120px;
-    right:0px;
+    right: 0px;
     margin: 0;
     padding: 0;
     z-index: 99;

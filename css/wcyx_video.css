@@ -38,6 +38,7 @@ body {
     height: 216px;
     position: relative;
 }
+
 .media-item-box:nth-child(5n) {
     /*width: 25%;*/
     /*flex:1;*/
@@ -55,29 +56,31 @@ body {
 }
 
 .media-info {
-    display: flex;
     position: absolute;
-    /*top: 0;*/
-    width: 42px;
-    height: 22px;
-    bottom: 10px;
-    right: 10px;
-    /*left: 0;*/
-    line-height: 1;
-    border-radius: 3px;
-    font-size: 12px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
-    color: rgba(255, 255, 255, 0.70);
-    background: rgba(0, 0, 0, 0.7);
-    /*background: rgba(0, 102, 176, 0.96);*/
+    color: #FFF;
+    background: rgba(0, 102, 176, 0.96);
     cursor: pointer;
 }
 
-/*.media-item-box:hover .media-info {
+.media-item-box:hover .media-info {
     display: flex;
-}*/
+    opacity:0 ;
+    background: rgba(0, 102, 176, 0.96);
+    transition: all ease 0.3s;
+}
+.media-item-box:hover .media-info:hover {
+    display: flex;
+    opacity:1 ;
+
+}
 
 .media-info-content {
     display: flex;
@@ -85,7 +88,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 120px;
+    /*margin-top: 120px;*/
+    margin-top: 35px;
 }
 
 .media-info-top {
@@ -119,7 +123,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 70px;
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.media-info-fn:hover {
+    color: #0066b0;
+    background: #fff;
 }
 
 .media-info-title {
@@ -129,6 +140,13 @@ body {
 .media-info-desc {
     font-size: 14px;
     margin-top: 10px;
+    padding: 0 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    line-height: 26px;
+    max-height: 78px;
 }
 
 .media-select-box {
@@ -224,8 +242,9 @@ body {
     border-right: 1px solid #eaeaea;
     box-sizing: border-box;
 }
-.active{
-    color:#0066b0;
+
+.active {
+    color: #0066b0;
 }
 
 .select-icon {

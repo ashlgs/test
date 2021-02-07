@@ -98,7 +98,7 @@ ul li {
     object-fit: cover;
 }
 
-.search-plate .desc {
+.search-plate .search-desc {
     position: absolute;
     right: 0;
     top: 170px;

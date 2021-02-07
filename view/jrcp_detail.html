@@ -1,16 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=0, maximum-scale=1, minimum-scale=0, user-scalable=yes">
-    <title>文创影像</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文创之声</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/wcyx_book.css">
-
+    <link rel="stylesheet" href="../css/jrcp_detail.css">
 </head>
-
-<body>
+<body id="body">
 <div class="search-box" style="display: none">
     <div class="search-plate">
         <img class="clear" src="../image/close.png">
@@ -28,12 +27,12 @@
     </div>
 </div>
 
-<header class="header-box" style="z-index: 5">
+<header class="header-box">
     <div class="header-content plate-center">
         <div class="header-left">
             <img class="header-logo" src="../image/logo.png" alt="">
             <div class="header-nav">
-                <a href="index.html">首页</a>
+                <a href="index.html" class="active">首页</a>
                 <a href="xhgk.html">文创聊城</a>
                 <a href="wczs.html">文创之声</a>
                 <a href="wcdj.html">文创党建</a>
@@ -41,7 +40,7 @@
                 <a href="gxptfw.html">服务平台</a>
                 <a href="hydw.html">会员单位</a>
                 <a href="fzjg.html">分支机构</a>
-                <a href="wcyx.html" class="active">文创影像</a>
+                <a href="wcyx.html">文创影像</a>
             </div>
         </div>
         <div class="header-right">
@@ -59,172 +58,77 @@
     <div class="top-line"></div>
 
 </header>
-<div class="content">
-    <div class="top-box">
-        <!--<div class="top-banner-title">文创聊城</div>
-        <div class="top-banner-line"></div>
-        <div class="top-banner-desc">INFORMATION</div>-->
 
-        <div class="media-select-box">
-            <div>全部</div>
+<div class="top-banner-box">
+    <div class="top-banner-title">服务平台</div>
+    <div class="top-banner-line"></div>
+    <div class="top-banner-desc">INFORMATION</div>
+</div>
+
+<div class="top-nav-box">
+    <div class="plate-center">
+        <div class="top-nav">
+            <a href="gxptfw.html" class="top-nav-item-active">供需平台服务</a>
+            <a href="szsyfw.html" class="top-nav-item">双招双引服务</a>
+            <a href="yxpxfw.html" class="top-nav-item">研学培训服务</a>
+            <a href="whjrfw.html" class="top-nav-item">文化金融服务</a>
+            <a href="zscqfw.html" class="top-nav-item">知识产权服务</a>
         </div>
-        <div class="media-select-box">
-            <div data-state="close" data-type="" class="select-box">
-                <div class="select-top">
-                    <div class="select-val">文创图片</div>
-                    <img class="select-icon" src="../image/footimg/down-arrow.png"></img>
-                </div>
-                <ul class="slelect-option-ui">
-                    <li data-value="文创聊城one" class="select-option-li">文创聊城one</li>
-                    <li data-value="文创聊城two" class="select-option-li">文创聊城two</li>
-                    <li data-value="文创聊城three" class="select-option-li">文创聊城three</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                </ul>
-            </div>
-
-        </div>
-        <div class="media-select-box">
-            <div data-state="close" data-type="_video" class="select-box">
-                <div class="select-top">
-                    <div class="select-val">文创视频</div>
-                    <img class="select-icon" src="../image/footimg/down-arrow.png"></img>
-                </div>
-                <ul class="slelect-option-ui">
-                    <li data-value="文创聊城a" class="select-option-li">文创聊城a</li>
-                    <li data-value="文创聊城b" class="select-option-li">文创聊城b</li>
-                    <li data-value="文创聊城c" class="select-option-li">文创聊城c</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                </ul>
-            </div>
-
-        </div>
-        <div class="media-select-box">
-            <div data-state="close" data-type="_book" class="select-box">
-                <div class="select-top">
-                    <div class="select-val" active>电子刊物</div>
-                    <img class="select-icon" src="../image/footimg/down-arrow.png"></img>
-                </div>
-                <ul class="slelect-option-ui">
-                    <li data-value="文创聊城1" class="select-option-li">文创聊城1</li>
-                    <li data-value="文创聊城2" class="select-option-li">文创聊城2</li>
-                    <li data-value="文创聊城3" class="select-option-li">文创聊城3</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                    <li data-value="文创聊城" class="select-option-li">文创聊城</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-    <div class="media-list">
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics0.baidu.com/feed/8694a4c27d1ed21bed849611288a03c353da3fe5.jpeg?token=da363a002a235961d2af8e334de9ecd2&s=D588D81B1A272A151E999AB60300B004"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics7.baidu.com/feed/7dd98d1001e939011340a706212b85e137d19691.png?token=165d5e0eb54753ce102d6ec0baaec979"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics0.baidu.com/feed/ac345982b2b7d0a2b56408615608970e49369a88.jpeg?token=7e9e2dec44e7ecb31d92349eeb9653c1&s=DB3107C75241034F16A8A4B303004003"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics0.baidu.com/feed/8694a4c27d1ed21bed849611288a03c353da3fe5.jpeg?token=da363a002a235961d2af8e334de9ecd2&s=D588D81B1A272A151E999AB60300B004"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics7.baidu.com/feed/7dd98d1001e939011340a706212b85e137d19691.png?token=165d5e0eb54753ce102d6ec0baaec979"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics0.baidu.com/feed/ac345982b2b7d0a2b56408615608970e49369a88.jpeg?token=7e9e2dec44e7ecb31d92349eeb9653c1&s=DB3107C75241034F16A8A4B303004003"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics0.baidu.com/feed/8694a4c27d1ed21bed849611288a03c353da3fe5.jpeg?token=da363a002a235961d2af8e334de9ecd2&s=D588D81B1A272A151E999AB60300B004"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics7.baidu.com/feed/7dd98d1001e939011340a706212b85e137d19691.png?token=165d5e0eb54753ce102d6ec0baaec979"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics0.baidu.com/feed/ac345982b2b7d0a2b56408615608970e49369a88.jpeg?token=7e9e2dec44e7ecb31d92349eeb9653c1&s=DB3107C75241034F16A8A4B303004003"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics0.baidu.com/feed/8694a4c27d1ed21bed849611288a03c353da3fe5.jpeg?token=da363a002a235961d2af8e334de9ecd2&s=D588D81B1A272A151E999AB60300B004"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics7.baidu.com/feed/7dd98d1001e939011340a706212b85e137d19691.png?token=165d5e0eb54753ce102d6ec0baaec979"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics0.baidu.com/feed/ac345982b2b7d0a2b56408615608970e49369a88.jpeg?token=7e9e2dec44e7ecb31d92349eeb9653c1&s=DB3107C75241034F16A8A4B303004003"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics0.baidu.com/feed/8694a4c27d1ed21bed849611288a03c353da3fe5.jpeg?token=da363a002a235961d2af8e334de9ecd2&s=D588D81B1A272A151E999AB60300B004"
-                 alt="">
-
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics7.baidu.com/feed/7dd98d1001e939011340a706212b85e137d19691.png?token=165d5e0eb54753ce102d6ec0baaec979"
-                 alt="">
-        </a>
-        <a class="media-item-box">
-            <img class="media-img"
-                 src="https://pics0.baidu.com/feed/ac345982b2b7d0a2b56408615608970e49369a88.jpeg?token=7e9e2dec44e7ecb31d92349eeb9653c1&s=DB3107C75241034F16A8A4B303004003"
-                 alt="">
-        </a>
     </div>
 </div>
-<div class="pagination-box"></div>
+
+<div class="jr-content-box">
+    <div class="nav-bar">
+        <div class="item" data-state="active">融资需求
+        </div>
+        <div class="item">金融产品
+        </div>
+    </div>
+    <div class="content-top">
+        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2107122157,4064384491&fm=26&gp=0.jpg">
+        <div class="right-box">
+            <div class="title">
+                《数码宝贝》二十周年纪念，初音未来重新演绎光叔《butterfly》！
+            </div>
+            <div class="company">
+                北京字节跳动科技有限公司
+            </div>
+            <div class="attr-list">
+                <div class="item">
+                    <span>产品类型:</span>
+                    <span class="value">担保品</span>
+                </div>
+                <div class="item">
+                    <span>融资轮次:</span>
+                    <span class="value">Pre-A轮</span>
+                </div>
+                <div class="item">
+                    <span>机构类型:</span>
+                    <span class="value">担保公司</span>
+                </div>
+                <div class="item">
+                    <span>投资领域:</span>
+                    <span class="value">软件和信息技术服务</span>
+                </div>
+                <div class="item">
+                    <span>发布时间:</span>
+                    <span class="value">2020-12-20</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-bottom">
+        <p>
+            时值《数码宝贝》诞生20周年，初音未来官方发布了一则视频——由初音重新演绎经典主题《Butter-Fly》MV，感兴趣的小伙伴可以看这里.就算没怎么看过《数码宝贝》的小伙伴们，相信也听过这首经典主题曲，每次前奏响起来的时候，钙君总是忍不住想起那个夏令营的故事。</p>
+        <p>
+            就算没怎么看过《数码宝贝》的小伙伴们，相信也听过这首经典主题曲，每次前奏响起来的时候，钙君总是忍不住想起那个夏令营的故事。就算没怎么看过《数码宝贝》的小伙伴们，相信也听过这首经典主题曲，每次前奏响起来的时候，钙君总是忍不住想起那个夏令营的故事。</p>
+
+    </div>
+
+</div>
+
 
 <!-- footer -->
-
-
 <div class="foot-bg"></div>
 <div class="foot-container">
     <div class="plate-center foot-content">
@@ -494,62 +398,12 @@
         <sapn>11010502000728</sapn>
     </p>
 </div>
+
 <script src="../js/jq.js"></script>
-<script src="../js/pagination.js"></script>
 <script src="../js/common.js"></script>
 <script>
-    $('.pagination-box').pagination({
-        totalData: 100, //总数量
-        current: 10, //当前页数
-        showData: 10, //一页显示几个
-        prevContent: '上一页',
-        nextContent: '下一页',
-        keepShowPN: true,
-        coping: true,
-        callback: function (api) {
-            $('.now').text(api.getCurrent());
-        }
-    }, function (api) {
-        $('.now').text(api.getCurrent());
-    });
-    //select打开关闭事件
-    $('body').on('click', '.select-top', function () {
-        var state = $(this).parent().attr('data-state') === 'close' ? 'open' : 'close'
-        $(this).parent().attr('data-state', state)
-    })
-    $(document).click(function (e) {
-        var topMenuList = $(".select-top");
-        for (i = 0; i < topMenuList.length; i++) {
-            let topMenu = topMenuList.eq(i);
-            //判断事件对象不是弹窗对象  并且  弹窗对象不包含事件对象
-            if (!topMenu.is(e.target) && topMenu.has(e.target).length == 0) {
-                //则隐藏弹窗
-                topMenu.parent().attr('data-state', 'close');
-            }
-        }
-    });
-
-    //全局监听关闭select
-    $(document).click(function (e) {
-        var _con = $('.select-box');
-        if (!_con.is(e.target) && _con.has(e.target).length === 0) {
-            $('.select-box').attr('data-state', 'close')
-        }
-    })
-
-    //监听select option选择
-    $('.slelect-option-ui li').click('click', function (e) {
-        $('.select-box').attr('data-state', 'close')
-//        console.log($(this).parent().parent().attr('data-type'));
-        let type = $(this).parent().parent().attr('data-type');
-        $(this).parent().parent().find('.select-top .select-val').text($(this).attr('data-value'))
-        var keyword = $(this).attr('data-value');
-        console.log(keyword)
-        window.location.href = `wcyx${type}.html?keyword=${keyword}`;
-    })
 
 
 </script>
 </body>
-
 </html>

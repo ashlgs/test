@@ -25,7 +25,9 @@
     height: 214px;
     overflow: hidden;
 }
-
+.member-item-info {
+    padding: 16px 20px;
+}
 .member-container .member-item .member-item-info .member-item-title {
     height: 55px;
     font-size: 16px;
