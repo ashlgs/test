@@ -246,6 +246,14 @@ body {
     height: 5px;
     display: block;
     object-fit: contain;
+    background: url("../image/footimg/down-arrow.png") no-repeat center;
+}
+.select-icon {
+    width: 30px;
+    height: 5px;
+    display: block;
+    object-fit: contain;
+    background: url("../image/footimg/down-arrow.png") no-repeat center;
 }
 
 .select-option-li:hover {

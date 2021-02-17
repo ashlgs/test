@@ -22,6 +22,10 @@ body {
     width: 100%;
     position: relative;
 }
+.top-box img{
+    display: block;
+    max-width: 100%;
+}
 
 /*右上角背景图*/
 .r-t-bg {
@@ -78,6 +82,8 @@ body {
     color: #4e4e4e;
     line-height: 30px;
     font-family: "PingFang SC Regular";
+
+
 }
 
 .top-box .content p {

@@ -44,6 +44,28 @@ body {
 .little-img-item {
     width: 350px;
     height: 234px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.little-img-item:hover .little-img-title {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.70);
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.little-img-title {
+    display: none;
 }
 
 .little-img {

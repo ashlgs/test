@@ -11,7 +11,30 @@
     <script src="../js/swiper.min.js"></script>
 
     <style>
+        .time {
+            width: 960px;
+            /*margin: 60px auto 0;*/
+        }
 
+        .time .time-top {
+            display: flex;
+            justify-content: space-between;
+            width: 960px;
+            margin: 0 auto 3px auto;
+        }
+
+        .time .line {
+            width: 1px;
+            height: 12px;
+            background: #C7C7C7;
+        }
+
+        .time-bar {
+            display: flex;
+            width: 960px;
+            height: 3px;
+            background: #f5f5f5;
+        }
     </style>
 </head>
 
@@ -61,7 +84,6 @@
         </div>
 
     </div>
-    <div class="top-line"></div>
 
 </header>
 
@@ -198,23 +220,23 @@
         </div>-->
         <div class="swiper-container bottom-honor-box">
             <div class="swiper-wrapper" style="transform:translate3d(-32px, 0px, 0px)">
-                <!--<div class="honor-item swiper-slide">
+                <div class="honor-item swiper-slide">
                     <img class="honor-img"
-                         src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2465964204,3612683526&fm=26&gp=0.jpg">
+                    src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/4ac07fb2a862485db98b28ce6f1d76b5.png">
                 </div>
                 <div class="honor-item swiper-slide">
-                    <img class="honor-img" -img
-                         src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fww3.sinaimg.cn%2Flarge%2F771a3ec3gw1eo60jeuvjbj20xc0xcwnp.jpg&refer=http%3A%2F%2Fwww.sina.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612495843&t=14f83d2c90da3263a9d9e89210f82ad2">
+                    <img class="honor-img"
+                         src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3103784260,704024337&fm=26&gp=0.jpg">
 
-                </div>-->
-              <!--  <div class="honor-item swiper-slide">
-                    <img class="honor-img" -img
+                </div>
+              <!-- <div class="honor-item swiper-slide">
+                    <img class="honor-img"
                          src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938795289,766540876&fm=26&gp=0.jpg">
-                </div>-->
-                <div class="honor-item swiper-slide">
+                </div>
+                 <div class="honor-item swiper-slide">
                     <img class="honor-img"
                          src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1159010356,753789953&fm=15&gp=0.jpg">
-                </div>
+                </div>-->
             </div>
             <div class="s4-prev-1 swiper-button-prev">
             </div>
@@ -222,7 +244,43 @@
             </div>
         </div>
 
-        <img class="tdht" src="../image/托底横条.png">
+        <!--<img class="tdht" src="../image/托底横条.png">-->
+        <div class="time">
+            <div class="time-top">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div class="time-bar"></div>
+        </div>
+
     </div>
 
 
@@ -255,14 +313,14 @@
                         <div class="desc">sdfads dfsfds f asf</div>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <!--<div class="swiper-slide">
                     <div class="book-item" href="#" target="_blank">
-                        <!--<img src="../img/康华.png" alt="1">-->
+                        &lt;!&ndash;<img src="../img/康华.png" alt="1">&ndash;&gt;
                         <img class="swiper-news-image"
                              src="../image/轮播.png">
                         <div class="desc">sdfads dfsfds f asf</div>
                     </div>
-                </div>
+                </div>-->
             </div>
 
             <div class="swiper-pagination"></div>
@@ -580,12 +638,13 @@
         observeParents: true,
     });*/
     const swiperHonor = new Swiper('.swiper-container.bottom-honor-box', {
-//        autoplay: false,//可选选项，自动滑动
-        loop: true,
-        slidesPerView: false,
-        slidesPerGroup: 2,
+//        loop:true,
+        slidesPerView: 'auto',
+        slidesPerGroup: 1,
+
         loopedSlides: 6,
         spaceBetween: 0,
+        initialSlide: 1,//默认显示第2张在中心位置
         centeredSlides: true, //页面居中
         navigation: {
             nextEl: '.s4-next-1',

@@ -11,17 +11,7 @@ $(".clear").click(function () {
     $("body").removeClass("noScroll")
 
 })
-/* $('#searchInput').bind('keydown', function (event) {
- if (event.keyCode == "13") {
- alert(1111);
- $(".search-box").hide();
- $("body").removeClass("noScroll")
- }
- if (event.keyCode == "27") {
- $(".search-box").hide();
- $("body").removeClass("noScroll")
- }
- });*/
+
 $(window).keydown(function (event) {
     if (event.keyCode == "13") {//监听Enter
         if (!$(".search-box").is(":hidden")) {

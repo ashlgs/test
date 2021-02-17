@@ -7,6 +7,9 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>会员申请</title>
+    <script src="../js/browser.min.js"></script>
+    <script type="text/babel"></script>
+
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/apply.css">
@@ -229,7 +232,6 @@
 <div class="modal-backdrop"></div>
 <div class="success-box">
     <img class="success-dialog" src="../image/success.png">
-    </img>
 </div>
 <div class="tips-box">
     <div class="tip-title">会员申请须知</div>
@@ -313,7 +315,7 @@
         </div>
         <div class="form-item-radio">
             <div class="form-item-title requied">单位性质</div>
-            <div class="radio-box">
+            <div id="companyNature" class="radio-box">
                 <div><input type="radio" name="companyNature" id="zero" value='0'/><label for="zero">事业单位</label></div>
                 <div><input type="radio" name="companyNature" id="one" value='1'/><label for="one">国有企业</label></div>
                 <div><input type="radio" name="companyNature" id="two" value='2'/><label for="two">民营企业</label>
@@ -329,6 +331,8 @@
                 </div>
                 <div><input type="radio" name="companyNature" id="other" value='9'/><label for="other">其他</label>
                 </div>
+                <input id="otherNatureInput" style="display: none" class="form-item-edit" type="text" maxlength="20" name="otherNature" id="otherNature">
+
             </div>
         </div>
         <div class="form-item-radio">
@@ -346,7 +350,8 @@
                 <div><input type="radio" name="productField" id="k" value='9'/><label for="k">工艺美术 </label></div>
                 <div><input type="radio" name="productField" id="l" value='10'/><label for="l">文化制造 </label></div>
                 <div><input type="radio" name="productField" id="m" value='11'/><label for="m">会展商贸 </label></div>
-                <div><input type="radio" name="productField" id="n" value='12'/><label for="n">文化融合（文化旅游/文化教育/文化体育/文化金融）</label></div>
+                <div><input type="radio" name="productField" id="n" value='12'/><label
+                        for="n">文化融合（文化旅游/文化教育/文化体育/文化金融）</label></div>
                 <div><input type="radio" name="productField" id="o" value='13'/><label for="o">文化旅游</label></div>
                 <div><input type="radio" name="productField" id="p" value='14'/><label for="p">文化教育</label></div>
                 <div><input type="radio" name="productField" id="q" value='15'/><label for="q">文化体育</label></div>
@@ -516,11 +521,11 @@
                         for="retiredSoldierf">否</label></div>
             </div>
         </div>
-       <!-- <div class="form-item">
-            <div class="form-item-title">其他社会职务</div>
-            <input class="form-item-edit" type="text" maxlength="100" name="otherSocietyTitle"
-                   id="otherSocietyTitle">
-        </div>-->
+        <!-- <div class="form-item">
+             <div class="form-item-title">其他社会职务</div>
+             <input class="form-item-edit" type="text" maxlength="100" name="otherSocietyTitle"
+                    id="otherSocietyTitle">
+         </div>-->
 
         <div class="form-item-area">
             <div class="form-item-title-area">其他社会职务</div>
@@ -637,8 +642,6 @@
 </div>
 
 <div class="submit" onclick="submit()">提交</div>
-<!--</div>-->
-</div>
 
 <!-- footer -->
 <div class="foot-bg"></div>
@@ -765,6 +768,9 @@
                             </li>
                             <li>
                                 <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
+
+                                
+
                             </li>
                             <li>
                                 <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
@@ -772,7 +778,9 @@
                         </ul>
                     </div>
                     <div id="menu3" class="foot-link-item">
-                        <div class="link-txt">文化和旅游政府部分官网</div>
+                        <div class="link
+
+                        -txt">文化和旅游政府部分官网</div>
                         <img src="../image/footimg/down-arrow.png" alt="">
                         <ul class="dropdown-menu" role="menu">
                             <li>
@@ -915,6 +923,7 @@
 <script src="../js/jq.js"></script>
 <script src="../js/common.js"></script>
 <script>
+    console.log("hahahh")
     let restTime = 4;
     let time = setInterval(function () {
         $('#close').text('(' + restTime + ') 我知道了');
@@ -944,6 +953,7 @@
 
         }
     })
+
 
     function preview(e) {
         console.log("e", e)
@@ -975,10 +985,10 @@
             success: function (data) {
                 console.log(data)
                 if (data.code == '2000') {
-                    $(`#preview-${e}`).attr('src', data.data);
-                    $(`#preview-${e}`).attr('data-url', data.data);
-                    $(`#preview-${e}`).parent().attr('data-url', data.data);
-                    console.log("$(`#preview-${e}`).attr", $(`#preview-${e}`).parent().attr('data-url'))
+                    $('#preview-' + e).attr('src', data.data);
+                    $('#preview-' + e).attr('data-url', data.data);
+                    $('#preview-' + e).parent().attr('data-url', data.data);
+//                    console.log("$(`#preview-${e}`).attr", $(`#preview-${e}`).parent().attr('data-url'))
                 } else {
                     alert(data.message)
                 }
@@ -987,10 +997,27 @@
         });
     }
 
+
+    $("#companyNature :radio").on('click', function () {
+        //var item=$('input:radio[name="sex"]:checked').val();
+        //或者
+        var item = $(this).val();
+        console.log(item);
+        $('#other-nature')
+        if (item == 9) {
+            $("#otherNatureInput").show();
+
+        }else{
+            $("#otherNatureInput").hide();
+        }
+
+    })
+
+
     function checkRadioInput(name) {
-        let fieldValue = $(`.detail-content-wrapper input[name=${name}]:checked`).val();//性别
+        let fieldValue = $('.detail-content-wrapper input[name=' + name + ']:checked').val();//性别
         if (!fieldValue) {
-            alert('请选择' + $(`.detail-content-wrapper input[name=${name}]`).parent().parent().prev().text());
+            alert('请选择' + $('.detail-content-wrapper input[name=' + name + ']').parent().parent().prev().text());
             return false;
         }
         return true;
@@ -1067,7 +1094,7 @@
         for (i in radioFields) {
             console.log(radioFields[i])
             if (checkRadioInput(radioFields[i])) {
-                param['' + radioFields[i]] = $(`.detail-content-wrapper input[name=${radioFields[i]}]:checked`).val();
+                param['' + radioFields[i]] = $('.detail-content-wrapper input[name=' + radioFields[i] + ']:checked').val();
             } else {
                 return
             }

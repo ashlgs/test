@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/swiper.min.css">
     <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/browser.min.js"></script>
+    <script type="text/babel"></script>
     <script src="../js/swiper.min.js"></script>
 </head>
 
@@ -84,7 +86,9 @@
 
             </a>
         </div>
-
+        <div class="banner-video-box">
+            <video id="video1" class="banner-video" controls="controls" muted autoplay="autoplay" src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/01/28/34480e3ce63c4c2c9f433dc5567c8153.mp4"/>
+        </div>
         <div class="swiper-slide">
             <a href="#" target="_blank">
                 <!--<img src="../img/康华.png" alt="1">-->
@@ -1572,7 +1576,8 @@
         <sapn>11010502000728</sapn>
     </p>
 </div>
-
+<script src="../js/browser.min.js"></script>
+<script type="text/babel"></script>
 <script src="../js/jq.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/scrollReveal.min.js"></script>
@@ -1617,7 +1622,7 @@
         spaceBetween: 0,
         loop: true,
         autoplay: {
-            delay: 3000,
+            delay: 15000,
             stopOnLastSlide: false,
             disableOnInteraction: false,
         },
@@ -1713,7 +1718,8 @@
 
 
     function createImgSwiper(dom, config) {
-        let {right = 10, speed = 1, originDistance = 0} = config
+        let right = 10; letspeed = 1; letoriginDistance = 0 ;
+
         let itemLen = $(dom).find('a').length
         let itemWidth = $(dom).find('a').width()
         let domWidth = (itemWidth + right) * itemLen
@@ -1746,7 +1752,9 @@
 
     // test竖向新闻列表滚动
     function createNewsSwiper(dom, config) {
-        let {speed = 1, padding = 20} = config
+//        let {speed = 1, padding = 20} = config
+        let speed =1;
+        let padding = 20;
         let itemLen = $(dom).find('.organization-item').length
         let itemHeight = $(dom).find('.organization-item').height()
         let domHeight = (itemHeight + 2 * padding) * itemLen

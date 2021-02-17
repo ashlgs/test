@@ -1090,7 +1090,7 @@ body {
     flex: 1;
     margin-right: 20px;
     width: 100%;
-    max-width: 325px;
+    max-width: 310px;
     font-size: 16px;
     overflow: hidden;
     white-space: nowrap;
@@ -1110,7 +1110,7 @@ body {
 
 .article-item-right {
     color: #999999;
-    font-size: 12px;
+    font-size: 15px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

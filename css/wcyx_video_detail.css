@@ -43,6 +43,87 @@ body {
 .little-img-item {
     width: 350px;
     height: 234px;
+    position: relative;
+}
+
+.little-img-item {
+    width: 350px;
+    height: 234px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.little-img-item:hover .little-img-title {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.70);
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.little-img-title {
+    display: none;
+}
+
+.little-img-item:hover .little-img-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*display: block;*/
+    width: 350px;
+    height: 234px;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 30px;
+    box-sizing: border-box;
+}
+
+.little-img-item:hover .little-img-mask:hover:hover {
+    display: flex;
+    opacity: 1;
+}
+
+.little-img-mask {
+    opacity: 0;
+    display: none;
+    background: rgba(0, 102, 176, 0.96);
+    transition: all ease 0.3s;
+    color: #fff;
+}
+
+.little-img-mask .title {
+    font-size: 20px;
+    margin-top: 10px;
+    /*padding: 0 20px;*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    line-height: 26px;
+    max-height: 52px;
+    font-weight: bold;
+
+}
+
+.little-img-mask .desc {
+    font-size: 14px;
+    margin-top: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    line-height: 26px;
+    max-height: 104px;
 }
 
 .little-img {
@@ -130,13 +211,12 @@ body {
     /* background: rgba(0, 102, 176, 0.96); */
     cursor: pointer;
 
-
     font-size: 14px;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding:10px 16px;
+    padding: 10px 16px;
     box-sizing: border-box;
     /*background: rgba(0, 0, 0, .3);*/
 
