@@ -1,196 +1,553 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>css3电子杂志画册3D翻页切换动画特效</title>
-    <!--图标库-->
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'/>
-    <link rel="stylesheet" href="../css/3d.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=0, maximum-scale=1, minimum-scale=0, user-scalable=yes">
+
+    <link rel="stylesheet" href="../css/base.css">
+
+    <link type="text/css" rel="stylesheet" href="../css/bookcss/slick.css">
+    <link rel="stylesheet" type="text/css" href="../css/bookcss/bookblock.css">
+    <link rel="stylesheet" type="text/css" href="../css/bookcss/custom.css">
+    <script src="../js/book/modernizr.custom.js"></script>
+    <style>
+        body {
+            min-width: 1400px;
+            padding-top: 85px;
+        }
+
+        .content {
+            width: 1400px;
+            margin: 0 auto;
+            height: 800px;
+
+        }
+
+        .top-container-right .desc p {
+            margin-top: 25px;
+            line-height: 30px;
+            color: #444444;
+            font-size: 16px;
+            margin-top: 25px;
+        }
+
+        .top-box {
+            /*position: fixed;*/
+            /*top: 85px;*/
+            width: 100%;
+            height: 100px;
+            /*background: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F58817b7e717f6.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611449351&t=1665d48cb121f3266b6550b6f03eb301') no-repeat 0 0;*/
+            background: url('../image/footer_bgd.png') no-repeat 0 0;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 70px;
+            /*z-index: 99;*/
+        }
+
+        .media-select-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            width: 160px;
+            height: 50px;
+            margin-right: 10px;
+
+            font-size: 16px;
+        }
+
+        .media-select-box:last-child {
+            margin-right: 0px;
+        }
+
+        .select-box {
+            background: #fff;
+            position: relative;
+            width: 230px;
+            height: 50px;
+            /*border: 2px solid #eee;*/
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            font-size: 16px;
+            cursor: pointer;
+            /*z-index: 2;*/
+        }
+
+        .slelect-option-ui {
+            position: absolute;
+            top: 50px;
+            width: 160px;
+            position: absolute;
+            max-height: 200px;
+            overflow-y: auto;
+            top: 100%;
+            left: 0;
+            z-index: 2;
+            display: none;
+            min-width: 160px;
+            padding: 5px 0;
+            margin: 2px 0 0;
+            font-size: 14px;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0, 0, 0, .15);
+            border-radius: 2px;
+            -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        }
+
+        .select-box[data-state=close] .slelect-option-ui {
+            display: none;
+        }
+
+        .select-box[data-state=open] .slelect-option-ui {
+            display: block;
+        }
+
+        .select-option-li {
+            height: 42px;
+            font-size: 14px;
+            color: #333;
+            line-height: 42px;
+            padding: 0 10px 0 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+
+        }
+
+        .select-top {
+            /*padding: 0 12px;*/
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .select-val {
+            /*flex: 6;*/
+            padding-left: 20px;
+            width: 130px;
+            border-right: 1px solid #eaeaea;
+            box-sizing: border-box;
+        }
+
+        .active {
+            color: #0066b0;
+        }
+
+        .select-icon {
+            width: 30px;
+            height: 5px;
+            display: block;
+            object-fit: contain;
+        }
+
+        .select-option-li:hover {
+            background: #eee;
+        }
+
+
+    </style>
+
 </head>
 <body>
-<div class='pages'>
-    <input id='one' name='trigger' type='radio'>
-    <input id='two' name='trigger' type='radio'>
-    <input id='three' name='trigger' type='radio'>
-    <input id='four' name='trigger' type='radio'>
-    <div class='pages_page'>
-        <div class='pages_page__inner'>
-            <div class='logo'>流行服饰</div>
-            <div class='pagenumber'>1 2</div>
-            <div class='content'>
-                <div class='content_center'>
-                    <h4>最新时尚与时尚设计</h4>
-                </div>
+<search>
+    <div class="search-box" style="display: none">
+        <div class="search-plate">
+            <img class="clear" src="../image/close.png">
+            <input id="searchInput" placeholder="请输入关键词">
+            <div class="search-desc">按Enter键进行搜索后Esc键关闭</div>
+            <div class="recommend-title">#推荐搜索#
+            </div>
+            <div class="search-tag-box">
+                <div class="search-tag">电动车激战</div>
+                <div class="search-tag">文化创意</div>
+                <div class="search-tag">教师管理</div>
+                <div class="search-tag">教师</div>
+                <div class="search-tag">教育老师</div>
+                <div class="search-tag">聊城市文化</div>
+                <div class="search-tag">文化创意</div>
+                <div class="search-tag">聊城市</div>
             </div>
         </div>
     </div>
-    <div class='pages_page'>
-        <div class='pages_page__inner'>
-            <div class='content'>
-                <div class='content_center right'>
-                    <h4>最新时尚与时尚设计</h4>
-                </div>
-                <div class='overlay'></div>
+</search>
+
+
+<header class="header-box">
+    <div class="header-content plate-center">
+        <div class="header-left">
+            <a href="/">
+                <img class="header-logo"
+                     src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/20/8d617106e88840a4969d6660d8b1e315.png"
+                     alt="">
+            </a>
+            <div class="header-nav">
+                <a target="_self"
+                   href="column?columnId=1">首页</a><a target="_self"
+                                                     href="column?columnId=2">文创聊城</a><a target="_self"
+                                                                                         href="column?columnId=6">文创之声</a><a
+                    target="_self"
+                    href="column?columnId=16">文创新政</a><a target="_self"
+                                                         href="column?columnId=19">文创党建</a><a target="_self"
+                                                                                              href="column?columnId=21">品牌文化</a><a
+                    target="_self"
+                    href="column?columnId=22">服务平台</a><a target="_self"
+                                                         href="column?columnId=23">会员单位</a><a target="_self"
+                                                                                              href="column?columnId=25">分支机构</a><a
+                    class="active"
+                    target="_self"
+                    href="column?columnId=28">文创影像</a>
             </div>
-            <div class='control next'>
-                <label for='two'></label>
+        </div>
+        <div class="header-right">
+            <div id="searchBtn" class="header-right-item">
+                <img src="./image/search.png" alt="">
+                <a class="search">搜索</a>
+            </div>
+            <div class="header-right-item">
+                <a href="apply" target="_blank">
+                    <img src="./image/user.png" alt="">
+                    <div>会员申请</div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="top-line"></div>
+
+
+    <div class="side_bar">
+        <ul class="">
+            <li class="sb1"><i class="i_gotop"></i><span>回到顶部</span></li>
+            <li class="sb2"><i class="i_gophone"></i><span>手机查看</span></li>
+            <li class="sb3"><i class="i_goservice"></i><span>联系我们</span></li>
+        </ul>
+        <p class="side_bar_kang gophone" style="display: none;">
+            <span class="side_title">用手机扫描二维码即可查看本页面</span>
+            <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/22/62d3dbf85a124feeae74deaccfb246de.png"
+                 id="CurPageEwm">
+        </p>
+        <div class="side_bar_kang goservice" style="display: none;">
+            <span class="side_title">扫码添加官方客服微信，直接在线沟通</span>
+            <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/22/5f23a80d064c4876af2eb13a365a64ab.png">
+            <div class="side_aside">
+                <span>薇薇安：15036894621</span>
+                <span>安琪儿：15801436987</span>
             </div>
         </div>
     </div>
-    <div class='pages_page'>
-        <div class='pages_page__inner'>
-            <div class='logo'>流行服饰</div>
-            <div class='pagenumber'>2 3</div>
-            <div class='control'>
-                <label for='one'></label>
+</header>
+<div class="top-box">
+    <div class="media-select-box">
+        <div>全部</div>
+    </div>
+    <div class="media-select-box">
+        <div data-state="close" data-type="images" class="select-box">
+            <div class="select-top">
+                <div class="select-val">文创图片</div>
+                <img class="select-icon" src="../image/footimg/down-arrow.png"></img>
             </div>
-            <div class='content'>
-                <div class='content_picture'> <img src='img/Bild01.jpg'> </div>
-                <div class='content_offset'>
-                    <h2>简介</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a imperdiet sapien. Nunc vehicula lorem neque, eu rutrum sapien posuere ut. Nunc eget ullamcorper turpis. Sed in vehicula magna, vitae eleifend velit. Donec dui turpis, viverra vitae
-                        lobortis commodo, lobortis et ex.</p>
-                </div>
-                <h1>
-                    <span>L</span>
-                    <span>o</span>
-                    <span>o</span>
-                    <span>k</span>
-                    <span>&nbsp;</span>
-                    <span>a</span>
-                    <span>t</span>
-                    <span>&nbsp;</span>
-                    <span>t</span>
-                    <span>h</span>
-                    <span>i</span>
-                    <span>s</span>
-                    <span>&nbsp;</span>
-                    <span>a</span>
-                    <span>w</span>
-                    <span>e</span>
-                    <span>s</span>
-                    <span>o</span>
-                    <span>m</span>
-                    <span>e</span>
-                    <br>
-                    <span>h</span>
-                    <span>e</span>
-                    <span>a</span>
-                    <span>d</span>
-                    <span>l</span>
-                    <span>i</span>
-                    <span>n</span>
-                    <span>e</span>
-                    <span>&nbsp;</span>
-                    <span>r</span>
-                    <span>i</span>
-                    <span>g</span>
-                    <span>h</span>
-                    <span>t</span>
-                    <span>&nbsp;</span>
-                    <span>h</span>
-                    <span>e</span>
-                    <span>r</span>
-                    <span>e</span>
-                </h1>
-            </div>
+            <ul class="slelect-option-ui">
+                <li class="select-option-li"
+                    column-value="58"
+                    data-state="active">
+                    全部
+                </li>
+                <li class="select-option-li"
+                    column-value="73">图片新闻
+                </li>
+                <li class="select-option-li"
+                    column-value="74">文创聊城
+                </li>
+                <li class="select-option-li"
+                    column-value="75">视觉聊城
+                </li>
+                <li class="select-option-li"
+                    column-value="94">学缘图书教育图书集
+                </li>
+            </ul>
         </div>
     </div>
-    <div class='pages_page'>
-        <div class='pages_page__inner'>
-            <div class='hamburger'>
-                <div class='hamburger_part'></div>
-                <div class='hamburger_part'></div>
-                <div class='hamburger_part'></div>
+    <div class="media-select-box">
+        <div data-state="close" data-type="videos" class="select-box">
+            <div class="select-top">
+                <div class="select-val">文创视频</div>
+                <img class="select-icon" src="../image/footimg/down-arrow.png"></img>
             </div>
-            <div class='control next'>
-                <label for='three'></label>
-            </div>
-            <div class='bg'></div>
-            <div class='footer'> <i class="fab fa-google-plus-g"></i> <i class="fas fa-retweet"></i> <i class="far fa-heart"></i> <i class="far fa-share-square"></i> </div>
-            <div class='content'>
-                <div class='content_quote'>
-                    <h5> <span class='quo'> <i>"</i> </span> <span>一个报价单</span> <span>来自</span> <span class='name'>杰米·库尔特</span> <span class='auth'>- Design公司</span> <span class='quo'>"</span> </h5>
-                </div>
-                <div class='content_picture'> <img src='img/Bild01.jpg'> </div>
-                <h1> <span>L</span> <span>o</span> <span>o</span> <span>k</span> <span>&nbsp;</span> <span>a</span> <span>t</span> <span>&nbsp;</span> <span>t</span> <span>h</span> <span>i</span> <span>s</span> <span>&nbsp;</span> <span>a</span> <span>w</span> <span>e</span> <span>s</span> <span>o</span> <span>m</span> <span>e</span> <br>
-                    <span>h</span> <span>e</span> <span>a</span> <span>d</span> <span>l</span> <span>i</span> <span>n</span> <span>e</span> <span>&nbsp;</span> <span>r</span> <span>i</span> <span>g</span> <span>h</span> <span>t</span> <span>&nbsp;</span> <span>h</span> <span>e</span> <span>r</span> <span>e</span> </h1>
-            </div>
+            <ul class="slelect-option-ui">
+                <li class="select-option-li"
+                    column-value="60">
+                    全部
+                </li>
+                <li class="select-option-li"
+                    column-value="76">视频新闻
+                </li>
+                <li class="select-option-li"
+                    column-value="77">宣传视频
+                </li>
+                <li class="select-option-li"
+                    column-value="93">协会会员代表大会集锦
+                </li>
+            </ul>
         </div>
     </div>
-    <div class='pages_page'>
-        <div class='pages_page__inner'>
-            <div class='logo'>流行服饰</div>
-            <div class='pagenumber'>4 5</div>
-            <div class='content'>
-                <div class='content_center'>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                    <h6>Lorem ipsum dolor sit amet</h6>
-                </div>
+    <div class="media-select-box">
+        <div data-state="close" data-type="books" class="select-box">
+            <div class="select-top">
+                <div class="select-val active">电子书刊</div>
+                <img class="select-icon" src="../image/footimg/down-arrow.png"></img>
             </div>
-            <div class='control'>
-                <label for='two'></label>
-            </div>
-        </div>
-    </div>
-    <div class='pages_page'>
-        <div class='pages_page__inner'>
-            <div class='hamburger'>
-                <div class='hamburger_part'></div>
-                <div class='hamburger_part'></div>
-                <div class='hamburger_part'></div>
-            </div>
-            <div class='control next'>
-                <label for='four'></label>
-            </div>
-            <div class='bg'></div>
-            <div class='content_centerimage'> <img src='img/profoto-collapsible-reflectors-rossella-vanon-fashion-photography-img_2013-600x900.jpg'> </div>
-            <div class='content'>
-                <div class='content_center right'>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                    <h6>Lorem ipsum dolor sit amet</h6>
-                </div>
-            </div>
-            <div class='footer'> <i class="fab fa-google-plus-g"></i> <i class="fas fa-retweet"></i> <i class="far fa-heart"></i> <i class="far fa-share-square"></i> </div>
-        </div>
-    </div>
-    <div class='pages_page'>
-        <div class='pages_page__inner'>
-            <div class='logo'>流行服饰</div>
-            <div class='pagenumber'>6 7</div>
-            <div class='content'>
-                <div class='content_section'>
-                    <h2>Super</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a imperdiet sapien. Nunc vehicula lorem neque, eu rutrum sapien posuere ut. Nunc eget ullamcorper turpis. Sed in vehicula magna, vitae eleifend velit.</p>
-                </div>
-                <div class='content_section'>
-                    <h2>Awesome</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a imperdiet sapien. Nunc vehicula lorem neque, eu rutrum sapien posuere ut. Nunc eget ullamcorper turpis. Sed in vehicula magna, vitae eleifend velit.</p>
-                </div>
-                <div class='content_section'>
-                    <h2>Great</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a imperdiet sapien. Nunc vehicula lorem neque, eu rutrum sapien posuere ut. Nunc eget ullamcorper turpis. Sed in vehicula magna.</p>
-                </div>
-            </div>
-            <div class='control'>
-                <label for='three'></label>
-            </div>
-        </div>
-    </div>
-    <div class='pages_page'>
-        <div class='pages_page__inner'>
-            <div class='hamburger'>
-                <div class='hamburger_part'></div>
-                <div class='hamburger_part'></div>
-                <div class='hamburger_part'></div>
-            </div>
-            <div class='bg'></div>
-            <div class='content'></div>
-            <div class='footer'> <i class="fab fa-google-plus-g"></i> <i class="fas fa-retweet"></i> <i class="far fa-heart"></i> <i class="far fa-share-square"></i> </div>
+            <ul class="slelect-option-ui">
+                <li class="select-option-li"
+                    column-value="61">
+                    全部
+                </li>
+                <li class="select-option-li"
+                    column-value="78">协会报刊
+                </li>
+                <li class="select-option-li"
+                    column-value="79">协会会刊
+                </li>
+                <li class="select-option-li"
+                    column-value="92">齐鲁晚报
+                </li>
+            </ul>
         </div>
     </div>
 </div>
+
+
+<div style="width:100%; text-align:center; height:30px; margin-top:30px; color:#888;">点击图片翻页</div>
+<div class="kance">
+    <div id="container" class="container" style="height:1000px;z-index:0;">
+        <div class="bb-custom-wrapper" style=" height:1000px;">
+            <div id="bb-bookblock" class="bb-bookblock"
+                 style="width:calc(1363px + 10%);; margin:0 auto; height:1000px;">
+
+                <div class="bb-item" id="item1">
+                    <div class="scroller">
+                        <img style="width:100%;height:100%;display:block;"
+                             src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/bf3b6eb8fad34ffca7608d8e3ff19802.png">
+                    </div>
+                </div>
+                <div class="bb-item" id="item2">
+                    <div class="scroller">
+                        <img style="width:100%;height:100%;display:block;"
+                             src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/2f867e50ef264df7b2629738e143cb1a.png">
+
+                    </div>
+                </div>
+                <div class="bb-item" id="item3">
+                    <div class="scroller"><img style="width:100%;height:100%;display:block;"
+                                               src="https://www.njwhjt.com.cn/skins/images/tk/03.jpg"/></div>
+                </div>
+
+            </div>
+            <nav style="left: 0;top: 0;width: 100%;height: 100%;display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: flex-end;align-items: center;">
+                <span id="bb-nav-prev"
+                      style="display: block;width: 50%;height: 100%;background:transparent !important;position: static;"></span>
+                <span id="bb-nav-next"
+                      style="display: block;width: 50%;height: 100%;background:transparent !important;position: static;"></span>
+            </nav>
+        </div>
+    </div>
+
+
+</div>
+
+<div>
+
+</div>
+
+<footer>
+    <div class="foot-bg"></div>
+    <div class="foot-container">
+        <div class="plate-center foot-content">
+            <div class="foot-left">
+                <img class="foot-logo"
+                     src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/01/30/8623406378a440f0ae9cf7a0be466875.png"
+                     alt="">
+                <div foot-left-info>
+                    <p>聊城市文化创意产业协会</p>
+                    <p>聊城市文化创意产业公共服务平台</p>
+                    <p>C20城市文创产业合作发展联盟成员单位</p>
+                </div>
+            </div>
+            <div class="foot-center">
+                <div class="foot-link">
+                    <div class="foot-title">友情链接</div>
+                    <div class="foot-link-item-box">
+
+                        <div id="menu1" class="foot-link-item">
+                            <div class="link-txt">文化和旅游政府部门网站</div>
+
+
+                            <img src="../image/footimg/down-arrow.png" alt="">
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="http://jnwl.jinan.gov.cn/"
+                                       target="_blank"
+                                    >济南市文化和旅游局</a>
+                                </li>
+                                <li>
+                                    <a href="http://whlyj.qingdao.gov.cn/n28356069/n32563280/index.html"
+                                       target="_blank"
+                                    >青岛市文化和旅游局</a>
+                                </li>
+                                <li>
+                                    <a href="http://whhlyj.dezhou.gov.cn/"
+                                       target="_blank"
+                                    >德州市文化和旅游局</a>
+                                </li>
+                                <li>
+                                    <a href="http://wlj.weihai.gov.cn/"
+                                       target="_blank"
+                                    >威海市文化和旅游局</a>
+                                </li>
+                                <li>
+                                    <a href="http://whlyj.taian.gov.cn/"
+                                       target="_blank"
+                                    >泰安市文化和旅游局</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="menu2" class="foot-link-item">
+
+                            <div class="link-txt">战略合作文化创意单位官网</div>
+
+                            <img src="../image/footimg/down-arrow.png" alt="">
+                            <ul class="dropdown-menu" role="menu">
+
+                            </ul>
+                        </div>
+                        <div id="menu3" class="foot-link-item">
+
+
+                            <div class="link-txt">社会团体组织政府部门会议</div>
+                            <img src="../image/footimg/down-arrow.png" alt="">
+                            <ul class="dropdown-menu" role="menu">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot-center-info">
+                    <div class="foot-center-info-item">
+                        <p class="foot-title">指导单位</p>
+                        <ul>
+                            <li>
+                                <span>中共聊城市委宣传部</span>
+                            </li>
+                            <li>
+                                <span>聊城市文化和旅游局</span>
+                            </li>
+                            <li>
+                                <span>聊城市民政局(社会组织管理中心)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="foot-center-info-item">
+                        <p class="foot-title">主办单位</p>
+                        <ul>
+                            <li>
+                                <span>聊城市文化创意产业协会</span>
+                            </li>
+                        </ul>
+                        <p class="foot-title">承办单位</p>
+                        <ul>
+                            <li>
+                                <span>秘书处 · 云上融媒中心</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="foot-center-info-item">
+                        <p class="foot-title">技术支持</p>
+                        <ul>
+                            <li>
+                                <span>学缘科教集团（技术中心）</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="foot-right">
+                <div class="foot-address">中国·聊城经济技术开发区当代国际大厦16楼</div>
+                <ul>
+                    <li>
+                        <span>电话：</span>
+                        <span>0635-8256026</span>
+                    </li>
+                    <li>
+                        <span>邮箱：</span>
+                        <span>sdlccia@163.com</span>
+                    </li>
+                    <li>
+                        <span>官网：</span>
+                        <span>http://www.sdlccia.com</span>
+                    </li>
+                </ul>
+                <div class="foot-qrcode">
+                    <div class="qrcode-box">
+                        <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/01/c16046af78684a16899701f46e99a2ab.png"
+                             alt="">
+                        <span>官方微信</span>
+                    </div>
+                    <div class="qrcode-box">
+                        <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/01/28/c534a702fdce490ca3624c22c0c2954f.png"
+                             alt="">
+                        <span>官方微博</span>
+                    </div>
+                    <div class="qrcode-box">
+                        <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/01/28/ddbfb1d37151410b80eb6cf5e6b4c67f.png"
+                             alt="">
+                        <span>水城礼好</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="website-records">
+        <p>
+            <span>Copyright © </span>
+            <span data-state="big">2020-2030 聊城市文化创意产业协会所有</span>
+            <span>· All Rights Reserved </span>
+            <span>鲁ICP备 2020045966号-1</span>
+
+            <img src="../image/footimg/record.png" alt="">
+
+            <a href="https://beian.miit.gov.cn/"
+               target="_blank">鲁公网安备 11010502000728</a>
+        </p>
+    </div>
+</footer>
 </body>
+
+<!--<script src="../js/skins/slick.js"></script>-->
+<script src="../js/jq.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/book/jscrollpane.js"></script>
+<script src="../js/book/custom.js"></script>
+<script src="../js/book/bookblock.js"></script>
+<script src="../js/book/page.js"></script>
+<script>
+    $(function () {
+
+        Page.init();
+
+    });
+</script>
 </html>

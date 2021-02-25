@@ -168,6 +168,7 @@
         input[type="number"] {
             -moz-appearance: textfield;
         }
+
     </style>
 </head>
 
@@ -331,7 +332,8 @@
                 </div>
                 <div><input type="radio" name="companyNature" id="other" value='9'/><label for="other">其他</label>
                 </div>
-                <input id="otherNatureInput" style="display: none" class="form-item-edit" type="text" maxlength="20" name="otherNature" id="otherNature">
+                <input id="otherNatureInput" style="display: none" class="form-item-edit" type="text" maxlength="20"
+                       name="otherNature" id="otherNature">
 
             </div>
         </div>
@@ -769,7 +771,6 @@
                             <li>
                                 <a href="http://www.fmprc.gov.cn" target="_blank" title="外交部">外交部</a>
 
-                                
 
                             </li>
                             <li>
@@ -780,7 +781,8 @@
                     <div id="menu3" class="foot-link-item">
                         <div class="link
 
-                        -txt">文化和旅游政府部分官网</div>
+                        -txt">文化和旅游政府部分官网
+                        </div>
                         <img src="../image/footimg/down-arrow.png" alt="">
                         <ul class="dropdown-menu" role="menu">
                             <li>
@@ -1007,7 +1009,7 @@
         if (item == 9) {
             $("#otherNatureInput").show();
 
-        }else{
+        } else {
             $("#otherNatureInput").hide();
         }
 
@@ -1022,14 +1024,87 @@
         }
         return true;
     }
-    function submit() {
-        $('.success-box').show();
+    function checkInput() {
+        // todo 校验2-4字 法人代表、单位负责人、入会人姓名、联系人姓名
+        let legalPersonValue = $('#legalPerson').val()
+        console.log("法人代表:", legalPersonValue);
 
-        setTimeout(function () {
-            console.log("跳转");
-            window.location.href = "http://baidu.com"
-        }, 2000)
+        let companyPrincipalVal = $('#companyPrincipal').val()
+        console.log("单位负责人:", companyPrincipalVal);
+
+        let memberNameVal = $('#memberName').val()
+        console.log("入会人姓名:", memberNameVal);
+
+        let contactNameVal = $('#contactName').val()
+        console.log("联系人姓名:", contactNameVal);
+
+        let _2t4Reg = /^[\u4e00-\u9fa5]{2,4}$/;
+
+        if (!_2t4Reg.test(legalPersonValue)) {
+            alert("法人代表应为2-4个汉字")
+            return false
+
+        }
+        if (!_2t4Reg.test(companyPrincipalVal)) {
+            alert("单位负责人应为2-4个汉字")
+            return false
+
+        }
+        if (!_2t4Reg.test(memberNameVal)) {
+            alert("入会人姓名应为2-4个汉字")
+            return false
+
+        }
+        if (!_2t4Reg.test(contactNameVal)) {
+            alert("联系人姓名应为2-4个汉字")
+            return false
+
+        }
+
+        // todo 校验2-5字籍贯
+        let _2t5Reg = /^[\u4e00-\u9fa5]{2,5}$/;
+        let hometownVal = $('#hometown').val()
+        console.log("籍贯:", hometownVal);
+        if (!_2t5Reg.test(hometownVal)) {
+            alert("籍贯应为2-5个汉字")
+            return false
+
+        }
+        // todo 校验2-15字毕业学校
+        let _2t15Reg = /^[\u4e00-\u9fa5]{2,15}$/;
+
+        let collegesVal = $('#colleges').val()
+        console.log("毕业(在读)院校:", collegesVal);
+        if (!_2t15Reg.test(collegesVal)) {
+            alert("毕业(在读)院校应为2-15个汉字")
+            return false
+        }
+        // todo 校验开户银行账号19位
+        let openingBankAccountVal = $('#openingBankAccount').val()
+
+        console.log("开户银行账号:", openingBankAccountVal);
+        console.log("开户银行账号:", openingBankAccountVal.length);
+        if (openingBankAccountVal.length != 19) {
+            alert("开户银行账号应为19位");
+            return false
+        }
+
+        return true
+    }
+    function submit() {
+        if(!checkInput()){
+            return
+        }
+console.log('ok')
+        /* $('.success-box').show();
+
+         setTimeout(function () {
+         console.log("跳转");
+         window.location.href = "http://baidu.com"
+         }, 2000)*/
         return
+
+
         console.log("submit", $('.detail-content-wrapper input'));
         let requirdArr = $('.form-item-title.requied');
         console.log("requiredArr:", requirdArr);
@@ -1042,6 +1117,16 @@
                 return
             }
         }
+
+        /*  // todo 校验2-4字 法人代表、单位负责人、入会人姓名、联系人姓名
+         let _2t4Reg = /^[\u4e00-\u9fa5]{2,4}$/;
+
+
+         // todo 校验2-5字籍贯
+         // todo 校验2-15字毕业学校
+
+         // todo 校验开户账号19位*/
+
 
         // 检查必填项-textarea
         let requirdTareaArr = $('.form-item-title-area.requied');

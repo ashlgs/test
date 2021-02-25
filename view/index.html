@@ -12,10 +12,128 @@
     <script src="../js/browser.min.js"></script>
     <script type="text/babel"></script>
     <script src="../js/swiper.min.js"></script>
+    <style>
+        .welcome-box {
+            height: 100%;
+            width: 100%;
+            background: black;
+            z-index: 20;
+            position: fixed;
+
+            top: 0;
+            transition: all ease 0.5s;
+
+        }
+
+        .welcome-box[data-state=disappear] {
+            transform: translate(0, -100%);
+            opacity: 0.7;
+        }
+
+        .video-box {
+            /*position: fixed;*/
+
+            display: block;
+            height: 100%;
+            width: 100%;
+            z-index: 2;
+
+        }
+
+        .mouse-btn {
+            position: fixed;
+            width: 30px;
+            height: 98px;
+            overflow: hidden;
+            z-index: 9;
+            bottom: 50px;
+            left: calc(50% - 15px);
+            cursor: pointer;
+
+        }
+
+        .mouse-circle {
+            width: 30px;
+            height: 50px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .mouse-arrow {
+            position: absolute;
+            width: 16px;
+            height: 70px;
+            display: block;
+            object-fit: cover;
+            left: calc(50% - 8px);
+            top: 10px;
+            /*top:30px;*/
+        }
+
+        .mask-box {
+            /*display: none;*/
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1040;
+            /*background-color: rgba(35, 24, 21, 0.25)*/
+        }
+
+        .mask-box .center {
+            width: 100%;
+            height: 367px;
+            margin: 12% auto 0;
+            /*padding-top: 12%;*/
+            position: relative;
+        }
+
+        .mask-box .center .desc {
+            position: absolute;
+            width: 100%;
+            font-size: 20px;
+            line-height: 1;
+            letter-spacing: 4px;
+            color: #fff;
+            text-align: center;
+            left: 0;
+            top: 288px;
+            font-weight: 500;
+
+        }
+
+        .mask-box .center img {
+            width: 500px;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+    </style>
 </head>
 
 <body>
+<div class="welcome-box">
+    <video id="video-welcome" class="video-box" muted="" autoplay="autoplay" loop="" x5-playsinline="true"
+           disablePictureInPicture
+           src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/24/9243e28b991f41a59ac295e4bee67d98.MP4">
+    <!--src="https://123-1254065752.cos.ap-shanghai.myqcloud.com/jituan/%E4%B8%BA%E4%BA%86%E8%BF%99%E5%BA%A7%E5%9F%8E.mp4">-->
+    </video>
+    <div class="mask-box">
+        <div class="center">
+            <img src="../image/welcome_center.png">
+            <div class="desc">
+                创意文化新动能,创建产业新高地; 服务于产业发展, 服务于会员单位
+            </div>
+        </div>
+        <div class="mouse-btn">
+            <img class="mouse-circle" src="../image/mouse-circle.png">
+            <img class="mouse-arrow" src="../image/mouse-arrow.png">
 
+        </div>
+    </div>
+</div>
 <div class="search-box" style="display: none">
     <div class="search-plate">
         <img class="clear" src="../image/close.png">
@@ -33,7 +151,7 @@
     </div>
 </div>
 
-<header class="header-box">
+<div class="header-box">
     <div class="header-content plate-center">
         <div class="header-left">
             <img class="header-logo" src="../image/logo.png" alt="">
@@ -63,10 +181,11 @@
     </div>
     <div class="top-line"></div>
 
-</header>
+</div>
+
 <!--<div class="top-line"></div>-->
 
-<div class="top-swiper-box swiper-container">
+<div class="top-swiper-box swiper-container" data-scroll-reveal="wait 0.1s, then enter bottom and move 30px over 0.8s">
 
     <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -87,7 +206,8 @@
             </a>
         </div>
         <div class="banner-video-box">
-            <video id="video1" class="banner-video" controls="controls" muted autoplay="autoplay" src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/01/28/34480e3ce63c4c2c9f433dc5567c8153.mp4"/>
+            <video id="video1" class="banner-video" controls="controls" muted autoplay="autoplay"
+                   src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/01/28/34480e3ce63c4c2c9f433dc5567c8153.mp4"/>
         </div>
         <div class="swiper-slide">
             <a href="#" target="_blank">
@@ -213,7 +333,8 @@
                     <div class="content">北京时间1月27日，美国佛罗里达州首席财务官建议国际奥委会(IOC)考虑将2021年奥运会的举办地迁至佛罗里达。</div>
                 </div>
                 <div class="img-wraper">
-                    <img class="image" src="https://resource.ttplus.cn/publish/app/data/2021/01/27/357180/cb15d5e0-773c-445a-bb36-998ee9837468.png">
+                    <img class="image"
+                         src="https://resource.ttplus.cn/publish/app/data/2021/01/27/357180/cb15d5e0-773c-445a-bb36-998ee9837468.png">
                 </div>
             </div>
             <div class="news-list-item">
@@ -227,7 +348,8 @@
                     <div class="content">北京时间1月27日，美国佛罗里达州首席财务官建议国际奥委会(IOC)考虑将2021年奥运会的举办地迁至佛罗里达。</div>
                 </div>
                 <div class="img-wraper">
-                    <img class="image" src="https://resource.ttplus.cn/publish/app/data/2021/01/27/357180/cb15d5e0-773c-445a-bb36-998ee9837468.png">
+                    <img class="image"
+                         src="https://resource.ttplus.cn/publish/app/data/2021/01/27/357180/cb15d5e0-773c-445a-bb36-998ee9837468.png">
                 </div>
             </div>
             <div class="news-list-item">
@@ -241,7 +363,8 @@
                     <div class="content">北京时间1月27日，美国佛罗里达州首席财务官建议国际奥委会(IOC)考虑将2021年奥运会的举办地迁至佛罗里达。</div>
                 </div>
                 <div class="img-wraper">
-                    <img class="image" src="https://resource.ttplus.cn/publish/app/data/2021/01/27/357180/cb15d5e0-773c-445a-bb36-998ee9837468.png">
+                    <img class="image"
+                         src="https://resource.ttplus.cn/publish/app/data/2021/01/27/357180/cb15d5e0-773c-445a-bb36-998ee9837468.png">
                 </div>
             </div>
         </div>
@@ -1576,12 +1699,146 @@
         <sapn>11010502000728</sapn>
     </p>
 </div>
+
+<div class="side_bar">
+    <ul class="">
+        <li class="sb1"><i class="i_gotop"></i><span>回到顶部</span></li>
+        <li class="sb2"><i class="i_gophone"></i><span>手机查看</span></li>
+        <li class="sb3"><i class="i_goservice"></i><span>在线客服</span></li>
+    </ul>
+    <p class="side_bar_kang gophone" style="display: none;">
+        <span class="side_title">用手机扫描二维码即可查看本页面</span>
+        <img src="http://meia.me/qrcode?s=https%3A%2F%2Fixdc.org%2F2020%2F%3Flang%3Dzh" id="CurPageEwm">
+    </p>
+    <p class="side_bar_kang goservice" style="display: none;">
+        <span class="side_title">扫码添加官方客服微信，直接在线沟通</span>
+        <img src="//ixdc.org/2018/images/ixdc_ewm.png">
+        <span class="side_aside">胡蓉：188-2626-0168<span class="side_hui">（微信同号）</span><br>
+               彭宇：188-2626-5168<span class="side_hui">（微信同号）</span>
+    </span>
+    </p>
+</div>
+
 <script src="../js/browser.min.js"></script>
 <script type="text/babel"></script>
 <script src="../js/jq.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/scrollReveal.min.js"></script>
 <script>
+    // 检测用户设备
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+//        alert('当前 移动端')
+        $('.welcome-box').hide()
+    } else {
+//        $('.welcome-box').hide()
+//        alert('当前 PC端')
+        // window.location.href = './Whtml/index.html'; // 跳转
+        $("body").addClass("noScroll")
+
+    }
+
+</script>
+
+
+<script>
+    let mouseScrolled = false
+
+    setTimeout(function () {
+        mouseScrolled = true;
+
+        $('.welcome-box').hide()
+        $("body").removeClass("noScroll")
+    },30000)
+
+    $('.mouse-btn').click(function () {
+        if (!mouseScrolled) {
+            mouseScrolled = true;
+            document.getElementById("video-welcome").pause();
+
+            $('.welcome-box').attr("data-state", "disappear")
+            setTimeout(function () {
+                let video = $("#video-welcome").get(0);
+
+                $('.welcome-box').hide()
+                $("body").removeClass("noScroll")
+            }, 500)
+        }
+    });
+
+    $('.mouse-btn').bind('mousewheel', function (event, delta) {
+        var dir = event.originalEvent.wheelDelta > 0 ? 'Up' : 'Down';
+        if (dir == 'Down' && !mouseScrolled) {
+            mouseScrolled = true;
+            document.getElementById("video-welcome").pause();
+
+            $('.welcome-box').attr("data-state", "disappear")
+            setTimeout(function () {
+                $('.welcome-box').hide()
+                $("body").removeClass("noScroll")
+            }, 500)
+        }
+        return false;
+    });
+
+    mouseMOve();
+    // test竖向新闻列表滚动
+    function mouseMOve() {
+        let speed = 0.3;
+        let distance = 0
+
+        function render() {
+            distance += speed
+            $('.mouse-arrow').css({
+                'top': distance + 'px'
+            })
+            if (distance >= 30) {
+                distance = 10
+            }
+        }
+
+        //每16ms执行一次
+        (function animloop() {
+            render();
+            window.requestAnimationFrame(animloop);
+        })()
+    }
+</script>
+<script>
+    //pc端右侧栏
+    $(".sb1").click(function () {
+        $("body,html").animate({scrollTop: 0});
+    });
+    $(".sb2").hover(function () {
+        $(".side_bar_kang").hide();
+        $(".gophone").show();
+    }, function () {
+        $(".side_bar_kang").hide();
+        $(".gophone").hide();
+    })
+    $(".sb3").hover(function () {
+
+        $(".side_bar_kang").hide();
+        $(".goservice").show();
+        console.log("aaaaaaaaaaaa")
+    }, function () {
+        $(".side_bar_kang").hide();
+        $(".goservice").hide();
+        console.log("bbbbbbbbbbbb")
+
+    })
+    var CurImgSrc = "http://meia.me/qrcode?s=" + encodeURIComponent(window.location.href);
+    console.log(CurImgSrc);
+
+    $("#CurPageEwm").attr("src", CurImgSrc);
     $('.top-banner .item').mouseover(function () {
         let currIndex = $(this).index();
         changeActiveByIndex(currIndex);
@@ -1622,7 +1879,7 @@
         spaceBetween: 0,
         loop: true,
         autoplay: {
-            delay: 15000,
+            delay: 8000,
             stopOnLastSlide: false,
             disableOnInteraction: false,
         },
@@ -1718,7 +1975,9 @@
 
 
     function createImgSwiper(dom, config) {
-        let right = 10; letspeed = 1; letoriginDistance = 0 ;
+        let right = 10;
+        let speed = 1;
+        let originDistance = 0;
 
         let itemLen = $(dom).find('a').length
         let itemWidth = $(dom).find('a').width()
@@ -1753,7 +2012,7 @@
     // test竖向新闻列表滚动
     function createNewsSwiper(dom, config) {
 //        let {speed = 1, padding = 20} = config
-        let speed =1;
+        let speed = 1;
         let padding = 20;
         let itemLen = $(dom).find('.organization-item').length
         let itemHeight = $(dom).find('.organization-item').height()

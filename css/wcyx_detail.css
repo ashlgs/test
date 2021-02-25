@@ -18,13 +18,13 @@ body {
 .top-container {
     display: flex;
     justify-content: space-between;
-    height: 600px;
+    height: 560px;
     width: 100%;
-    border: 1px solid #dee0ea;
+    /*border: 1px solid #dee0ea;*/
 }
 
 .top-container-left {
-    width: 900px;
+    width: 980px;
     height: 100%;
 }
 
@@ -38,9 +38,35 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    flex-shrink: 0;
     /*border: 1px solid #E5E6EA;*/
 }
+.big-img-item .desc {
+    display: none;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #fff;
+    font-size: 14px;
+    line-height: 40px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: rgba(0, 0, 0, 0.5);
 
+
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    -ms-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+}
+.big-img-item:hover .desc{
+    display: block;
+}
 .little-img-item {
     width: 350px;
     height: 234px;
@@ -94,8 +120,8 @@ body {
 
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
     background-image: url(../image/left.png);
-    width: 40px;
-    height: 70px;
+    width: 30px;
+    height: 50px;
     right: auto;
     left: 0;
     display: none;
@@ -104,8 +130,8 @@ body {
 
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
     background-image: url(../image/right.png);
-    width: 40px;
-    height: 70px;
+    width: 30px;
+    height: 50px;
     right: 0;
     left: auto;
     background-size: 100% 100%;
@@ -113,9 +139,43 @@ body {
 }
 
 .top-container-right {
-    width: 600px;
-    box-sizing: border-box;
-    padding: 40px 30px;
+    width: 400px;
+    /*box-sizing: border-box;*/
+    padding-left: 20px;
+    /*padding: 40px 30px;*/
+    /*overflow: hidden;*/
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.top-container-right::-webkit-scrollbar { /*滚动条整体样式*/
+    width: 6px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+.top-container-right::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+    border-radius: 3px;
+    /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
+    background: #afbcc7;
+}
+
+.top-container-right::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
+    border-radius: 3px;
+    background: #f7f8fa;
+}
+
+
+.top-container-right img{
+    width: 390px;
+    height: 260px;
+    overflow: hidden;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    /*border:1px solid red;*/
 }
 
 .top-container-right .title {

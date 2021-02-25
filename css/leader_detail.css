@@ -190,8 +190,17 @@ body {
     margin-right: 20px;
     font-size: 16px;
     color: #555c6c;
-    line-height: 30px;
     overflow: hidden;
+}
+.bottom-left p{
+    line-height: 28px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    /*超出两行显示省略号*/
+    overflow: hidden;
+    height: 196px;
 }
 
 .bottom-honor-box {
@@ -248,9 +257,9 @@ body {
 
 .s4-prev-1 {
     display: none;
-    width: 22px;
-    height: 40px;
-    top: 120px;
+    width: 30px;
+    height: 50px;
+    top: 115px;
     left: 0px;
     margin: 0;
     padding: 0;
@@ -263,9 +272,9 @@ body {
 
 .s4-next-1 {
     display: none;
-    width: 22px;
-    height: 40px;
-    top: 120px;
+    width: 30px;
+    height: 50px;
+    top: 115px;
     right: 0px;
     margin: 0;
     padding: 0;

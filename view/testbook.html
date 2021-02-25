@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=0, maximum-scale=1, minimum-scale=0, user-scalable=yes">
+    <link rel="icon" href="/image/logo2.png" sizes="44x44">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../css/jquery.booklet.latest.css" type="text/css" rel="stylesheet" media="screen, projection, tv"/>
+    <title>文创影像-聊城市文化创意产业协会</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <!--    <link rel="stylesheet" href="../css/swiper.min.css">-->
+    <!--    <script src="../js/swiper.min.js"></script>-->
+    <script src="../js/jquery-2.1.0.min.js"></script>
+    <script> window.jQuery || document.write('<script src="../js/jquery-2.1.0.min.js"><\/script>') </script>
+
+
+    <script src="../js/jquery-ui-1.10.4.min.js"></script>
+
+    <script src="../js/jquery.easing.1.3.js"></script>
+
+    <script src="../js/jquery.booklet.latest.js"></script>
+
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="../js/prefixfree.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/bookblock.css"/>
+    <!-- custom demo style -->
+    <link rel="stylesheet" type="text/css" href="../css/demo1.css"/>
+    <script src="../js/book/modernizr.custom.js"></script>
+
+
+    <style>
+        body {
+            min-width: 1400px;
+            padding-top: 85px;
+        }
+
+        .content {
+            width: 1400px;
+            margin: 0 auto;
+            height: 800px;
+
+        }
+
+        .top-container-right .desc p {
+            margin-top: 25px;
+            line-height: 30px;
+            color: #444444;
+            font-size: 16px;
+            margin-top: 25px;
+        }
+
+        .top-box {
+            /*position: fixed;*/
+            /*top: 85px;*/
+            width: 100%;
+            height: 100px;
+            /*background: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F58817b7e717f6.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611449351&t=1665d48cb121f3266b6550b6f03eb301') no-repeat 0 0;*/
+            background: url('../image/footer_bgd.png') no-repeat 0 0;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 70px;
+            /*z-index: 99;*/
+        }
+
+        .media-select-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            width: 160px;
+            height: 50px;
+            margin-right: 10px;
+
+            font-size: 16px;
+        }
+
+        .media-select-box:last-child {
+            margin-right: 0px;
+        }
+
+        .select-box {
+            background: #fff;
+            position: relative;
+            width: 230px;
+            height: 50px;
+            /*border: 2px solid #eee;*/
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            font-size: 16px;
+            cursor: pointer;
+            /*z-index: 2;*/
+        }
+
+        .slelect-option-ui {
+            position: absolute;
+            top: 50px;
+            width: 160px;
+            position: absolute;
+            max-height: 200px;
+            overflow-y: auto;
+            top: 100%;
+            left: 0;
+            z-index: 2;
+            display: none;
+            min-width: 160px;
+            padding: 5px 0;
+            margin: 2px 0 0;
+            font-size: 14px;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0, 0, 0, .15);
+            border-radius: 2px;
+            -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        }
+
+        .select-box[data-state=close] .slelect-option-ui {
+            display: none;
+        }
+
+        .select-box[data-state=open] .slelect-option-ui {
+            display: block;
+        }
+
+        .select-option-li {
+            height: 42px;
+            font-size: 14px;
+            color: #333;
+            line-height: 42px;
+            padding: 0 10px 0 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+
+        }
+
+        .select-top {
+            /*padding: 0 12px;*/
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .select-val {
+            /*flex: 6;*/
+            padding-left: 20px;
+            width: 130px;
+            border-right: 1px solid #eaeaea;
+            box-sizing: border-box;
+        }
+
+        .active {
+            color: #0066b0;
+        }
+
+        .select-icon {
+            width: 30px;
+            height: 5px;
+            display: block;
+            object-fit: contain;
+        }
+
+        .select-option-li:hover {
+            background: #eee;
+        }
+
+        .book-item {
+            width: 100%;
+            height: 100%;
+        }
+
+        .book-item img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .tips {
+            width: 100%;
+            text-align: center;
+            height: 30px;
+            margin: 0 0 30px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+<search>
+    <div class="search-box" style="display: none">
+        <div class="search-plate">
+            <img class="clear" src="../image/close.png">
+            <input id="searchInput" placeholder="请输入关键词">
+            <div class="search-desc">按Enter键进行搜索后Esc键关闭</div>
+            <div class="recommend-title">#推荐搜索#
+            </div>
+            <div class="search-tag-box">
+                <div class="search-tag">电动车激战</div>
+                <div class="search-tag">文化创意</div>
+                <div class="search-tag">教师管理</div>
+                <div class="search-tag">教师</div>
+                <div class="search-tag">教育老师</div>
+                <div class="search-tag">聊城市文化</div>
+                <div class="search-tag">文化创意</div>
+                <div class="search-tag">聊城市</div>
+            </div>
+        </div>
+    </div>
+</search>
+<header class="header-box">
+    <div class="header-content plate-center">
+        <div class="header-left">
+            <a href="/">
+                <img class="header-logo"
+                     src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/20/8d617106e88840a4969d6660d8b1e315.png"
+                     alt="">
+            </a>
+            <div class="header-nav">
+                <a target="_self"
+                   href="column?columnId=1">首页</a><a target="_self"
+                                                     href="column?columnId=2">文创聊城</a><a target="_self"
+                                                                                         href="column?columnId=6">文创之声</a><a
+                    target="_self"
+                    href="column?columnId=16">文创新政</a><a target="_self"
+                                                         href="column?columnId=19">文创党建</a><a target="_self"
+                                                                                              href="column?columnId=21">品牌文化</a><a
+                    target="_self"
+                    href="column?columnId=22">服务平台</a><a target="_self"
+                                                         href="column?columnId=23">会员单位</a><a target="_self"
+                                                                                              href="column?columnId=25">分支机构</a><a
+                    class="active"
+                    target="_self"
+                    href="column?columnId=28">文创影像</a>
+            </div>
+        </div>
+        <div class="header-right">
+            <div id="searchBtn" class="header-right-item">
+                <img src="./image/search.png" alt="">
+                <a class="search">搜索</a>
+            </div>
+            <div class="header-right-item">
+                <a href="apply" target="_blank">
+                    <img src="./image/user.png" alt="">
+                    <div>会员申请</div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="top-line"></div>
+
+
+    <div class="side_bar">
+        <ul class="">
+            <li class="sb1"><i class="i_gotop"></i><span>回到顶部</span></li>
+            <li class="sb2"><i class="i_gophone"></i><span>手机查看</span></li>
+            <li class="sb3"><i class="i_goservice"></i><span>联系我们</span></li>
+        </ul>
+        <p class="side_bar_kang gophone" style="display: none;">
+            <span class="side_title">用手机扫描二维码即可查看本页面</span>
+            <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/22/62d3dbf85a124feeae74deaccfb246de.png"
+                 id="CurPageEwm">
+        </p>
+        <div class="side_bar_kang goservice" style="display: none;">
+            <span class="side_title">扫码添加官方客服微信，直接在线沟通</span>
+            <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/22/5f23a80d064c4876af2eb13a365a64ab.png">
+            <div class="side_aside">
+                <span>薇薇安：15036894621</span>
+                <span>安琪儿：15801436987</span>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="top-box">
+    <div class="media-select-box">
+        <div>全部</div>
+    </div>
+    <div class="media-select-box">
+        <div data-state="close" data-type="images" class="select-box">
+            <div class="select-top">
+                <div class="select-val">文创图片</div>
+                <img class="select-icon" src="../image/footimg/down-arrow.png"></img>
+            </div>
+            <ul class="slelect-option-ui">
+                <li class="select-option-li"
+                    column-value="58"
+                    data-state="active">
+                    全部
+                </li>
+                <li class="select-option-li"
+                    column-value="73">图片新闻
+                </li>
+                <li class="select-option-li"
+                    column-value="74">文创聊城
+                </li>
+                <li class="select-option-li"
+                    column-value="75">视觉聊城
+                </li>
+                <li class="select-option-li"
+                    column-value="94">学缘图书教育图书集
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="media-select-box">
+        <div data-state="close" data-type="videos" class="select-box">
+            <div class="select-top">
+                <div class="select-val">文创视频</div>
+                <img class="select-icon" src="../image/footimg/down-arrow.png"></img>
+            </div>
+            <ul class="slelect-option-ui">
+                <li class="select-option-li"
+                    column-value="60">
+                    全部
+                </li>
+                <li class="select-option-li"
+                    column-value="76">视频新闻
+                </li>
+                <li class="select-option-li"
+                    column-value="77">宣传视频
+                </li>
+                <li class="select-option-li"
+                    column-value="93">协会会员代表大会集锦
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="media-select-box">
+        <div data-state="close" data-type="books" class="select-box">
+            <div class="select-top">
+                <div class="select-val active">电子书刊</div>
+                <img class="select-icon" src="../image/footimg/down-arrow.png"></img>
+            </div>
+            <ul class="slelect-option-ui">
+                <li class="select-option-li"
+                    column-value="61">
+                    全部
+                </li>
+                <li class="select-option-li"
+                    column-value="78">协会报刊
+                </li>
+                <li class="select-option-li"
+                    column-value="79">协会会刊
+                </li>
+                <li class="select-option-li"
+                    column-value="92">齐鲁晚报
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="tips">
+    移动鼠标到图片边缘点击翻页
+
+</div>
+
+
+<!--<div id="mybook">
+    <div class="book-item">
+        &lt;!&ndash;<h3>Yay, Page 1!</h3>&ndash;&gt;
+        <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/bf3b6eb8fad34ffca7608d8e3ff19802.png"/>
+    </div>
+    <div class="book-item">
+        &lt;!&ndash;<h3>Yay, Page 1!</h3>&ndash;&gt;
+        <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/2f867e50ef264df7b2629738e143cb1a.png"/>
+    </div>
+    <div class="book-item">
+        &lt;!&ndash;<h3>Yay, Page 1!</h3>&ndash;&gt;
+        <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/3a28ed82fc644ce2966672845eae83bd.png"/>
+    </div>
+
+</div>-->
+
+
+<div class="content">
+
+    <div class="bb-custom-wrapper">
+        <div id="bb-bookblock" class="bb-bookblock">
+            <div class="bb-item" data-key="1">
+                <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/bf3b6eb8fad34ffca7608d8e3ff19802.png"/>
+            </div>
+            <div class="bb-item" data-key="2">
+                <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/bf3b6eb8fad34ffca7608d8e3ff19802.png"/>
+            </div>
+            <div class="bb-item" data-key="3">
+                <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/bf3b6eb8fad34ffca7608d8e3ff19802.png"/>
+            </div>
+            <div class="bb-item" data-key="4">
+                <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/bf3b6eb8fad34ffca7608d8e3ff19802.png"/>
+            </div>
+            <div class="bb-item" data-key="5">
+                <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/bf3b6eb8fad34ffca7608d8e3ff19802.png"/>
+            </div>
+        </div>
+        dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+    </div>
+    <!--
+        <div class="scene">
+            <article class="book">
+                <section class="page active">
+                    <div class="front">
+                        <div class="book-item">
+                            &lt;!&ndash;<h3>Yay, Page 1!</h3>&ndash;&gt;
+                            <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/bf3b6eb8fad34ffca7608d8e3ff19802.png"/>
+                        </div>
+
+                    </div>
+                    <div class="back">
+                        <div class="book-item">
+                            &lt;!&ndash;<h3>Yay, Page 1!</h3>&ndash;&gt;
+                            <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/2f867e50ef264df7b2629738e143cb1a.png"/>
+                        </div>
+
+                    </div>
+                </section>
+                <section class="page">
+                    <div class="front">
+                        <div class="book-item">
+                            &lt;!&ndash;<h3>Yay, Page 1!</h3>&ndash;&gt;
+                            <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/3a28ed82fc644ce2966672845eae83bd.png"/>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="book-item">
+                            &lt;!&ndash;<h3>Yay, Page 1!</h3>&ndash;&gt;
+                            <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/bf3b6eb8fad34ffca7608d8e3ff19802.png"/>
+                        </div>
+                    </div>
+                </section>
+                <section class="page">
+                    <div class="front">
+                        <div class="book-item">
+                            &lt;!&ndash;<h3>Yay, Page 1!</h3>&ndash;&gt;
+                            <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/07/2f867e50ef264df7b2629738e143cb1a.png"/>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <h1>– 5 –</h1>
+                        <p>
+                            Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in
+                            der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel? Gerade
+                            jetzt, wo er das Ding seines Lebens gedreht hatte und mit der Beute verschwinden wollte!
+                        </p>
+                        <p>
+                            Oder gehörten die Schritte hinter ihm zu einem der unzähligen Gesetzeshüter dieser Stadt, und die
+                            stählerne Acht um seine Handgelenke würde gleich zuschnappen? Er konnte die Aufforderung stehen zu
+                            bleiben schon hören. Gehetzt sah er sich um.
+                        </p>
+                    </div>
+                </section>
+                <section class="page">
+                    <div class="front">
+                        <h1>– 6 –</h1>
+                        <p>
+                            Sehen Sie, Webstandards sind das Regelwerk, auf dem Webseiten aufbauen. So gibt es Regeln für HTML,
+                            CSS, JavaScript oder auch XML; Worte, die Sie vielleicht schon einmal von Ihrem Entwickler gehört
+                            haben. Diese Standards sorgen dafür, dass alle Beteiligten aus einer Webseite den größten Nutzen
+                            ziehen.
+                        </p>
+                        <p>
+                            Im Gegensatz zu früheren Webseiten müssen wir zum Beispiel nicht mehr zwei verschiedene Webseiten
+                            für den Internet Explorer und einen anderen Browser programmieren. Es reicht eine Seite, die -
+                            richtig angelegt - sowohl auf verschiedenen Browsern im Netz funktioniert, aber ebenso gut für den
+                            Ausdruck oder
+                        </p>
+                    </div>
+                    <div class="back">
+                        <h1>– 7 –</h1>
+                        <p>
+                            Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in
+                            der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel? Gerade
+                            jetzt, wo er das Ding seines Lebens gedreht hatte und mit der Beute verschwinden wollte!
+                        </p>
+                        <p>
+                            Oder gehörten die Schritte hinter ihm zu einem der unzähligen Gesetzeshüter dieser Stadt, und die
+                            stählerne Acht um seine Handgelenke würde gleich zuschnappen? Er konnte die Aufforderung stehen zu
+                            bleiben schon hören. Gehetzt sah er sich um.
+                        </p>
+                    </div>
+                </section>
+                <section class="page">
+                    <div class="front">
+                        <h1>– 8 –</h1>
+                        <p>
+                            Sehen Sie, Webstandards sind das Regelwerk, auf dem Webseiten aufbauen. So gibt es Regeln für HTML,
+                            CSS, JavaScript oder auch XML; Worte, die Sie vielleicht schon einmal von Ihrem Entwickler gehört
+                            haben. Diese Standards sorgen dafür, dass alle Beteiligten aus einer Webseite den größten Nutzen
+                            ziehen.
+                        </p>
+                        <p>
+                            Im Gegensatz zu früheren Webseiten müssen wir zum Beispiel nicht mehr zwei verschiedene Webseiten
+                            für den Internet Explorer und einen anderen Browser programmieren. Es reicht eine Seite, die -
+                            richtig angelegt - sowohl auf verschiedenen Browsern im Netz funktioniert, aber ebenso gut für den
+                            Ausdruck oder
+                        </p>
+                    </div>
+                    <div class="back">
+                        <h1>– 9 –</h1>
+                        <p>
+                            Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in
+                            der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel? Gerade
+                            jetzt, wo er das Ding seines Lebens gedreht hatte und mit der Beute verschwinden wollte!
+                        </p>
+                        <p>
+                            Oder gehörten die Schritte hinter ihm zu einem der unzähligen Gesetzeshüter dieser Stadt, und die
+                            stählerne Acht um seine Handgelenke würde gleich zuschnappen? Er konnte die Aufforderung stehen zu
+                            bleiben schon hören. Gehetzt sah er sich um.
+                        </p>
+                    </div>
+                </section>
+            </article>
+        </div>
+    -->
+
+    <!-- <div class="top-container">
+         &lt;!&ndash;<div class="top-container-left">&ndash;&gt;
+         <div class="swiper-container top-container-left">
+             <div class="swiper-wrapper">
+                 <div class="big-img-item swiper-slide" th:each="item: ${books.mediaResourcesList}">
+                     <img class="big-img" th:src="@{${item.coverImage}}"/>
+                 </div>
+             </div>
+             <div class="s4-prev-1 swiper-button-prev">
+             </div>
+             <div class="s4-next-1 swiper-button-next">
+             </div>
+         </div>
+     </div>-->
+
+
+</div>
+
+<!-- footer -->
+
+
+<footer>
+    <div class="foot-bg"></div>
+    <div class="foot-container">
+        <div class="plate-center foot-content">
+            <div class="foot-left">
+                <img class="foot-logo"
+                     src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/01/30/8623406378a440f0ae9cf7a0be466875.png"
+                     alt="">
+                <div foot-left-info>
+                    <p>聊城市文化创意产业协会</p>
+                    <p>聊城市文化创意产业公共服务平台</p>
+                    <p>C20城市文创产业合作发展联盟成员单位</p>
+                </div>
+            </div>
+            <div class="foot-center">
+                <div class="foot-link">
+                    <div class="foot-title">友情链接</div>
+                    <div class="foot-link-item-box">
+
+                        <div id="menu1" class="foot-link-item">
+                            <div class="link-txt">文化和旅游政府部门网站</div>
+
+
+                            <img src="../image/footimg/down-arrow.png" alt="">
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="http://jnwl.jinan.gov.cn/"
+                                       target="_blank"
+                                    >济南市文化和旅游局</a>
+                                </li>
+                                <li>
+                                    <a href="http://whlyj.qingdao.gov.cn/n28356069/n32563280/index.html"
+                                       target="_blank"
+                                    >青岛市文化和旅游局</a>
+                                </li>
+                                <li>
+                                    <a href="http://whhlyj.dezhou.gov.cn/"
+                                       target="_blank"
+                                    >德州市文化和旅游局</a>
+                                </li>
+                                <li>
+                                    <a href="http://wlj.weihai.gov.cn/"
+                                       target="_blank"
+                                    >威海市文化和旅游局</a>
+                                </li>
+                                <li>
+                                    <a href="http://whlyj.taian.gov.cn/"
+                                       target="_blank"
+                                    >泰安市文化和旅游局</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="menu2" class="foot-link-item">
+
+                            <div class="link-txt">战略合作文化创意单位官网</div>
+
+                            <img src="../image/footimg/down-arrow.png" alt="">
+                            <ul class="dropdown-menu" role="menu">
+
+                            </ul>
+                        </div>
+                        <div id="menu3" class="foot-link-item">
+
+
+                            <div class="link-txt">社会团体组织政府部门会议</div>
+                            <img src="../image/footimg/down-arrow.png" alt="">
+                            <ul class="dropdown-menu" role="menu">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot-center-info">
+                    <div class="foot-center-info-item">
+                        <p class="foot-title">指导单位</p>
+                        <ul>
+                            <li>
+                                <span>中共聊城市委宣传部</span>
+                            </li>
+                            <li>
+                                <span>聊城市文化和旅游局</span>
+                            </li>
+                            <li>
+                                <span>聊城市民政局(社会组织管理中心)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="foot-center-info-item">
+                        <p class="foot-title">主办单位</p>
+                        <ul>
+                            <li>
+                                <span>聊城市文化创意产业协会</span>
+                            </li>
+                        </ul>
+                        <p class="foot-title">承办单位</p>
+                        <ul>
+                            <li>
+                                <span>秘书处 · 云上融媒中心</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="foot-center-info-item">
+                        <p class="foot-title">技术支持</p>
+                        <ul>
+                            <li>
+                                <span>学缘科教集团（技术中心）</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="foot-right">
+                <div class="foot-address">中国·聊城经济技术开发区当代国际大厦16楼</div>
+                <ul>
+                    <li>
+                        <span>电话：</span>
+                        <span>0635-8256026</span>
+                    </li>
+                    <li>
+                        <span>邮箱：</span>
+                        <span>sdlccia@163.com</span>
+                    </li>
+                    <li>
+                        <span>官网：</span>
+                        <span>http://www.sdlccia.com</span>
+                    </li>
+                </ul>
+                <div class="foot-qrcode">
+                    <div class="qrcode-box">
+                        <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/02/01/c16046af78684a16899701f46e99a2ab.png"
+                             alt="">
+                        <span>官方微信</span>
+                    </div>
+                    <div class="qrcode-box">
+                        <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/01/28/c534a702fdce490ca3624c22c0c2954f.png"
+                             alt="">
+                        <span>官方微博</span>
+                    </div>
+                    <div class="qrcode-box">
+                        <img src="https://sdlccia.oss-cn-hangzhou.aliyuncs.com/xy-association/other/2021/01/28/ddbfb1d37151410b80eb6cf5e6b4c67f.png"
+                             alt="">
+                        <span>水城礼好</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="website-records">
+        <p>
+            <span>Copyright © </span>
+            <span data-state="big">2020-2030 聊城市文化创意产业协会所有</span>
+            <span>· All Rights Reserved </span>
+            <span>鲁ICP备 2020045966号-1</span>
+
+            <img src="../image/footimg/record.png" alt="">
+
+            <a href="https://beian.miit.gov.cn/"
+               target="_blank">鲁公网安备 11010502000728</a>
+        </p>
+    </div>
+</footer>
+
+<!--<script src="../js/jq.js"></script>-->
+<script src="../js/common.js"></script>
+<script src='../js/jquery.hammer.min.js' type="text/javascript"></script>
+<script src="../js/jquerypp.custom.js"></script>
+<script src="../js/jquery.bookblock.js"></script>
+<script>
+    var Page = (function () {
+
+        var config = {
+                $bookBlock: $('#bb-bookblock'),
+                $navNext: $('.bb-item'),
+
+            },
+            init = function () {
+                config.$bookBlock.bookblock({
+                    speed: 800,
+                    shadowSides: 0.8,
+                    shadowFlip: 0.7
+                });
+                initEvents();
+            },
+            initEvents = function () {
+
+
+
+                // add navigation events
+                config.$navNext.on('click touchstart', function (e) {
+                    console.log();
+                    if (e.offsetX >= $(this).width() / 2) {
+                        if ($(this).data('key') < 5) {
+                            config.$bookBlock.bookblock('next');
+                        }
+                    } else {
+                        if ($(this).data('key') > 1) {
+                            config.$bookBlock.bookblock('prev');
+                        }
+
+                    }
+                    // console.log(e.offsetX);
+                    // console.log()
+                    // debugger;
+
+                    return false;
+                });
+
+
+            };
+
+        return {init: init};
+
+    })();
+</script>
+<script>
+    Page.init();
+</script>
+<script>
+    /*var currentPage = 0;
+
+     $('.book')
+     .on('click', '.active', nextPage)
+     .on('click', '.flipped', prevPage);
+
+     $('.book').hammer().on("swipeleft", nextPage);
+     $('.book').hammer().on("swiperight", prevPage);
+
+     function prevPage() {
+
+     $('.flipped')
+     .last()
+     .removeClass('flipped')
+     .addClass('active')
+     .siblings('.page')
+     .removeClass('active');
+     }
+     function nextPage() {
+
+     $('.active')
+     .removeClass('active')
+     .addClass('flipped')
+     .next('.page')
+     .addClass('active')
+     .siblings();
+
+
+     }*/
+
+
+    //select打开关闭事件
+    $('body').on('click', '.select-top', function () {
+        var state = $(this).parent().attr('data-state') === 'close' ? 'open' : 'close'
+        $(this).parent().attr('data-state', state)
+    })
+    $(document).click(function (e) {
+        var topMenuList = $(".select-top");
+        for (i = 0; i < topMenuList.length; i++) {
+            let topMenu = topMenuList.eq(i);
+            //判断事件对象不是弹窗对象  并且  弹窗对象不包含事件对象
+            if (!topMenu.is(e.target) && topMenu.has(e.target).length == 0) {
+                //则隐藏弹窗
+                topMenu.parent().attr('data-state', 'close');
+            }
+        }
+    });
+
+    //全局监听关闭select
+    $(document).click(function (e) {
+        var _con = $('.select-box');
+        if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+            $('.select-box').attr('data-state', 'close')
+        }
+    })
+
+    //监听select option选择
+    $('.slelect-option-ui li').click('click', function (e) {
+        $('.select-box').attr('data-state', 'close')
+//        console.log($(this).parent().parent().attr('data-type'));
+        let type = $(this).parent().parent().attr('data-type');
+        $(this).parent().parent().find('.select-top .select-val').text($(this).attr('data-value'))
+        let columnId = $(this).attr('column-value');
+        console.log(columnId)
+        // window.location.href = `wcyx${type}.html?keyword=${keyword}`;
+        window.location.href = `${type}?columnId=${columnId}`;
+    })
+
+    /*
+     const swiperImgs = new Swiper('.swiper-container.top-container-left', {
+     autoplay: false,//可选选项，自动滑动
+     loop: true,
+     slidesPerView: 'auto',
+     slidesPerGroup: 1,
+     loopedSlides: 1,
+     spaceBetween: 0,
+     centeredSlides: true, //页面居中
+     navigation: {
+     nextEl: '.top-container-left .s4-next-1',
+     prevEl: '.top-container-left .s4-prev-1',
+     },
+     observer: true,
+     observeParents: true,
+     });*/
+    //    $(function() {
+    //        single book
+    $('#mybook').booklet();
+
+    //multiple books with ID's
+    $('#mybook1, #mybook2').booklet();
+
+    //multiple books with a class
+    $('.mycustombooks').booklet();
+    //    });
+
+</script>
+</body>
+
+</html>

@@ -5,6 +5,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+body{
+    cursor: default;
+}
 
 a {
     text-decoration: none;
@@ -623,7 +626,6 @@ input[type="text"] {
     vertical-align: middle;
 }
 
-/
 /*********************************************************************************************************************
 
 /* 各模块通用样式 */
@@ -918,9 +920,155 @@ input[type="text"] {
     justify-content: flex-end;
 }
 
+.side_bar {
+    display: none;
+}
+
+.side_bar li span {
+    font-size: 14px;
+    color: #999999;
+    display: block;
+}
+
+.side_bar li {
+    padding-bottom: 26px;
+    cursor: pointer;
+}
+
+.side_bar i {
+    display: block;
+    margin: 30px auto 10px auto;
+    position: relative;
+}
+
+.side_bar .i_gotop {
+    width: 20px;
+    height: 21px;
+    background: url(../image/pic/i_gotop.png) no-repeat;
+    background-size: 20px auto;
+}
+
+.side_bar .i_gophone {
+    width: 24px;
+    height: 28px;
+    background: url(../image/pic/i_gophone.png) no-repeat;
+    background-size: 19px auto;
+}
+
+.side_bar .i_goservice {
+    width: 24px;
+    height: 23px;
+    background: url(../image/pic/i_goservice.png) no-repeat;
+    background-size: 23px auto;
+}
+
+.side_bar .i_gophone::before, .side_bar .i_goservice::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: #E0E0E0;
+    left: 0px;
+    top: -30px;
+}
+
+.side_bar .on .i_gotop, .side_bar li:hover .i_gotop {
+    background-image: url(../image/pic/i_gotop_hover.png);
+}
+
+.side_bar .on .i_gophone, .side_bar li:hover .i_gophone {
+    background-image: url(../image/pic/i_gophone_hover.png);
+}
+
+.side_bar .on .i_goservice, .side_bar li:hover .i_goservice {
+    background-image: url(../image/pic/i_goservice_hover.png);
+}
+
+.side_bar li:hover span, .side_bar .on span {
+    /*color: #F90084;*/
+    color: #0066b0;
+}
+
+.side_bar_kang {
+    display: none;
+    background-repeat: no-repeat;
+    width: 442px;
+    height: 378px;
+    position: absolute;
+    top: -14px;
+    right: 70px;
+}
+
+.gophone {
+    background-image: url(../image/pic/gophone.png);
+}
+
+.goservice {
+    background-image: url(../image/pic/goservice.png);
+}
+
+.side_bar_kang .side_title {
+    display: block;
+    padding: 38px 0 31px 0;
+    color: #333333;
+    font-size: 16px;
+}
+
+.side_bar_kang img {
+    width: 219px;
+    height: 219px;
+}
+
+.side_aside {
+    display: block;
+    color: #333;
+    padding: 10px 0 0 0;
+}
+
+.side_aside .side_hui {
+    color: #999;
+}
+
+.goservice .side_title {
+    padding: 28px 0 10px 0;
+}
+
+.indexEN .Icon_list li {
+    font-size: 20px;
+}
+
+.indexEN .go_buy .button, .indexEN .titles .button {
+    width: auto;
+    padding: 0 10px;
+}
+
+.clip-text {
+    display: block;
+}
+
+.top-menu_en .site-nav li a, .top-menu_en .site-nav li a:hover {
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 800px) {
+    .side_bar {
+        display: block;
+        text-align: center;
+        width: 80px;
+        height: 350px;
+        background: #FFFFFF;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        box-shadow: 0 0 14px 0 rgb(0 0 0 / 7%);
+        border-radius: 3px;
+        z-index: 11;
+    }
+}
+
 /* 广告区域 */
 
-.adver-area2 .imgbox {
+/*.adver-area2 .imgbox {
     margin-bottom: 20px;
 }
 
@@ -930,11 +1078,11 @@ input[type="text"] {
     justify-content: center;
     flex-direction: column;
     height: 100px;
-    /*background: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F58817b7e717f6.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611449351&t=1665d48…) no-repeat 0 0;*/
+    !*background: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F58817b7e717f6.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611449351&t=1665d48…) no-repeat 0 0;*!
     background: url('../image/footer_bgd.png') no-repeat 0 0;
     background-position: center;
     background-size: cover;
-}
+}*/
 
 /*手机*/
 /*
@@ -964,3 +1112,5 @@ input[type="text"] {
         display: none;
     }
 }*/
+
+

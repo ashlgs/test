@@ -95,13 +95,13 @@
 
 }
 
-/* 去掉date中上下小三角，但是保留input类型为number的小三角。 */
+/* 鍘绘帀date涓笂涓嬪皬涓夎锛屼絾鏄繚鐣檌nput绫诲瀷涓簄umber鐨勫皬涓夎銆� */
 input[type=date]::-webkit-inner-spin-button {
     display: hidden;
 }
 
-/*控制下拉小箭头的*/
-/*input[type="date"]::-webkit-calendar-picker-indicator {
+/*鎺у埗涓嬫媺灏忕澶寸殑*/
+input[type="date"]::-webkit-calendar-picker-indicator {
     display: flex;
     width: 100%;
     height: 100%;
@@ -109,8 +109,8 @@ input[type=date]::-webkit-inner-spin-button {
     position: absolute;
     border-right: 18px solid transparent;
     background: url(../image/footimg/down-arrow.png) no-repeat right;
-    color: #666;
-}*/
+    color: transparent;
+}
 
 .requied {
 
@@ -145,7 +145,7 @@ input[type=date]::-webkit-inner-spin-button {
     margin-left: 20px;
     border: 1px solid #eaeaea;
     overflow: hidden;
-    width:150px;
+    width: 150px;
     height: 100px;
     box-sizing: border-box;
 }
@@ -178,7 +178,7 @@ input[type="radio"] + label:before {
     height: 16px;
     margin-right: 10px;
     vertical-align: middle;
-    background: url(../image/RadioButton.png) no-repeat 0px center;
+    background: url(../image/radio1.png) no-repeat 0px center;
     /*background-image: url('../image/close.png')*/
 }
 
@@ -192,7 +192,7 @@ input[type="radio"]:checked + label:before {
     background: url(../image/radio.png) no-repeat 0px center;
 }
 
-/*input[type="date"] {
+input[type="date"] {
     width: 400px;
     font-size: 14px;
     height: 36px;
@@ -210,12 +210,9 @@ input[type="radio"]:checked + label:before {
     box-sizing: border-box;
 }
 
-::-webkit-calendar-picker-indicator{
-   display:none;
-}
 input[type=date]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}*/
+    visibility: hidden;
+}
 
 input[type="file"] {
     width: 400px;
@@ -304,13 +301,13 @@ input[type="file"]:focus {
 
 input:focus {
     border: 1px solid #dee0ea;
-    /* 解决input按钮自动填充后 浏览器渲染的默认背景问题 */
+    /* 瑙ｅ喅input鎸夐挳鑷姩濉厖鍚� 娴忚鍣ㄦ覆鏌撶殑榛樿鑳屾櫙闂 */
     /*box-shadow: inset 0 0 0 1000px #FFFFFF !important;*/
 }
 
 .preview {
     display: block;
     object-fit: contain;
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 100px;
 }

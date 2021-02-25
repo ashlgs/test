@@ -35,8 +35,10 @@ body {
 
 .media-item-box {
     /*width: 25%;*/
-    width: 475px;
-    height: 320px;
+    /*width: 475px;*/
+    width: 380px;
+    height: 253px;
+    /*height: 320px;*/
     position: relative;
 }
 
@@ -59,19 +61,22 @@ body {
     flex-direction: column;
     color: #FFF;
     background: rgba(0, 102, 176, 0.96);
-    cursor: pointer;
 }
 
 .media-item-box:hover .media-info {
     display: flex;
-    opacity:0 ;
-    background: rgba(0, 102, 176, 0.96);
+    flex-direction: column;
+    opacity: 0;
+    background: rgba(0, 102, 176, 0.90);
     transition: all ease 0.3s;
 
 }
 .media-item-box:hover .media-info:hover {
     display: flex;
-    opacity:1 ;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    opacity: 1;
 
 }
 
@@ -81,43 +86,47 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 96px;
+    padding:30px 40px 0;
 }
 
 .media-info-top {
-    position: absolute;
-    top: 30px;
-    left: 30px;
+
     line-height: 1;
+    padding:10px 0 0 10px;
+
 }
 
+
 .media-info-top .up {
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .media-info-top .down {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .short-line {
     background: #fff;
     height: 2px;
     width: 20px;
-    margin: 5px 0;
+    margin: 5px 0 8px 0;
 }
 
 .media-info-fn {
-    width: 150px;
-    height: 36px;
+    position: absolute;
+    left:calc(50% - 45px);
+    bottom: 30px;
+    width: 90px;
+    height: 30px;
     border: 1px solid #fff;
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-top: 10px; */
-    margin-bottom: 30px;
     flex-shrink: 0;
+    cursor: pointer;
+
 }
 
 .media-info-fn:hover {
@@ -125,9 +134,22 @@ body {
     background: #fff;
 }
 
+
 .media-info-title {
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+
+
+
+
 }
+
 
 .media-info-desc {
     line-height: 26px;
